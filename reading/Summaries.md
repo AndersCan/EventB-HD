@@ -91,6 +91,6 @@ Describes the documents:
 ...
 Useful to characterise each environmental quantity as either monitored, controlled or both.
 
-Monitored are what he user wants the system to monitor. Controlled are what the system can control. *m* is used to denote *monitored* while *c* denotes *controlled*.
+Monitored are what the user wants the system to monitor. Controlled are what the system can control. *m* is used to denote *monitored* while *c* denotes *controlled*.
 
 Goal of the paper is to describe the contents of key computer system documents, not their form. They do not provide information on **how** to represent the data, only **what** should be represented.
