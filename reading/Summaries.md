@@ -75,3 +75,22 @@ Article that shows the attempt of getting Bosch to adopt the usage of Event-B to
 
 ## Hemodialysis Machine in Hybrid Event-B
 Shows the potential of how one can use HE to model a dialysis machine.  Uses Multi Machine Event-B and connects these together by using a interface. This allows for the refinement of sub-components, instead of "concatenated" machines in vanilla Event-B. The interface that connects the machines defines shared variables that can be changed by the other events. 
+
+## Functional Documents for Computer Systems
+*David Lorge Parnas & Jan Madey*
+
+Describes the documents: 
+ - System Requirements
+ - System Design
+ - Software Requirements 
+ - Software Behaviour Specification
+ - Module Interface Specification
+ - Module Internal Design
+
+> A critical step in documenting the requirements of a computer system is the indentification of the encrionmental quantities to be measured or controlled and the representaion of those quantities by mathematucal variables. Environmental quantities include: physical props(temperatures and pressures), the readings of user-visible displays, adminstrative information (number of people assigned to a given task), and even the wishes aof a human user. 
+...
+Useful to characterise each environmental quantity as either monitored, controlled or both.
+
+Monitored are what he user wants the system to monitor. Controlled are what the system can control. *m* is used to denote *monitored* while *c* denotes *controlled*.
+
+Goal of the paper is to describe the contents of key computer system documents, not their form. They do not provide information on **how** to represent the data, only **what** should be represented.
