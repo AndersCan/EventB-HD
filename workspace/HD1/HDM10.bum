@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="HDM1"/>
+<org.eventb.core.seesContext name="*" org.eventb.core.target="ActiveContext"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="c_bloodPump"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="c_heparimPump"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="c_ufPump"/>
+<org.eventb.core.variable name="/" org.eventb.core.identifier="c_heater"/>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="m_DFluidTemp ≔ 0" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="m_venousRedDetector ≔ OFF" org.eventb.core.label="act7"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="m_bloodPumpRotation ≔ 0" org.eventb.core.label="act8"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="m_bloodVolume  ≔ 0" org.eventb.core.label="act9"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleBloodPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleBloodPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="2" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toogleHeparimPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toogleHeparimPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="3" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleUfPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleUfPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleHeater">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleHeater"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="B" org.eventb.core.identifier="c_alarm"/>
+<org.eventb.core.variable name="5" org.eventb.core.identifier="m_DFluidTemp"/>
+<org.eventb.core.invariant name="6" org.eventb.core.label="inv1" org.eventb.core.predicate="m_DFluidTemp ∈ ℤ "/>
+<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleAlarm">
+<org.eventb.core.refinesEvent name="+" org.eventb.core.target="c_toggleAlarm"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_DFluidTempChange">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="newtemp"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="newtemp ∈ ℤ "/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="m_DFluidTemp ≔ newtemp" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="8" org.eventb.core.identifier="m_venousRedDetector"/>
+<org.eventb.core.invariant name="9" org.eventb.core.label="inv2" org.eventb.core.predicate="m_venousRedDetector ∈ ActiveStates "/>
+<org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_toggleVenousRedDetector">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="as"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="as ∈ ActiveStates"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="m_venousRedDetector ≠ as"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="m_venousRedDetector ≔ as" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name=";" org.eventb.core.identifier="m_bloodPumpRotation"/>
+<org.eventb.core.invariant name="=" org.eventb.core.label="inv3" org.eventb.core.predicate="m_bloodPumpRotation ∈ {−1, 0, 1}"/>
+<org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_toggleBloodPumpDirection">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="rotation"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="rotation ∈ {−1, 0, 1}"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="m_bloodPumpRotation ≠ rotation"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="m_bloodPumpRotation ≔ rotation" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_changeBloodVolume">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="bv"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="bv ∈ ℕ "/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="m_bloodVolume ≔ bv" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="@" org.eventb.core.identifier="m_bloodVolume"/>
+<org.eventb.core.invariant name="A" org.eventb.core.label="inv4" org.eventb.core.predicate="m_bloodVolume  ∈ ℕ "/>
+</org.eventb.core.machineFile>

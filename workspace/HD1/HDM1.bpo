@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="19">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poIdentifier name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.poIdentifier name="OFF" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="ON" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poPredicate name="ActiveStatet" org.eventb.core.predicate="partition(ActiveStates,{ON},{OFF})" org.eventb.core.source="/HD1/ActiveContext.buc|org.eventb.core.contextFile#ActiveContext|org.eventb.core.axiom#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/HD1/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poIdentifier name="c_alarm" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_bloodPump" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_heater" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_heparimPump" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_ufPump" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_heparimPumq" org.eventb.core.parentSet="/HD1/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poIdentifier name="c_ufPump'" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_heater'" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_heparimPump'" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_bloodPump'" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_alarm'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_heparimPumq" org.eventb.core.parentSet="/HD1/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#EVTIDENTc_heparimPumq" org.eventb.core.poStamp="17"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_heparimPumr" org.eventb.core.parentSet="/HD1/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_bloodPump'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_heparimPumr" org.eventb.core.parentSet="/HD1/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#EVTIDENTc_heparimPumr" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD1/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#1|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_bloodPump≠as" org.eventb.core.source="/HD1/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#1|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_heparimPums" org.eventb.core.parentSet="/HD1/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_heparimPump'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_heparimPums" org.eventb.core.parentSet="/HD1/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#EVTIDENTc_heparimPums" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD1/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#2|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_heparimPump≠as" org.eventb.core.source="/HD1/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#2|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_heparimPumt" org.eventb.core.parentSet="/HD1/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_ufPump'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_heparimPumt" org.eventb.core.parentSet="/HD1/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#EVTIDENTc_heparimPumt" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD1/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#3|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_ufPump≠as" org.eventb.core.source="/HD1/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#3|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_heparimPumu" org.eventb.core.parentSet="/HD1/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_heater'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_heparimPumu" org.eventb.core.parentSet="/HD1/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#EVTIDENTc_heparimPumu" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD1/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#4|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_heater≠as" org.eventb.core.source="/HD1/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#4|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_heparimPumv" org.eventb.core.parentSet="/HD1/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_alarm'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_heparimPumv" org.eventb.core.parentSet="/HD1/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#EVTIDENTc_heparimPumv" org.eventb.core.poStamp="19">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD1/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_alarm≠as" org.eventb.core.source="/HD1/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD1/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c_bloodPump∈ActiveStates" org.eventb.core.source="/HD1/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_heparimPump∈ActiveStates" org.eventb.core.source="/HD1/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c_ufPump∈ActiveStates" org.eventb.core.source="/HD1/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="c_heater∈ActiveStates" org.eventb.core.source="/HD1/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="c_alarm∈ActiveStates" org.eventb.core.source="/HD1/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#6"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

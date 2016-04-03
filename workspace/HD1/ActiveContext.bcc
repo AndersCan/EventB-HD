@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(ActiveStates,{ON},{OFF})" org.eventb.core.source="/HD1/ActiveContext.buc|org.eventb.core.contextFile#ActiveContext|org.eventb.core.axiom#*" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="ActiveStates" org.eventb.core.source="/HD1/ActiveContext.buc|org.eventb.core.contextFile#ActiveContext|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.scConstant name="OFF" org.eventb.core.source="/HD1/ActiveContext.buc|org.eventb.core.contextFile#ActiveContext|org.eventb.core.constant#)" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.scConstant name="ON" org.eventb.core.source="/HD1/ActiveContext.buc|org.eventb.core.contextFile#ActiveContext|org.eventb.core.constant#(" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.scContextFile>
