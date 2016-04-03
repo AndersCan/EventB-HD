@@ -18,6 +18,7 @@ Monitored
  - Net Fluid removal rate (balance chamber)
  - Rotation direction of UFP (Ultra Filtration Pump)
  - Net Fluid removal volume (balance chamber)
+ - Venous Red Detector
 
 Controlled 
 ========
