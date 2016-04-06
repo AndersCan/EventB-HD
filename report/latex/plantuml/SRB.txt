@@ -1,0 +1,10 @@
+@startuml
+
+S : Software System
+R : System Requirements
+B : Event-B Model
+S --> R
+R --> S : Testing
+R --> B : Soundly linked
+B --> S : Safe Mechanized translation
+@enduml
