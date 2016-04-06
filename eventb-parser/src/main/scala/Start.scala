@@ -4,6 +4,7 @@
 
 import parser.MachineParser
 import parser.MachineParser.BMachine
+import tags.Tags
 
 import scala.xml.{Node, XML}
 
@@ -26,7 +27,7 @@ object Start {
           .foreach(bm => println(bm.name + " - " + bm.variables \@ "name"))
 
 
-    val combined = MachineParser.combineMachines(parsedMachines(0), parsedMachines(1))
+//    val combined = MachineParser.combineMachines(parsedMachines(0), parsedMachines(1))
 //    combined.variables
 //      .foreach(x => println(x))
     //    val machine1 = XML.loadFile("ParserTest/Machine1.bum")
@@ -56,7 +57,7 @@ object Start {
 
   def isEvent(node: Node): Boolean = {
     node match {
-      case <org.eventb.core.event></org.eventb.core.event> => true
+      case Tags.Variable.getNode  => true
       case _ => false
     }
   }
@@ -66,21 +67,16 @@ object Start {
       case x :: xs => {
         x match {
           // @formatter:off
-          case node @ <org.eventb.core.variable/> =>
+          case node @ Tags.Variable.getNode =>
             // @formatter:on
             println("ID: " + node \ "@org.eventb.core.identifier")
           case _ => {
             println("Printing")
-            //            println(x)
             printVariables(xs)
-
           }
         }
-
       }
       case _ => println("EOF!")
     }
-
-    // <org.eventb.core.variable name={name} org.eventb.core.identifier={identifier}>
   }
 }

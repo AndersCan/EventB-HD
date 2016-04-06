@@ -20,12 +20,11 @@ class MachineParserTests extends FlatSpec with Matchers {
     max should be(',')
   }
   it should "be able to increment char value of a node" in {
-    val n = MachineParser.increment(
+    val actuall = MachineParser.increment(
         <org.eventb.core.variable org.eventb.core.identifier="ID1" name="("/>,
       28)
-
-    println(n)
-
+    val expected = <org.eventb.core.variable name="(" org.eventb.core.identifier="ID1" org.eventb.core.name=")"/>
+    actuall should be(expected)
   }
 
 
