@@ -19,6 +19,7 @@ Next meeting scheduled for Friday 15th. 09:00
 
 Why  do people want to use Event-B? What is the value generated? 
 
+![System, requirements and Event-B link][SRB]
  - Create a link between requirements and code
 	 - Re-engineer the system
 		 - From the System we can extract the requirements
@@ -78,4 +79,4 @@ Notes:
 * No requirement for a fully modeled system, but highly desireable.
 * Final goal - Library of transformations
  
-
+[SRB]: https://raw.githubusercontent.com/AndersCan/EventB-Thesis/master/report/latex/plantuml/SRB.png "System, Requirements and Event-B"
