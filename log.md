@@ -1,27 +1,4 @@
 #Meetings
-
-##10.02.16 First meeting 
-Given "The Hemodialysis Machine Case Study" by Atif Mashkoor. Scheduled new meeting for Wednesday 16 @ 10.30. Shall present a potential sketch for an event-b model.
-Notes:
-* Proposing models in Event-B and translate them to Machine deployable code
-* Show events easily translated to C-code
-* PEMS is Dialysis machine
-* No requirement for a fully modeled system, but highly desireable.
-* Final goal - Library of transformations
-
-##16.02.16 - Second meeting 
-* Read, then describe the HD machine at a high level. Use Diagrams to describe the system.
-* Identify what will be in Event-B
-* What refinement to use
-* Conclusion - Add features to Event-B (Extensions)
-* Summerize what is missing in Rodin-Platform for analysing the HD machine
-* Study the required Event-B extensions
- * Elements that can not be modeled
-  * What are other languages doing?
-  * Study Hybrid Event-B
-What can you do in B?
-Provide tools for translation
-
 ## 29.03.16 - Third meeting
 New meeting scheduled for Monday, April 4th.
 * Read 4 model variable by Parnas.
@@ -38,5 +15,27 @@ New meeting scheduled for Monday, April 4th.
  * Simultaneous events, event ordering, readability of Machines
  
  **For next meeting**: Create an initial (or several) models for the dialysis machine. Send them to Mery before Sunday.
+
+##16.02.16 - Second meeting 
+* Read, then describe the HD machine at a high level. Use Diagrams to describe the system.
+* Identify what will be in Event-B
+* What refinement to use
+* Conclusion - Add features to Event-B (Extensions)
+* Summerize what is missing in Rodin-Platform for analysing the HD machine
+* Study the required Event-B extensions
+ * Elements that can not be modeled
+  * What are other languages doing?
+  * Study Hybrid Event-B
+What can you do in B?
+Provide tools for translation
+
+##10.02.16 First meeting 
+Given "The Hemodialysis Machine Case Study" by Atif Mashkoor. Scheduled new meeting for Wednesday 16 @ 10.30. Shall present a potential sketch for an event-b model.
+Notes:
+* Proposing models in Event-B and translate them to Machine deployable code
+* Show events easily translated to C-code
+* PEMS is Dialysis machine
+* No requirement for a fully modeled system, but highly desireable.
+* Final goal - Library of transformations
  
 
