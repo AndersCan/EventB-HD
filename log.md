@@ -1,4 +1,44 @@
 #Meetings
+## 06.04.16 - Forth meeting
+
+Next meeting scheduled for Friday 15th. 09:00
+
+ - Different ways of composition
+	* Abrial Composition
+		* Might be too complicated/ inefficient
+	* Butler Composition
+		* Event sharing
+		* Should read
+* Rodin editor improvements
+	* Not possible to hide events
+		* Implement a *hidden* attribute to the XML?
+		* Makes it hard to focus on a few events
+* Keep method
+	1. Refine a specific feature of an abstract machine. Refine until the feature is concrete. 
+	2. Hide/ignore the refined events, variables and invariants. Then repeat step 1 with the refined machine.
+
+Why  do people want to use Event-B? What is the value generated? 
+
+ - Create a link between requirements and code
+	 - Re-engineer the system
+		 - From the System we can extract the requirements
+		 - From the requirements we can generate Event-B models
+		 - From the Event-B models we can generate the System.
+For certification of the system we can give a Certification company the Event-B models
+ - They can Re-inject requirements to the model (Testing)
+ - Peer review of the model
+ - A software engineer may ask a proclaimed Event-B expert to model a certain system. The model returned is tested by the engineer. If all the tests pass then the engineer may infer that the Event-B expert is infact an expert.
+	 - Only an example, not a reality.
+ 
+**Comments on current model**
+
+ - Attach requirements to Event-B model
+	 - Link events to requirements with ProR?
+ - Current model is observing from the outside and ``zooming'' in on features
+ - Should add some physiological features to the system.
+	 - Behaviour of the body
+	 - Understand/control the system (?)
+
 ## 29.03.16 - Third meeting
 New meeting scheduled for Monday, April 4th.
 * Read 4 model variable by Parnas.
