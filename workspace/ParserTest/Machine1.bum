@@ -10,4 +10,11 @@
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="new_number ∈ ℕ "/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="Machine1_number ≔ new_number" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
+<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Machine1_SomethingElse">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="newer_number"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="newer_number ∈ ℕ1 "/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="Machine1_number ≔ newer_number" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="newer_number &lt; 5"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="newer_number &gt; 1"/>
+</org.eventb.core.event>
 </org.eventb.core.machineFile>

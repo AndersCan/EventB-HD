@@ -17,4 +17,5 @@
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="new_number∈ℕ"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
 </org.eventb.core.prProof>
+<org.eventb.core.prProof name="Machine1_SomethingElse/inv1/INV"/>
 </org.eventb.core.prFile>
