@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="r_bpVRDorVolumeStop/grd2/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ActiveStates,{ON},{OFF}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p1" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p2,p3"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Rotation,{CLOCKWISE},{STOPPED},{COUNTERCLOCKWISE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p4" org.eventb.core.prInfHyps="p5,p6,p7,p8"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p5,p6,p7,p8"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p17"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prIdent name="c_bloodPump" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="c_bloodPump∈ActiveStates">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="m_DFluidTemp∈ℤ">
+<org.eventb.core.prIdent name="m_DFluidTemp" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬CLOCKWISE=COUNTERCLOCKWISE">
+<org.eventb.core.prIdent name="CLOCKWISE" org.eventb.core.type="Rotation"/>
+<org.eventb.core.prIdent name="COUNTERCLOCKWISE" org.eventb.core.type="Rotation"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="Rotation={CLOCKWISE,STOPPED,COUNTERCLOCKWISE}">
+<org.eventb.core.prIdent name="CLOCKWISE" org.eventb.core.type="Rotation"/>
+<org.eventb.core.prIdent name="COUNTERCLOCKWISE" org.eventb.core.type="Rotation"/>
+<org.eventb.core.prIdent name="Rotation" org.eventb.core.type="ℙ(Rotation)"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="Rotation"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="c_bloodPump≠as"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="c_alarm∈ActiveStates">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="c_alarm" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="ActiveStates={ON,OFF}">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prIdent name="ON" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬STOPPED=COUNTERCLOCKWISE">
+<org.eventb.core.prIdent name="COUNTERCLOCKWISE" org.eventb.core.type="Rotation"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="Rotation"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬CLOCKWISE=STOPPED">
+<org.eventb.core.prIdent name="CLOCKWISE" org.eventb.core.type="Rotation"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="Rotation"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="c_heater∈ActiveStates">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="c_heater" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(ActiveStates,{ON},{OFF})">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prIdent name="ON" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ON=OFF">
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prIdent name="ON" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="c_ufPump∈ActiveStates">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="c_ufPump" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="m_bloodPumpRotation∈Rotation">
+<org.eventb.core.prIdent name="Rotation" org.eventb.core.type="ℙ(Rotation)"/>
+<org.eventb.core.prIdent name="m_bloodPumpRotation" org.eventb.core.type="Rotation"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(Rotation,{CLOCKWISE},{STOPPED},{COUNTERCLOCKWISE})">
+<org.eventb.core.prIdent name="CLOCKWISE" org.eventb.core.type="Rotation"/>
+<org.eventb.core.prIdent name="COUNTERCLOCKWISE" org.eventb.core.type="Rotation"/>
+<org.eventb.core.prIdent name="Rotation" org.eventb.core.type="ℙ(Rotation)"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="Rotation"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬c_bloodPump=as"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="m_venousRedDetector∈ActiveStates">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="m_venousRedDetector" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="c_heparimPump∈ActiveStates">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="c_heparimPump" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL3:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="r_bpVRDorVolumeStop/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ActiveStates,{ON},{OFF}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p0" org.eventb.core.prInfHyps="p1,p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p1,p2"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(Rotation,{CLOCKWISE},{STOPPED},{COUNTERCLOCKWISE}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p4,p5,p6,p7"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="SELECT2" org.eventb.core.prHyps="p4,p5,p6,p7"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE7" org.eventb.core.prHyps="p15"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="c_bloodPump∈ActiveStates">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="c_bloodPump" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="m_DFluidTemp∈ℤ">
+<org.eventb.core.prIdent name="m_DFluidTemp" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬CLOCKWISE=COUNTERCLOCKWISE">
+<org.eventb.core.prIdent name="CLOCKWISE" org.eventb.core.type="Rotation"/>
+<org.eventb.core.prIdent name="COUNTERCLOCKWISE" org.eventb.core.type="Rotation"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="Rotation={CLOCKWISE,STOPPED,COUNTERCLOCKWISE}">
+<org.eventb.core.prIdent name="CLOCKWISE" org.eventb.core.type="Rotation"/>
+<org.eventb.core.prIdent name="COUNTERCLOCKWISE" org.eventb.core.type="Rotation"/>
+<org.eventb.core.prIdent name="Rotation" org.eventb.core.type="ℙ(Rotation)"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="Rotation"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="c_alarm∈ActiveStates">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="c_alarm" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="ActiveStates={ON,OFF}">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prIdent name="ON" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬STOPPED=COUNTERCLOCKWISE">
+<org.eventb.core.prIdent name="COUNTERCLOCKWISE" org.eventb.core.type="Rotation"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="Rotation"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬CLOCKWISE=STOPPED">
+<org.eventb.core.prIdent name="CLOCKWISE" org.eventb.core.type="Rotation"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="Rotation"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="c_heater∈ActiveStates">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="c_heater" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(ActiveStates,{ON},{OFF})">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prIdent name="ON" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬ON=OFF">
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prIdent name="ON" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="c_ufPump∈ActiveStates">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="c_ufPump" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="m_bloodPumpRotation∈Rotation">
+<org.eventb.core.prIdent name="Rotation" org.eventb.core.type="ℙ(Rotation)"/>
+<org.eventb.core.prIdent name="m_bloodPumpRotation" org.eventb.core.type="Rotation"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(Rotation,{CLOCKWISE},{STOPPED},{COUNTERCLOCKWISE})">
+<org.eventb.core.prIdent name="CLOCKWISE" org.eventb.core.type="Rotation"/>
+<org.eventb.core.prIdent name="COUNTERCLOCKWISE" org.eventb.core.type="Rotation"/>
+<org.eventb.core.prIdent name="Rotation" org.eventb.core.type="ℙ(Rotation)"/>
+<org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="Rotation"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="m_venousRedDetector∈ActiveStates">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="m_venousRedDetector" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="c_heparimPump∈ActiveStates">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="c_heparimPump" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+</org.eventb.core.prFile>

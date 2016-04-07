@@ -9,8 +9,11 @@
 <org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
 <org.eventb.core.action name="'" org.eventb.core.assignment="m_DFluidTemp ≔ 0" org.eventb.core.label="act6"/>
 <org.eventb.core.action name="(" org.eventb.core.assignment="m_venousRedDetector ≔ OFF" org.eventb.core.label="act7"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="m_bloodPumpRotation ≔ 0" org.eventb.core.label="act8"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="m_bloodPumpRotation ≔ STOPPED" org.eventb.core.label="act8"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="m_bloodVolume  ≔ 0" org.eventb.core.label="act9"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="m_emptyDialyzer :∈ {0,1}" org.eventb.core.label="act10"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="m_time ≔ 0" org.eventb.core.label="act11"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="u_definedBloodVolume :∈ ℕ " org.eventb.core.label="act12"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleBloodPump">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleBloodPump"/>
@@ -44,10 +47,10 @@
 <org.eventb.core.action name="*" org.eventb.core.assignment="m_venousRedDetector ≔ as" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name=";" org.eventb.core.identifier="m_bloodPumpRotation"/>
-<org.eventb.core.invariant name="=" org.eventb.core.label="inv3" org.eventb.core.predicate="m_bloodPumpRotation ∈ {−1, 0, 1}"/>
+<org.eventb.core.invariant name="=" org.eventb.core.label="inv3" org.eventb.core.predicate="m_bloodPumpRotation ∈ Rotation"/>
 <org.eventb.core.event name="&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_toggleBloodPumpDirection">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="rotation"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="rotation ∈ {−1, 0, 1}"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="rotation ∈ Rotation"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="m_bloodPumpRotation ≠ rotation"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="m_bloodPumpRotation ≔ rotation" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
@@ -58,4 +61,23 @@
 </org.eventb.core.event>
 <org.eventb.core.variable name="@" org.eventb.core.identifier="m_bloodVolume"/>
 <org.eventb.core.invariant name="A" org.eventb.core.label="inv4" org.eventb.core.predicate="m_bloodVolume  ∈ ℕ "/>
+<org.eventb.core.seesContext name="evt2" org.eventb.core.target="PumpContex1"/>
+<org.eventb.core.variable name="evt3" org.eventb.core.identifier="m_emptyDialyzer"/>
+<org.eventb.core.invariant name="evt4" org.eventb.core.label="inv5" org.eventb.core.predicate="m_emptyDialyzer ∈ {0,1}"/>
+<org.eventb.core.event name="evt5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_toggleEmptyDialyzer">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="empty"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="empty ∈ {0,1}"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="m_emptyDialyzer ≠ empty"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="m_emptyDialyzer ≔ empty" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="evt6" org.eventb.core.identifier="m_time"/>
+<org.eventb.core.invariant name="evt7" org.eventb.core.label="inv6" org.eventb.core.predicate="m_time ∈ ℕ "/>
+<org.eventb.core.event name="evt8" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="tick_tock">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="tm"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="tm ∈ ℕ "/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="tm &gt; m_time"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="m_time ≔ tm" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="evt9" org.eventb.core.identifier="u_definedBloodVolume"/>
+<org.eventb.core.invariant name="evt:" org.eventb.core.label="inv7" org.eventb.core.predicate="u_definedBloodVolume ∈ ℕ "/>
 </org.eventb.core.machineFile>

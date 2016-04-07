@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="HDM10"/>
+<org.eventb.core.seesContext name="*" org.eventb.core.target="ActiveContext"/>
+<org.eventb.core.seesContext name="evt2" org.eventb.core.target="PumpContex1"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="c_bloodPump"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="c_heparimPump"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="c_ufPump"/>
+<org.eventb.core.variable name="/" org.eventb.core.identifier="c_heater"/>
+<org.eventb.core.variable name="B" org.eventb.core.identifier="c_alarm"/>
+<org.eventb.core.variable name="5" org.eventb.core.identifier="m_DFluidTemp"/>
+<org.eventb.core.variable name="8" org.eventb.core.identifier="m_venousRedDetector"/>
+<org.eventb.core.variable name=";" org.eventb.core.identifier="m_bloodPumpRotation"/>
+<org.eventb.core.variable name="@" org.eventb.core.identifier="m_bloodVolume"/>
+<org.eventb.core.variable name="evt3" org.eventb.core.identifier="m_emptyDialyzer"/>
+<org.eventb.core.variable name="evt6" org.eventb.core.identifier="m_time"/>
+<org.eventb.core.event name="evt7" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="evt8" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleBloodPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleBloodPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toogleHeparimPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toogleHeparimPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt:" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleUfPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleUfPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleHeater">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleHeater"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleAlarm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleAlarm"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="m_DFluidTempChange">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="m_DFluidTempChange"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt?" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="m_toggleVenousRedDetector">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="m_toggleVenousRedDetector"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="m_toggleBloodPumpDirection">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="m_toggleBloodPumpDirection"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtA" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="m_changeBloodVolume">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="m_changeBloodVolume"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtB" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="m_toggleEmptyDialyzer">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="m_toggleEmptyDialyzer"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtC" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="tick_tock">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="tick_tock"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtD" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="r_bpVRDorVolumeStop">
+<org.eventb.core.action name="*" org.eventb.core.assignment="c_bloodPump ≔ OFF" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="m_venousRedDetector = ON ∨ m_bloodVolume ≥ u_definedBloodVolume "/>
+<org.eventb.core.refinesEvent name=")" org.eventb.core.target="c_toggleBloodPump"/>
+<org.eventb.core.witness name="*" org.eventb.core.label="as" org.eventb.core.predicate="⊤"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="evtE" org.eventb.core.identifier="u_definedBloodVolume"/>
+</org.eventb.core.machineFile>
