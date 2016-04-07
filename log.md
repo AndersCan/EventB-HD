@@ -14,10 +14,10 @@ Next meeting scheduled for Friday 15th. 09:00
 		* Implement a *hidden* attribute to the XML?
 		* Makes it hard to focus on a few events
 * Keep method
-	1. Refine a specific feature of an abstract machine. Refine until the feature is concrete. 
-	2. Hide/ignore the refined events, variables and invariants. Then repeat step 1 with the refined machine.
+         1. Refine a specific feature of an abstract machine. Refine until the feature is concrete. 
+         2. Hide/ignore the refined events, variables and invariants. Then repeat step 1 with the refined machine.
 
-Why  do people want to use Event-B? What is the value generated? 
+**Why  do people want to use Event-B? What is the value generated?**
 
 ![System, requirements and Event-B link][SRB]
  - Create a link between requirements and code
