@@ -2,6 +2,8 @@ package parser
 
 import javax.xml.bind.DatatypeConverter
 
+import tags.Tags
+
 import scala.xml._
 
 /**
@@ -12,7 +14,7 @@ object MachineParser {
   case class BMachine(name: String, variables: Seq[Node], events: Seq[Node])
 
   /**
-    * Reads the given UTF-8 file and returns its BMachine
+    * Reads the given file (Only UTF-8 tested) and returns its BMachine
     *
     * @param filepath path to event-b machine
     * @return parsed BMmachine with accessible attributes
@@ -21,10 +23,65 @@ object MachineParser {
     val xmlRoot = XML.loadFile(filepath)
 
     val machineName = filepath.split('/').last.dropRight(4)
-    val variables: Seq[Node] = xmlRoot \ "org.eventb.core.variable"
-    val events: Seq[Node] = xmlRoot \ "org.eventb.core.event"
+    val variables: Seq[Node] = xmlRoot \ Tags.Variable.getTag
+    val events: Seq[Node] = xmlRoot \ Tags.Event.getTag
+    //TODO Add invariants
+    val invariants: Seq[Node] = xmlRoot \ Tags.Invariant.getTag
 
     BMachine(machineName, variables, events)
+  }
+
+
+  def generateDeadlockInvariant(bm: BMachine): String = {
+    def predicateCombinator(input: List[String], acc: String = ""): String = input match {
+      case x :: xs => ""
+      case _ => ""
+    }
+    // Get all events
+    // Get events guards
+    // Concat guards with 'or' (\/)
+    //    bm.events.foreach(e => println(e \ "org.eventb.core.guard"))
+    println(combineInvariants(bm.events
+      .groupBy(node => node \@ "org.eventb.core.label")
+      //        .map(e => List(e._2 \\ "org.eventb.core.guard"))
+      .filterNot(xs => xs._2.forall(_.isEmpty))
+      //        .flatMap(xs => xs.map(xss => List(xss \\ "@org.eventb.core.predicate")))
+      //        .map(xs => xs.map(_.toString))
+      //        .map(xs => predicateCombinator(xs))
+      //        .map(e => e._2 \ "org.eventb.core.guard")
+      //        .values
+      //      .toList
+      //      .map(g => g \\ "@org.eventb.core.predicate")
+      //      .foldLeft(Seq[Node])((a, i) => a)
+      .map(e => getInvariants(e))
+      .map(e => combineInvariants(e, " AND ")).toList, " OR "))
+    //        .foldLeft(Seq[String])((a, i) =>a a.+(i))
+
+    //        .map(e => combineInvariants(e, " AND "))
+    //        .foreach(e => println(e))
+
+    //      .flatten(b => b.)
+
+
+    ""
+  }
+
+  def getInvariants(tup: (String, Seq[Node])): Seq[String] = {
+    val p = tup._2 \\ "@org.eventb.core.predicate"
+    p.map(_.toString())
+    //    List("")
+  }
+
+  def combineInvariants(seq: Seq[String], seperator: String = " OR ", acc: String = ""): String = {
+    seq match {
+      case Nil => acc
+      case x :: Nil =>
+        if (acc.isEmpty) x else acc + seperator + x
+      case x :: xs =>
+        if (acc.isEmpty) combineInvariants(xs, seperator, x)
+        else
+          combineInvariants(xs, seperator, acc + seperator + x)
+    }
   }
 
   /*
@@ -54,11 +111,12 @@ object MachineParser {
       .max
       .charAt(0)
   }
-/*
-  This method is a mess and does not work. Why numbers are not used for lines
-   will remain a mystery.
-   Missing: Trivial implementation of HexString -> Int -> HexString
-  */
+
+  /*
+    This method is a mess and does not work. Why numbers are not used for lines
+     will remain a mystery.
+     Missing: Trivial implementation of HexString -> Int -> HexString
+    */
   def increment(node: Node, max: Char): Node = {
     val increment = max - 27
     new scala.xml.transform.RewriteRule {

@@ -18,18 +18,19 @@ object Start {
 
 
   def main(args: Array[String]): Unit = {
-    val machines = List("ParserTest/Machine1.bum", "ParserTest/Machine2.bum")
+    val machines = List("ParserTest/Machine1.bum")//, "ParserTest/Machine2.bum")
 
     val parsedMachines: List[BMachine] =
       machines
         .map(filepath => MachineParser.parseMachine(filepath))
-        parsedMachines
-          .foreach(bm => println(bm.name + " - " + bm.variables \@ "name"))
+
+    parsedMachines
+      .foreach(bm => println(MachineParser.generateDeadlockInvariant(bm)))
 
 
-//    val combined = MachineParser.combineMachines(parsedMachines(0), parsedMachines(1))
-//    combined.variables
-//      .foreach(x => println(x))
+    //    val combined = MachineParser.combineMachines(parsedMachines(0), parsedMachines(1))
+    //    combined.variables
+    //      .foreach(x => println(x))
     //    val machine1 = XML.loadFile("ParserTest/Machine1.bum")
     //    val xml = XML.loadFile("ParserTest/Machine1.bum")
     //    //    xml.descendant
@@ -57,7 +58,7 @@ object Start {
 
   def isEvent(node: Node): Boolean = {
     node match {
-      case Tags.Variable.getNode  => true
+      case Tags.Variable.getNode => true
       case _ => false
     }
   }
