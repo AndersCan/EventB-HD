@@ -1,7 +1,14 @@
 #Requirements
 Requirements from taken from the HD paper and categorized to their controlled element.
+
+## Heparim Pump
+| ReqID | Description |
+:----:|---
+S-3 | To prevent coagulation of blood, an anti-coagulation pump doses an anticoagulant into the bloodline between the BP and the dialyzer. Anti-coagulant is flown at the set rate or the set volume from the syringe into the EBC during treatment.
+R-22 | If anticoagulant delivery is running, then the software shall monitor the anticoagulant flow direction and if the reverse direction is detected, then the software shall stop the blood flow and the anticoagulant flow, and execute an alarm signal
+
 ## Blood Pump
-| Requirement | Description |
+| ReqID | Description |
 ---|---
 |S-4 | The BP is stopped when either the VRD detects blood or the BP has transported a predefined volume. |
 |S-6 | The BP cannot be used for infusion outside the initiation phase, e.g., during saline infusion. |
