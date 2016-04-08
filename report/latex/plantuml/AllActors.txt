@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+actor Nurse
+actor Patient
+rectangle System {
+
+    rectangle UI
+
+  rectangle Internal {
+    rectangle Controller
+    rectangle Hardware
+    rectangle Sensors
+  }
+}
+
+Nurse -> UI : Sets parameters \n Presses buttons
+UI -> Controller : Updates
+Controller -> Hardware : Changes state
+Sensors -> Controller : Updates
+Patient <-left-> Hardware : Blood exchange
+Patient -left-> Sensors : State change
+@enduml
