@@ -34,6 +34,53 @@ Controlled
  - Heater
 	 - (Assumed; not in documents)
 	 - Heats the dialysate fluid.
+ - Alarm
+ 	- Speaker
+ - Signal Lamp
+ 	- Colors
+ 		- Yellow
+ 		- Green
+
+User Interface
+==========
+ - (Input all the parameters for treatment)
+ - Start/Stop button
+ - Empty Dialyzer button
+ - Rinsing parameters
+  - Filling BP rate
+  - Filling BP volume
+  - Rinsing BP rate
+  - DF flow
+  - Rinsing time
+  - UF rate for rinsing
+  - UF volume for rinsing
+  - Blood flow for connecting patient
+ - Treatment parameters
+  - Conductivity
+  - Bicarbotnate/Acetate
+  - Bicarbonate conductivity
+  - DF temperature
+  - Rinsing time
+  - DF flow
+  - UF parameters
+    - UF volume
+    - Therapy time
+    - Min UF rate
+    - MAX UF rate
+ - Pressure parameters
+  - Limit delta Min/Max AP
+  - Actual TMP/max TMP
+  - Limits TMP
+  - LOw/High
+  - Extended TMP limit range
+  - DF flow
+ - Heparin parameters
+  - Heparin stop time
+  - Heparin bolus volume
+  - Heparin profile/rate
+  - Treatment without heparin
+  - Syringe type
+
 
 Extra
 -------
