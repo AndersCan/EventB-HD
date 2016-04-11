@@ -1,0 +1,87 @@
+@startuml
+left to right direction
+
+rectangle UserInterface {
+  rectangle UserValues
+}
+
+rectangle System {
+  rectangle Sys_Phase {
+    rectangle Preparation
+    rectangle Initiation
+    rectangle Ending
+  }
+  rectangle Status {
+    rectangle Priming
+    rectangle Rinsing
+  }
+}
+
+/' Pumps '/
+rectangle Blood_Pump {
+  rectangle BP_Rotation
+  rectangle Blood_Filling_Volume
+  rectangle Blood_Flow
+}
+
+rectangle Heparin_Pump {
+  rectangle HP_Rotation
+}
+
+rectangle UltraFiltrationPump {
+  rectangle UFP_Rotation
+  rectangle NetFluidRemovalRate
+  rectangle BackwardsDeliverdVolume
+}
+
+rectangle Venous {
+  rectangle V_Pressure
+  rectangle V_Pressure_Limit
+}
+
+rectangle Arterial {
+  rectangle A_Pressure
+  rectangle A_Pressure_Limit
+}
+
+rectangle VenousRedDetector {
+  rectangle VRD
+}
+
+rectangle SaftetyAirDetector {
+  rectangle SAD_Flow
+}
+rectangle Dialyser {
+  rectangle Empty_Dialyser
+  rectangle FlowsOpen
+}
+
+rectangle Alarm {
+  rectangle AlarmAcknowledged
+}
+
+
+
+/'Ingoing to UserInterface'/
+Venous -> UserInterface
+Arterial -> UserInterface
+
+/'SaftetyAirDetector'/
+SaftetyAirDetector -> System
+System -> SaftetyAirDetector
+
+ /' Blood pump connections '/
+Blood_Pump -> UserInterface
+Blood_Pump -> Venous
+Blood_Pump -> Arterial
+Blood_Pump -down-> VenousRedDetector
+Blood_Pump -> System
+Blood_Pump -> Dialyser
+
+Heparin_Pump -> UserInterface
+
+UltraFiltrationPump -> Dialyser
+UltraFiltrationPump -> Alarm
+
+
+@enduml
