@@ -1,4 +1,16 @@
 #Meetings
+
+## 08.04.16
+Make a list of model variables needed for satisfying the requirements. 
+Dealing with userinput - When nurse interacts -> Interactinos are safe: add informal requirements that the nurse knows how to operate the system. The system is only usable under ceirtain circumstances: Nurse needs training.
+
+Choice of variable Initiation might be worng with regards to the domain (Orange colour for aircraft lock).
+Cognitive science - The system should help the patient & the Nurse should contribute positively.
+
+Rewrite requirements if they collide
+
+Next meeting Thuesday, 12.05.2016
+
 ## 06.04.16 - Forth meeting
 
 Next meeting scheduled for Friday 15th. 09:00
