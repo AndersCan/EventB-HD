@@ -2,6 +2,28 @@ Summaries
 ==============
 Short summaries of papers & books read throughout the internship.
 
+## Guidelines for Formal Domain Modeling in Event-B
+Contexts define facts, events define behavior.
+Properties kept as event guards or invariants?:
+> The choice between the two expressions depends on the kind of system one has to develop. For instance, developers of a road traffic monitoring system will likely prefer collide events since their system will have to deal with such situations. Developers of a traffic light control system will likely prefer invariant expressions as it is one of the goals of their system.
+
+>!Guard(Collide) => Invariant(NoCollision)
+
+To introduce *time* to an Event-B model, we must add the set: activationTime that contains elements that must be processed at the given *activationTime*. **event-queue technique**
+> Guard: vehicle(dom(activationTime)) /\ time=activationTime(vehicle) : "The time is now"
+> Action: activationTime := activationTime <|− {vehicle |-> time + timeInc}. "Add new activation time, delete old"
+> Tick_Tock: Time can only progress to the lowest value of the range of activationTime. "All activation times must be processed"
+
+Safety property - something bad never happens
+Liveness property - something good eventually happen
+
+> No-collision is a typical safety property. While modeling domains, this is adequate: the proof that all events maintain the invariant is sufficient to establish that the domain is well-behaved.
+
+Refine with small steps:
+> Ideally, only one new fact should be introduced per refinement.
+
+> Event-B has inherited from B the view that a development is a sequence of refinements.
+
 ##Cruise Control In Hybrid Event-B 
 *Richard Banach & Michael Butler*
 Case study proving the validity of the need for Hybrid Event-B (HB). Time is a first-class citizen of HB; all variables and and functions are functions of time. Time: Readonly, Clock: Value increases with time, but can be set by events.
