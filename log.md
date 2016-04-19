@@ -1,5 +1,21 @@
 #Meetings
 
+## 12.04.16
+System tries to maintain some percentage that the human is no longer able to maintain himself
+Look at the global system that is simulating the kidney: What is the purpose of the machine? How is it interacting with the paitient?
+
+Sketch of the system.
+Introduce abstract events for differential equations. Evolutin of variables --> Continuously according to some kinds of equations. 
+
+Sue Wen & Abrial : Is it co-simulation (B & MathWorks)?
+Master --> Identify new problems. 
+
+Start classical modelling. Validate system with values from real cases. Real data fed into system --> real time animations. FDA might have data available regarding dialysis of real patients.
+
+Think global view: Mission of the system : Cleaning, purifying, the blood.
+
+Note: Possible to connect animator with an AI that attempts to invalidate the system? Could automatically search an animation wrt some invariant/heuristic. 
+
 ## 08.04.16
 Make a list of model variables needed for satisfying the requirements. 
 Dealing with userinput - When nurse interacts -> Interactinos are safe: add informal requirements that the nurse knows how to operate the system. The system is only usable under ceirtain circumstances: Nurse needs training.
