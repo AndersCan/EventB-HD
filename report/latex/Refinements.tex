@@ -1,0 +1,10 @@
+\section{Machine Refinements}
+A defining characteristic of Event-B is its refinement of machines. At the start of the modelling process, we have our most abstract representation of the system. This abstract machine is then refined into a new machine that contains more details. The choice of the details is upto the modeller. Refinements usually fall within two categories; either a feature extension or a data refinement. Feature extensions usually implies that a machine has additional events or variables introduced. A data refinement is, as its name implies, refining the data of a machine. It is used when we have defined some data very abstractly and what to refine it to be more concrete. For example, a traffic light might initially only be either on or off. We can refine it to have red, green and yellow lights. We can link these variables together by adding an invariant that shows their equivalence. This is known a gluing invariant as it is gluing/connecting invariants.
+
+$$ abstractLight = ON  \Leftrightarrow \{GREEN\} = getLights(concreteLight)$$
+$$ abstractLight = OFF \Leftrightarrow \{RED\}   = getLights(concreteLight)$$ 
+
+In this example, when the \textit{abstractLight} is turned on the \textit{concreteLight} must be GREEN. While OFF must be {RED}.
+
+
+The choice of both abstraction level and incremental refinements is one that should be taken with great care.
