@@ -2,6 +2,18 @@ Summaries
 ==============
 Short summaries of papers & books read throughout the internship.
 
+## Towards the Trustworthy Development of Active Medical Devices: A Hemodialysis Case Study
+Their approach to developing an Active Medical Device (AMD):
+ 1. Specification step
+ 	1. Requirementstranslated to mathematical formulas, Informal 2 Formal and logical structures
+ 2. Verification step
+ 	1. Achived when it is proven that the model is free from specification errors and inconsistencies. 
+ 	2. Fully proven specification ensures that the model is consistent, well defined and its events preserve its invariants.
+ 3. Validation step
+ 	1. Validation of a model is achived when it is demonstrated that the model is free from reqirement errors and reflects the stakeholders wishes adequatly.
+ 4. CODE GENERATION
+ 
+
 ## Guidelines for Formal Domain Modeling in Event-B
 Contexts define facts, events define behavior.
 Properties kept as event guards or invariants?:
