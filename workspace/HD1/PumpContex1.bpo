@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="3">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="Rotation" org.eventb.core.type="ℙ(Rotation)"/>
 <org.eventb.core.poIdentifier name="CLOCKWISE" org.eventb.core.type="Rotation"/>
 <org.eventb.core.poIdentifier name="COUNTERCLOCKWISE" org.eventb.core.type="Rotation"/>
 <org.eventb.core.poIdentifier name="STOPPED" org.eventb.core.type="Rotation"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD1/PumpContex1.bpo|org.eventb.core.poFile#PumpContex1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="3">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD1/PumpContex1.bpo|org.eventb.core.poFile#PumpContex1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(Rotation,{CLOCKWISE},{STOPPED},{COUNTERCLOCKWISE})" org.eventb.core.source="/HD1/PumpContex1.buc|org.eventb.core.contextFile#PumpContex1|org.eventb.core.axiom#+"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

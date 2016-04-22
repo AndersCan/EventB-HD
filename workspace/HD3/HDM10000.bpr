@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="INITIALISATION/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ActiveStates,{ON},{OFF}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with m_actual2SetBloodFlowRatio'=ℕ" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p5">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="m_actual2SetBloodFlowRatio'" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="m_actual2SetBloodFlowRatio'=ℕ"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(ActiveStates,{ON},{OFF})">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prIdent name="ON" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="⊥"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬ON=OFF">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prIdent name="ON" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="m_actual2SetBloodFlowRatio'=0 ‥ 100"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="m_actual2SetBloodFlowRatio'∈{ℕ}"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="ℕ=0 ‥ 100"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="m_actual2SetBloodFlowRatio'∈{0 ‥ 100}"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="ActiveStates={ON,OFF}">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prIdent name="ON" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/act8/FIS" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="SystemPhases">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ActiveStates,{ON},{OFF}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(SystemPhases,{Preperation},{Initiation},{Ending}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5,p6,p7,p8"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p5,p6,p7,p8"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p10" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p11">
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p11" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬⊥"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(ActiveStates,{ON},{OFF})">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prIdent name="ON" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬Preperation=Initiation">
+<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬Initiation=Ending">
+<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ON=OFF">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prIdent name="ON" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="SystemPhases={Preperation,Initiation,Ending}">
+<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(SystemPhases,{Preperation},{Initiation},{Ending})">
+<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬Preperation=Ending">
+<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="ActiveStates={ON,OFF}">
+<org.eventb.core.prIdent name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prIdent name="ON" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬SystemPhases=(∅ ⦂ ℙ(SystemPhases))"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="SystemPhases≠(∅ ⦂ ℙ(SystemPhases))"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="m_changeActual2SetBloodFlowRatio/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prIdent name="ratio" org.eventb.core.type="ℙ(ℤ)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="ratio∈{0 ‥ 100}"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ca_actual2SetBloodFlowRatio/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="ActiveStates">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ActiveStates,{ON},{OFF}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with as=ON" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p6"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="ON" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prIdent name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prIdent name="setBloodFlow" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="c_alarm≠as">
+<org.eventb.core.prIdent name="c_alarm" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="c_bloodPump∈ActiveStates">
+<org.eventb.core.prIdent name="c_bloodPump" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬c_alarm=as">
+<org.eventb.core.prIdent name="c_alarm" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="c_alarm∈ActiveStates">
+<org.eventb.core.prIdent name="c_alarm" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="setBloodFlow≠0"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="ActiveStates={ON,OFF}">
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="c_heater∈ActiveStates">
+<org.eventb.core.prIdent name="c_heater" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(ActiveStates,{ON},{OFF})">
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬ON=OFF">
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬c_alarm=ON">
+<org.eventb.core.prIdent name="c_alarm" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="c_ufPump∈ActiveStates">
+<org.eventb.core.prIdent name="c_ufPump" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="as=ON"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="c_heparimPump∈ActiveStates">
+<org.eventb.core.prIdent name="c_heparimPump" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬setBloodFlow=0"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="as∈ActiveStates"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ca_actual2SetBloodFlowRatio/grd5/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="ActiveStates">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ActiveStates,{ON},{OFF}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p4"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(SystemPhases,{Preperation},{Initiation},{Ending}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6,p7,p8,p9"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p6,p7,p8,p9"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p15">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p11"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13,p14"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p18"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p19"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p20"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p21"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with as=ON" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p11" org.eventb.core.prInfHyps="p23"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p11"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="ON" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prIdent name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prIdent name="setBloodFlow" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="c_alarm≠as">
+<org.eventb.core.prIdent name="c_alarm" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="c_bloodPump∈ActiveStates">
+<org.eventb.core.prIdent name="c_bloodPump" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬Preperation=Initiation">
+<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="SystemPhases" org.eventb.core.type="ℙ(SystemPhases)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬c_alarm=as">
+<org.eventb.core.prIdent name="c_alarm" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬Initiation=Ending">
+<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="SystemPhases" org.eventb.core.type="ℙ(SystemPhases)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="SystemPhases={Preperation,Initiation,Ending}">
+<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="SystemPhases" org.eventb.core.type="ℙ(SystemPhases)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="setBloodFlow∈ℕ1"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="c_alarm∈ActiveStates">
+<org.eventb.core.prIdent name="c_alarm" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(SystemPhases,{Preperation},{Initiation},{Ending})">
+<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="SystemPhases" org.eventb.core.type="ℙ(SystemPhases)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬Preperation=Ending">
+<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="SystemPhases" org.eventb.core.type="ℙ(SystemPhases)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="setBloodFlow≠0"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="ActiveStates={ON,OFF}">
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="c_heater∈ActiveStates">
+<org.eventb.core.prIdent name="c_heater" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(ActiveStates,{ON},{OFF})">
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬ON=OFF">
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬c_alarm=ON">
+<org.eventb.core.prIdent name="c_alarm" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="actualBloodFlow∈ℕ∧setBloodFlow∈ℕ1">
+<org.eventb.core.prIdent name="actualBloodFlow" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="c_ufPump∈ActiveStates">
+<org.eventb.core.prIdent name="c_ufPump" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="actualBloodFlow∈ℕ">
+<org.eventb.core.prIdent name="actualBloodFlow" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="as=ON"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="c_heparimPump∈ActiveStates">
+<org.eventb.core.prIdent name="c_heparimPump" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬setBloodFlow=0"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="c_systemPhase∈SystemPhases">
+<org.eventb.core.prIdent name="SystemPhases" org.eventb.core.type="ℙ(SystemPhases)"/>
+<org.eventb.core.prIdent name="c_systemPhase" org.eventb.core.type="SystemPhases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="as∈ActiveStates"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="ca_actual2SetBloodFlowRatio/grd6/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="ActiveStates">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(ActiveStates,{ON},{OFF}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p4"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(SystemPhases,{Preperation},{Initiation},{Ending}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6,p7,p8,p9"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p6,p7,p8,p9"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p15">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p11"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p13,p14"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p18"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p19"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p20"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p21"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p22"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with as=ON" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p11" org.eventb.core.prInfHyps="p23"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p11"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="ON" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prIdent name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.prIdent name="setBloodFlow" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="c_alarm≠as">
+<org.eventb.core.prIdent name="c_alarm" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="c_bloodPump∈ActiveStates">
+<org.eventb.core.prIdent name="c_bloodPump" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬Preperation=Initiation">
+<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="SystemPhases" org.eventb.core.type="ℙ(SystemPhases)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬c_alarm=as">
+<org.eventb.core.prIdent name="c_alarm" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬Initiation=Ending">
+<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="SystemPhases" org.eventb.core.type="ℙ(SystemPhases)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="SystemPhases={Preperation,Initiation,Ending}">
+<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="SystemPhases" org.eventb.core.type="ℙ(SystemPhases)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="setBloodFlow∈ℕ1"/>
+<org.eventb.core.prPred name="p20" org.eventb.core.predicate="c_alarm∈ActiveStates">
+<org.eventb.core.prIdent name="c_alarm" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(SystemPhases,{Preperation},{Initiation},{Ending})">
+<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="SystemPhases" org.eventb.core.type="ℙ(SystemPhases)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬Preperation=Ending">
+<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="SystemPhases" org.eventb.core.type="ℙ(SystemPhases)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="setBloodFlow≠0"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="ActiveStates={ON,OFF}">
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p19" org.eventb.core.predicate="c_heater∈ActiveStates">
+<org.eventb.core.prIdent name="c_heater" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(ActiveStates,{ON},{OFF})">
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬ON=OFF">
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬c_alarm=ON">
+<org.eventb.core.prIdent name="c_alarm" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="actualBloodFlow∈ℕ∧setBloodFlow∈ℕ1">
+<org.eventb.core.prIdent name="actualBloodFlow" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="c_ufPump∈ActiveStates">
+<org.eventb.core.prIdent name="c_ufPump" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="actualBloodFlow∈ℕ">
+<org.eventb.core.prIdent name="actualBloodFlow" org.eventb.core.type="ℤ"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="as=ON"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="c_heparimPump∈ActiveStates">
+<org.eventb.core.prIdent name="c_heparimPump" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬setBloodFlow=0"/>
+<org.eventb.core.prPred name="p21" org.eventb.core.predicate="c_systemPhase∈SystemPhases">
+<org.eventb.core.prIdent name="SystemPhases" org.eventb.core.type="ℙ(SystemPhases)"/>
+<org.eventb.core.prIdent name="c_systemPhase" org.eventb.core.type="SystemPhases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p22" org.eventb.core.predicate="as∈ActiveStates"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+</org.eventb.core.prFile>

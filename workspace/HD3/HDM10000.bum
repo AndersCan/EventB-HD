@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="HDM1000"/>
+<org.eventb.core.seesContext name="*" org.eventb.core.target="ActiveContext"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="c_bloodPump"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="c_heparimPump"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="c_ufPump"/>
+<org.eventb.core.variable name="/" org.eventb.core.identifier="c_heater"/>
+<org.eventb.core.variable name="5" org.eventb.core.identifier="c_alarm"/>
+<org.eventb.core.variable name="&gt;" org.eventb.core.identifier="m_bloodInSystem"/>
+<org.eventb.core.variable name="@" org.eventb.core.identifier="m_cleanedBloodInSystem"/>
+<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="c_systemPhase :∈ SystemPhases" org.eventb.core.label="act8"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toogleHeparimPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toogleHeparimPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleUfPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleUfPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="D" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleHeater">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleHeater"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="E" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleAlarm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleAlarm"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="F" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="e_bloodPumpIsOn">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="e_bloodPumpIsOn"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="e_ufPumpIsOn">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="e_ufPumpIsOn"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="e_returnBlood">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="e_returnBlood"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_turnOffBloodPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_turnOffBloodPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_turnOnBloodPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_turnOnBloodPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="c_changeSystemPhase">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="phase"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="phase ∈ SystemPhases"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_systemPhase ≔ phase" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_actual2SetBloodFlowRatio">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_turnOnAlarm"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="c_systemPhase = Initiation"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="actualBloodFlow ∈ ℕ ∧ setBloodFlow ∈ ℕ1"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="actualBloodFlow"/>
+<org.eventb.core.parameter name="*" org.eventb.core.identifier="setBloodFlow"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd6" org.eventb.core.predicate="(actualBloodFlow ÷ setBloodFlow) &lt; 70"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt2" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_bloodFlowRotation">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_turnOnAlarm"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="bloodFlowRotation ∈ {−1,0,1}"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="bloodFlowRotation"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd5" org.eventb.core.predicate="bloodFlowRotation = −1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt6" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_venousPressureOutOfSafeRange">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_turnOnAlarm"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd4" org.eventb.core.predicate="c_systemPhase = Initiation"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="minPressure ∈ ℕ1  ∧ maxPressure ∈ ℕ1 ∧ minPressure &lt; maxPressure"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="actualPressure"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd6" org.eventb.core.predicate="actualPressure ∈ ℕ "/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd7" org.eventb.core.predicate="actualPressure &lt; minPressure ∨ actualPressure &gt; maxPressure"/>
+<org.eventb.core.parameter name="," org.eventb.core.identifier="minPressure"/>
+<org.eventb.core.parameter name="-" org.eventb.core.identifier="maxPressure"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt7" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_arterialPressureOutOfSafeRange">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_turnOnAlarm"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd4" org.eventb.core.predicate="c_systemPhase = Initiation"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="minPressure ∈ ℕ1  ∧ maxPressure ∈ ℕ1 ∧ minPressure &lt; maxPressure"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="actualPressure"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd6" org.eventb.core.predicate="actualPressure ∈ ℕ "/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd7" org.eventb.core.predicate="actualPressure &lt; minPressure ∨ actualPressure &gt; maxPressure"/>
+<org.eventb.core.parameter name="," org.eventb.core.identifier="minPressure"/>
+<org.eventb.core.parameter name="-" org.eventb.core.identifier="maxPressure"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="evt2" org.eventb.core.target="SystemPhaseCtx"/>
+<org.eventb.core.variable name="evt3" org.eventb.core.identifier="c_systemPhase"/>
+<org.eventb.core.invariant name="evt4" org.eventb.core.label="inv1" org.eventb.core.predicate="c_systemPhase ∈ SystemPhases"/>
+<org.eventb.core.event name="evt8" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_noOrReverseBloodFlowWhileConnectingPatient">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_turnOnAlarm"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="c_systemPhase = Initiation"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="bloodFlowRotation ∈ {−1,0,1}"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="bloodFlowRotation"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd6" org.eventb.core.predicate="bloodFlowRotation = −1 ∨ bloodFlowRotation = 0"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_fillingBloodVolumeExceedsLimit">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_turnOnAlarm"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="bloodVolume ∈ ℕ"/>
+<org.eventb.core.parameter name=")" org.eventb.core.identifier="bloodVolume"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd6" org.eventb.core.predicate="bloodVolume &gt; 400"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

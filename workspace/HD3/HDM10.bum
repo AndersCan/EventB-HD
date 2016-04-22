@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="HDM1"/>
+<org.eventb.core.seesContext name="*" org.eventb.core.target="ActiveContext"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="c_bloodPump"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="c_heparimPump"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="c_ufPump"/>
+<org.eventb.core.variable name="/" org.eventb.core.identifier="c_heater"/>
+<org.eventb.core.variable name="5" org.eventb.core.identifier="c_alarm"/>
+<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="m_bloodInSystem ≔ 0" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="m_cleanedBloodInSystem ≔ 0" org.eventb.core.label="act7"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="7" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleBloodPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleBloodPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="8" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toogleHeparimPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toogleHeparimPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="9" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleUfPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleUfPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=":" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleHeater">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleHeater"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=";" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleAlarm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleAlarm"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="=" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="e_bloodPumpIsOn">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="amount"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="c_bloodPump = ON"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="amount ∈ ℕ1 "/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="m_bloodInSystem ≔ m_bloodInSystem + amount" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="&gt;" org.eventb.core.identifier="m_bloodInSystem"/>
+<org.eventb.core.invariant name="?" org.eventb.core.label="inv1" org.eventb.core.predicate="m_bloodInSystem ∈ ℕ "/>
+<org.eventb.core.variable name="@" org.eventb.core.identifier="m_cleanedBloodInSystem"/>
+<org.eventb.core.invariant name="A" org.eventb.core.label="inv2" org.eventb.core.predicate="m_cleanedBloodInSystem ∈ ℕ "/>
+<org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="e_ufPumpIsOn">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="amount"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="c_ufPump = ON"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="amount ∈ ℕ1 "/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="m_cleanedBloodInSystem ≔ m_cleanedBloodInSystem + amount" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="amount &lt; m_bloodInSystem"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="m_bloodInSystem ≔ m_bloodInSystem − amount" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="e_returnBlood">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="amount"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="amount ∈ ℕ1 "/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="amount &lt; m_cleanedBloodInSystem"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="m_cleanedBloodInSystem ≔ m_cleanedBloodInSystem − amount" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

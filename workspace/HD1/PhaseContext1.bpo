@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="1">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="Phases" org.eventb.core.type="ℙ(Phases)"/>
 <org.eventb.core.poIdentifier name="ENDING" org.eventb.core.type="Phases"/>
 <org.eventb.core.poIdentifier name="INITIATION" org.eventb.core.type="Phases"/>
 <org.eventb.core.poIdentifier name="PREPERATION" org.eventb.core.type="Phases"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD1/PhaseContext1.bpo|org.eventb.core.poFile#PhaseContext1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD1/PhaseContext1.bpo|org.eventb.core.poFile#PhaseContext1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(Phases,{PREPERATION},{INITIATION},{ENDING})" org.eventb.core.source="/HD1/PhaseContext1.buc|org.eventb.core.contextFile#PhaseContext1|org.eventb.core.axiom#+"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

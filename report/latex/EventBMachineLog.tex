@@ -1,0 +1,27 @@
+\section{Event-B Models}
+-- Notes on Event-B machine --
+
+\subsection{HD2}
+Ignore all values, focus only on the very abstract level. Don't have physical entities, like pumps that can be on or off.
+HDM1 - Patient blood never goes below 1.
+...
+Fails at refinement 2. Can not clean the blood before giving it is pumped back to the patient.
+
+---
+
+HD3
+
+HDM10
+If bloodpump in on, the system increases its amount of blood currently inside the system.
+Blood inside the system can be cleaned if the ultrafiltration pump is turned on and there is blood in the system.
+Cleaned blood is removed from the system. IN real life it is returned to the patient. 
+
+HDM100
+For any reason, we may turn off the Blood pump
+
+HDM1000
+Can only turn on blood pump when the alarm is off.
+Alarm can be turned on for any reason
+
+HDM10000
+Added values the values that the nurse inputs that can trigger an alarm and stop the blood pump.
