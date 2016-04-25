@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="HDM100000"/>
+<org.eventb.core.seesContext name="*" org.eventb.core.target="ActiveContext"/>
+<org.eventb.core.seesContext name="evt2" org.eventb.core.target="SystemPhaseCtx1"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="c_bloodPump"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="c_heparimPump"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="c_ufPump"/>
+<org.eventb.core.variable name="/" org.eventb.core.identifier="c_heater"/>
+<org.eventb.core.variable name="5" org.eventb.core.identifier="c_alarm"/>
+<org.eventb.core.variable name="&gt;" org.eventb.core.identifier="m_bloodInSystem"/>
+<org.eventb.core.variable name="@" org.eventb.core.identifier="m_cleanedBloodInSystem"/>
+<org.eventb.core.variable name="evt3" org.eventb.core.identifier="c_systemPhase"/>
+<org.eventb.core.variable name="evtF" org.eventb.core.identifier="c_systemSubPhase"/>
+<org.eventb.core.event name="evtG" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="evtH" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toogleHeparimPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toogleHeparimPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtI" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleUfPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleUfPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtJ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleHeater">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleHeater"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtK" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleAlarm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleAlarm"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtL" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="e_bloodPumpIsOn">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="e_bloodPumpIsOn"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtM" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="e_ufPumpIsOn">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="e_ufPumpIsOn"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtN" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="e_returnBlood">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="e_returnBlood"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtO" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_turnOffBloodPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_turnOffBloodPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtP" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_turnOnBloodPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_turnOnBloodPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_changeSystemPhase">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_changeSystemPhase"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtR" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_actual2SetBloodFlowRatio">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ca_actual2SetBloodFlowRatio"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtS" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_bloodFlowRotation">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ca_bloodFlowRotation"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtT" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_venousPressureOutOfSafeRange">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ca_venousPressureOutOfSafeRange"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtU" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_arterialPressureOutOfSafeRange">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ca_arterialPressureOutOfSafeRange"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtV" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_noOrReverseBloodFlowWhileConnectingPatient">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ca_noOrReverseBloodFlowWhileConnectingPatient"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd7" org.eventb.core.predicate="c_systemSubPhase = ConnectingPatientAndStarting"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtW" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_fillingBloodVolumeExceedsLimit">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ca_fillingBloodVolumeExceedsLimit"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd7" org.eventb.core.predicate="c_systemSubPhase = ConnectingPatientAndStarting"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtX" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_flowThroughSADExceedsLimit">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_turnOnAlarm"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="flow"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd4" org.eventb.core.predicate="flow ∈ ℕ"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd5" org.eventb.core.predicate="c_systemSubPhase = RinsingDialyser ∨ c_systemPhase = Initiation ∨ c_systemSubPhase = Reinfusion"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd6" org.eventb.core.predicate="flow &gt; 1200"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

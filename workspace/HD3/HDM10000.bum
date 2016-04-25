@@ -94,4 +94,7 @@
 <org.eventb.core.parameter name=")" org.eventb.core.identifier="bloodVolume"/>
 <org.eventb.core.guard name="+" org.eventb.core.label="grd6" org.eventb.core.predicate="bloodVolume &gt; 400"/>
 </org.eventb.core.event>
+<org.eventb.core.event name="evt:" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_turnOnAlarm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_turnOnAlarm"/>
+</org.eventb.core.event>
 </org.eventb.core.machineFile>

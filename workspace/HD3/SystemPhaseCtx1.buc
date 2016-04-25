@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.extendsContext name="'" org.eventb.core.target="SystemPhaseCtx"/>
+<org.eventb.core.axiom name="A" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(SystemSubPhases, {AutoSelfTest}, {ConnectingConcetrate}, {SettingRinsingParameters}, {IrtTubingSystem}, {PrepHeparinPump}, {SettingTreatmentParameters}, {RinsingDialyser}, {ConnectingPatientAndStarting}, {DuringTherapy}, {Reinfusion}, {EmptyDialyzer}, {EmptyCartridge}, {OverviewOfTherapy})"/>
+<org.eventb.core.axiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="SUBPHASE ∈ SystemPhases → ℙ(SystemSubPhases)"/>
+<org.eventb.core.constant name="." org.eventb.core.identifier="SUBPHASE"/>
+<org.eventb.core.axiom name="1" org.eventb.core.label="axm3" org.eventb.core.predicate="SUBPHASE(Preperation) = {AutoSelfTest, ConnectingConcetrate, SettingRinsingParameters, IrtTubingSystem, PrepHeparinPump, SettingTreatmentParameters, RinsingDialyser}"/>
+<org.eventb.core.axiom name="/" org.eventb.core.label="axm4" org.eventb.core.predicate="SUBPHASE(Initiation) = {ConnectingPatientAndStarting, DuringTherapy}"/>
+<org.eventb.core.axiom name="0" org.eventb.core.label="axm5" org.eventb.core.predicate="SUBPHASE(Ending) = {Reinfusion, EmptyDialyzer, EmptyCartridge, OverviewOfTherapy}"/>
+<org.eventb.core.carrierSet name="2" org.eventb.core.identifier="SystemSubPhases"/>
+<org.eventb.core.constant name="B" org.eventb.core.identifier="SUBPHASEORDER"/>
+<org.eventb.core.constant name="3" org.eventb.core.identifier="AutoSelfTest"/>
+<org.eventb.core.constant name="4" org.eventb.core.identifier="ConnectingConcetrate"/>
+<org.eventb.core.constant name="5" org.eventb.core.identifier="SettingRinsingParameters"/>
+<org.eventb.core.constant name="6" org.eventb.core.identifier="IrtTubingSystem"/>
+<org.eventb.core.constant name="7" org.eventb.core.identifier="PrepHeparinPump"/>
+<org.eventb.core.constant name="8" org.eventb.core.identifier="SettingTreatmentParameters"/>
+<org.eventb.core.constant name="9" org.eventb.core.identifier="RinsingDialyser"/>
+<org.eventb.core.constant name=":" org.eventb.core.identifier="ConnectingPatientAndStarting"/>
+<org.eventb.core.constant name=";" org.eventb.core.identifier="DuringTherapy"/>
+<org.eventb.core.constant name="=" org.eventb.core.identifier="Reinfusion"/>
+<org.eventb.core.constant name="&gt;" org.eventb.core.identifier="EmptyDialyzer"/>
+<org.eventb.core.constant name="?" org.eventb.core.identifier="EmptyCartridge"/>
+<org.eventb.core.constant name="@" org.eventb.core.identifier="OverviewOfTherapy"/>
+<org.eventb.core.axiom name="C" org.eventb.core.label="axm6" org.eventb.core.predicate="SUBPHASEORDER ∈ SystemSubPhases → ℕ1 "/>
+<org.eventb.core.axiom name="D" org.eventb.core.label="axm7" org.eventb.core.predicate="SUBPHASEORDER(AutoSelfTest) ∈ {1}"/>
+<org.eventb.core.axiom name="E" org.eventb.core.label="axm8" org.eventb.core.predicate="SUBPHASEORDER(ConnectingConcetrate) ∈ {2}"/>
+<org.eventb.core.axiom name="F" org.eventb.core.label="axm9" org.eventb.core.predicate="SUBPHASEORDER(SettingRinsingParameters) ∈ {3}"/>
+<org.eventb.core.axiom name="G" org.eventb.core.label="axm10" org.eventb.core.predicate="SUBPHASEORDER(IrtTubingSystem) ∈ {4}"/>
+<org.eventb.core.axiom name="H" org.eventb.core.label="axm11" org.eventb.core.predicate="SUBPHASEORDER(PrepHeparinPump) ∈ {5}"/>
+<org.eventb.core.axiom name="I" org.eventb.core.label="axm12" org.eventb.core.predicate="SUBPHASEORDER(SettingTreatmentParameters) ∈ {6}"/>
+<org.eventb.core.axiom name="J" org.eventb.core.label="axm13" org.eventb.core.predicate="SUBPHASEORDER(RinsingDialyser) ∈ {7}"/>
+<org.eventb.core.axiom name="K" org.eventb.core.label="axm14" org.eventb.core.predicate="SUBPHASEORDER(ConnectingPatientAndStarting) ∈ {8}"/>
+<org.eventb.core.axiom name="L" org.eventb.core.label="axm15" org.eventb.core.predicate="SUBPHASEORDER(DuringTherapy) ∈ {9}"/>
+<org.eventb.core.axiom name="M" org.eventb.core.label="axm16" org.eventb.core.predicate="SUBPHASEORDER(Reinfusion) ∈ {10}"/>
+<org.eventb.core.axiom name="N" org.eventb.core.label="axm17" org.eventb.core.predicate="SUBPHASEORDER(EmptyDialyzer) ∈ {11}"/>
+<org.eventb.core.axiom name="O" org.eventb.core.label="axm18" org.eventb.core.predicate="SUBPHASEORDER(EmptyCartridge) ∈ {12}"/>
+<org.eventb.core.axiom name="P" org.eventb.core.label="axm19" org.eventb.core.predicate="SUBPHASEORDER(OverviewOfTherapy) ∈ {13}"/>
+</org.eventb.core.contextFile>

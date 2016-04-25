@@ -193,4 +193,12 @@
 <org.eventb.core.scGuard name="aw" org.eventb.core.label="grd6" org.eventb.core.predicate="bloodVolume&gt;400" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt9|org.eventb.core.guard#+" org.eventb.core.theorem="false"/>
 <org.eventb.core.scParameter name="bloodVolume" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt9|org.eventb.core.parameter#)" org.eventb.core.type="ℤ"/>
 </org.eventb.core.scEvent>
+<org.eventb.core.scEvent name="m_cleanedBloodInSystf'" org.eventb.core.accurate="true" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_turnOnAlarm" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt:">
+<org.eventb.core.scRefinesEvent name="'" org.eventb.core.scTarget="/HD3/HDM1000.bcm|org.eventb.core.scMachineFile#HDM1000|org.eventb.core.scEvent#m_cleanedBloodInSystex" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt:|org.eventb.core.refinesEvent#'"/>
+<org.eventb.core.scGuard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="c_alarm≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scGuard name="au" org.eventb.core.label="grd3" org.eventb.core.predicate="as=ON" org.eventb.core.source="/HD3/HDM1000.bum|org.eventb.core.machineFile#HDM1000|org.eventb.core.event#evt2|org.eventb.core.guard#(" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAction name="at" org.eventb.core.assignment="c_alarm ≔ as" org.eventb.core.label="act1" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.action#*"/>
+<org.eventb.core.scParameter name="as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.parameter#'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.scEvent>
 </org.eventb.core.scMachineFile>
