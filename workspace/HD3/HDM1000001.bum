@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
-<org.eventb.core.refinesMachine name="'" org.eventb.core.target="HDM100000"/>
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="HDM1000000"/>
 <org.eventb.core.seesContext name="*" org.eventb.core.target="ActiveContext"/>
 <org.eventb.core.seesContext name="evt2" org.eventb.core.target="SystemPhaseCtx1"/>
 <org.eventb.core.variable name="(" org.eventb.core.identifier="c_bloodPump"/>
@@ -12,7 +12,10 @@
 <org.eventb.core.variable name="@" org.eventb.core.identifier="m_cleanedBloodInSystem"/>
 <org.eventb.core.variable name="evt3" org.eventb.core.identifier="c_systemPhase"/>
 <org.eventb.core.variable name="evtF" org.eventb.core.identifier="c_systemSubPhase"/>
-<org.eventb.core.event name="evtG" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.event name="evtG" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="m_flowThroughSAD ≔ 0" org.eventb.core.label="act10"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="c_airLimitForSAD ≔ 0" org.eventb.core.label="act11"/>
+</org.eventb.core.event>
 <org.eventb.core.event name="evtH" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toogleHeparimPump">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toogleHeparimPump"/>
 </org.eventb.core.event>
@@ -39,7 +42,6 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="evtP" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_turnOnBloodPump">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_turnOnBloodPump"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="SUBPHASEORDER(c_systemSubPhase) &lt; SUBPHASEORDER(EmptyDialyzer)"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="evtQ" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_changeSystemPhase">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_changeSystemPhase"/>
@@ -58,13 +60,50 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="evtV" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_noOrReverseBloodFlowWhileConnectingPatient">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ca_noOrReverseBloodFlowWhileConnectingPatient"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd7" org.eventb.core.predicate="c_systemSubPhase = ConnectingPatientAndStarting"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="evtW" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_fillingBloodVolumeExceedsLimit">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="ca_fillingBloodVolumeExceedsLimit"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd7" org.eventb.core.predicate="c_systemSubPhase = ConnectingPatientAndStarting"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_turnOnAlarm">
+<org.eventb.core.event name="evtZ" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_changeFlowThrougSAD">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="flow"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="flow ∈ ℕ"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="m_flowThroughSAD ≔ flow" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_flowThroughSADExceedsLimit">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_turnOnAlarm"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd5" org.eventb.core.predicate="c_systemSubPhase = RinsingDialyser ∨ c_systemPhase = Initiation ∨ c_systemSubPhase = Reinfusion"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd6" org.eventb.core.predicate="m_flowThroughSAD &gt; 1200"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="evtX" org.eventb.core.identifier="m_flowThroughSAD"/>
+<org.eventb.core.invariant name="evtY" org.eventb.core.label="inv1" org.eventb.core.predicate="m_flowThroughSAD ∈ ℕ "/>
+<org.eventb.core.event name="evt2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="c_setAirVolumeLimitLow">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="limit"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="limit ∈ ℕ"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_airLimitForSAD ≔ limit" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="m_flowThroughSAD ≥ 0 ∧ m_flowThroughSAD ≤ 200"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="limit = 20"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="c_setAirVolumeLimitMedium">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="limit"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="limit ∈ ℕ"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_airLimitForSAD ≔ limit" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="m_flowThroughSAD ≥ 201 ∧ m_flowThroughSAD ≤ 400"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="limit = 30"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="c_setAirVolumeLimitHigh">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="limit"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="limit ∈ ℕ"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_airLimitForSAD ≔ limit" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="m_flowThroughSAD &gt; 400"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="limit = 50"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="evt[" org.eventb.core.identifier="c_airLimitForSAD"/>
+<org.eventb.core.invariant name="evt\" org.eventb.core.label="inv2" org.eventb.core.predicate="c_airLimitForSAD ∈ ℕ "/>
+<org.eventb.core.event name="evt]" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_airVolumeExceedsSADLimit">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="volume"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd6" org.eventb.core.predicate="c_systemSubPhase = ConnectingPatientAndStarting ∨ c_systemPhase = Initiation ∨ c_systemSubPhase = Reinfusion"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="volume ∈ ℕ "/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd5" org.eventb.core.predicate="volume &gt; c_airLimitForSAD"/>
+<org.eventb.core.refinesEvent name="*" org.eventb.core.target="c_turnOnAlarm"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>

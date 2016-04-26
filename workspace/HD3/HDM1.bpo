@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="1">
-<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
 <org.eventb.core.poIdentifier name="OFF" org.eventb.core.type="ActiveStates"/>
 <org.eventb.core.poIdentifier name="ON" org.eventb.core.type="ActiveStates"/>
 <org.eventb.core.poPredicate name="ActiveStatet" org.eventb.core.predicate="partition(ActiveStates,{ON},{OFF})" org.eventb.core.source="/HD3/ActiveContext.buc|org.eventb.core.contextFile#ActiveContext|org.eventb.core.axiom#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/HD3/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/HD3/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="c_alarm" org.eventb.core.type="ActiveStates"/>
 <org.eventb.core.poIdentifier name="c_bloodPump" org.eventb.core.type="ActiveStates"/>
 <org.eventb.core.poIdentifier name="c_heater" org.eventb.core.type="ActiveStates"/>
@@ -61,7 +61,7 @@
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_alarm≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD3/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD3/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c_bloodPump∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#)"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_heparimPump∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#,"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c_ufPump∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#."/>

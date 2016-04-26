@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="2">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0"/>
 <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="E_bloodInSystem" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="M_patientBlood" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="inv3/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="inv3/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#HYP("/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="M_patientBlood≠0" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#."/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#."/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#HYP("/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#EVTALLHYPE_bloodInSysten"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#*"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#'"/>
@@ -19,7 +19,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#HYP(|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#EVTALLHYPE_bloodInSysten">
 <org.eventb.core.poPredicate name="'" org.eventb.core.predicate="M_patientBlood'∈ℕ1" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#'|org.eventb.core.action#("/>
 </org.eventb.core.poPredicateSet>
@@ -29,7 +29,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#HYP(|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/act2/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="INITIALISATION/act2/FIS" org.eventb.core.accurate="true" org.eventb.core.poDesc="Feasibility of action" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#EVTALLHYPE_bloodInSysten"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="ℕ1≠(∅ ⦂ ℙ(ℤ))" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#'|org.eventb.core.action#("/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#'|org.eventb.core.action#("/>
@@ -40,7 +40,7 @@
 <org.eventb.core.poIdentifier name="E_bloodInSystem'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTALLHYPE_bloodInSysten" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#EVTIDENTE_bloodInSysten" org.eventb.core.poStamp="0"/>
-<org.eventb.core.poSequent name="A_pumpIn/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="A_pumpIn/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#EVTALLHYPE_bloodInSysteo"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="E_bloodInSystem+amount∈ℕ" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#*"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#("/>
@@ -48,7 +48,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poSequent#A_pumpIn\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#HYP(|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="A_pumpIn/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="A_pumpIn/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#EVTALLHYPE_bloodInSysteo"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="M_patientBlood − amount∈ℕ1" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#-"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#("/>
@@ -56,16 +56,16 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poSequent#A_pumpIn\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#HYP(|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTE_bloodInSysteo" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="EVTIDENTE_bloodInSysteo" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="M_patientBlood'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="E_bloodInSystem'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPE_bloodInSysteo" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#EVTIDENTE_bloodInSysteo" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="EVTALLHYPE_bloodInSysteo" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#EVTIDENTE_bloodInSysteo" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#(|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="M_patientBlood&gt;amount" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#(|org.eventb.core.guard#+"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="A_pumpOut/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="A_pumpOut/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#EVTALLHYPE_bloodInSystep"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="E_bloodInSystem − amount∈ℕ" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#*"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#+"/>
@@ -73,7 +73,7 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poSequent#A_pumpOut\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#HYP(|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="A_pumpOut/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="2">
+<org.eventb.core.poSequent name="A_pumpOut/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#EVTALLHYPE_bloodInSystep"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="M_patientBlood+amount∈ℕ1" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#-"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#+"/>
@@ -81,12 +81,12 @@
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poSequent#A_pumpOut\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#HYP(|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTE_bloodInSystep" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="EVTIDENTE_bloodInSystep" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="M_patientBlood'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="E_bloodInSystem'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPE_bloodInSystep" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#EVTIDENTE_bloodInSystep" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="EVTALLHYPE_bloodInSystep" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#EVTIDENTE_bloodInSystep" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#+|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="amount≤E_bloodInSystem" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#+|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
@@ -94,7 +94,7 @@
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="E_bloodInSystem∈ℕ" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#*"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="M_patientBlood∈ℕ1" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#-"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#HYP(" org.eventb.core.poStamp="2">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD2/HDM1.bpo|org.eventb.core.poFile#HDM1|org.eventb.core.poPredicateSet#HYP(" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="M_patientBlood≠0" org.eventb.core.source="/HD2/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#."/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

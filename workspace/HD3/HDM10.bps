@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="3" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="3" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="e_bloodPumpIsOn/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="9" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="e_ufPumpIsOn/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="e_ufPumpIsOn/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="7" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="e_returnBlood/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="8" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="e_bloodPumpIsOn/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="e_ufPumpIsOn/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="e_ufPumpIsOn/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="e_returnBlood/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="0" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>

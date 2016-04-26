@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0"/>
 <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/HD2/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="E_bloodInSystem" org.eventb.core.type="ℤ"/>
@@ -18,7 +18,7 @@
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="E_bloodInSystem'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPE_bloodInSysteo" org.eventb.core.parentSet="/HD2/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTIDENTE_bloodInSysteo" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="EVTALLHYPE_bloodInSysteo" org.eventb.core.parentSet="/HD2/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTIDENTE_bloodInSysteo" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD2/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.event#.|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="M_patientBlood&gt;amount" org.eventb.core.source="/HD2/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.event#.|org.eventb.core.guard#+"/>
 </org.eventb.core.poPredicateSet>
