@@ -14,7 +14,7 @@
 <org.eventb.core.variable name="evtF" org.eventb.core.identifier="c_systemSubPhase"/>
 <org.eventb.core.event name="evtG" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
 <org.eventb.core.action name="'" org.eventb.core.assignment="m_flowThroughSAD ≔ 0" org.eventb.core.label="act10"/>
-<org.eventb.core.action name="(" org.eventb.core.assignment="c_airLimitForSAD ≔ 0" org.eventb.core.label="act11"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="c_airVolumeLimitForSAD ≔ 0" org.eventb.core.label="act11"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="evtH" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toogleHeparimPump">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toogleHeparimPump"/>
@@ -79,31 +79,31 @@
 <org.eventb.core.event name="evt2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="c_setAirVolumeLimitLow">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="limit"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="limit ∈ ℕ"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="c_airLimitForSAD ≔ limit" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_airVolumeLimitForSAD ≔ limit" org.eventb.core.label="act1"/>
 <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="m_flowThroughSAD ≥ 0 ∧ m_flowThroughSAD ≤ 200"/>
 <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="limit = 20"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="evt3" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="c_setAirVolumeLimitMedium">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="limit"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="limit ∈ ℕ"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="c_airLimitForSAD ≔ limit" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_airVolumeLimitForSAD ≔ limit" org.eventb.core.label="act1"/>
 <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="m_flowThroughSAD ≥ 201 ∧ m_flowThroughSAD ≤ 400"/>
 <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="limit = 30"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="evt4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="c_setAirVolumeLimitHigh">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="limit"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="limit ∈ ℕ"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="c_airLimitForSAD ≔ limit" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="c_airVolumeLimitForSAD ≔ limit" org.eventb.core.label="act1"/>
 <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="m_flowThroughSAD &gt; 400"/>
 <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="limit = 50"/>
 </org.eventb.core.event>
-<org.eventb.core.variable name="evt[" org.eventb.core.identifier="c_airLimitForSAD"/>
-<org.eventb.core.invariant name="evt\" org.eventb.core.label="inv2" org.eventb.core.predicate="c_airLimitForSAD ∈ ℕ "/>
+<org.eventb.core.variable name="evt[" org.eventb.core.identifier="c_airVolumeLimitForSAD"/>
+<org.eventb.core.invariant name="evt\" org.eventb.core.label="inv2" org.eventb.core.predicate="c_airVolumeLimitForSAD ∈ ℕ "/>
 <org.eventb.core.event name="evt]" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_airVolumeExceedsSADLimit">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="volume"/>
 <org.eventb.core.guard name="+" org.eventb.core.label="grd6" org.eventb.core.predicate="c_systemSubPhase = ConnectingPatientAndStarting ∨ c_systemPhase = Initiation ∨ c_systemSubPhase = Reinfusion"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="volume ∈ ℕ "/>
-<org.eventb.core.guard name=")" org.eventb.core.label="grd5" org.eventb.core.predicate="volume &gt; c_airLimitForSAD"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd5" org.eventb.core.predicate="volume &gt; c_airVolumeLimitForSAD"/>
 <org.eventb.core.refinesEvent name="*" org.eventb.core.target="c_turnOnAlarm"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>
