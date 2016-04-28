@@ -36,14 +36,6 @@
 <org.eventb.core.invariant name="?" org.eventb.core.label="inv1" org.eventb.core.predicate="m_bloodInSystem ∈ ℕ "/>
 <org.eventb.core.variable name="@" org.eventb.core.identifier="m_cleanedBloodInSystem"/>
 <org.eventb.core.invariant name="A" org.eventb.core.label="inv2" org.eventb.core.predicate="m_cleanedBloodInSystem ∈ ℕ "/>
-<org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="e_ufPumpIsOn">
-<org.eventb.core.parameter name="'" org.eventb.core.identifier="amount"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="c_ufPump = ON"/>
-<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="amount ∈ ℕ1 "/>
-<org.eventb.core.action name="*" org.eventb.core.assignment="m_cleanedBloodInSystem ≔ m_cleanedBloodInSystem + amount" org.eventb.core.label="act1"/>
-<org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="amount &lt; m_bloodInSystem"/>
-<org.eventb.core.action name="," org.eventb.core.assignment="m_bloodInSystem ≔ m_bloodInSystem − amount" org.eventb.core.label="act2"/>
-</org.eventb.core.event>
 <org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="e_returnBlood">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="amount"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="amount ∈ ℕ1 "/>

@@ -31,9 +31,6 @@
 <org.eventb.core.event name="evtL" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="e_bloodPumpIsOn">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="e_bloodPumpIsOn"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="evtM" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="e_ufPumpIsOn">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="e_ufPumpIsOn"/>
-</org.eventb.core.event>
 <org.eventb.core.event name="evtN" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="e_returnBlood">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="e_returnBlood"/>
 </org.eventb.core.event>

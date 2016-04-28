@@ -28,9 +28,6 @@
 <org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="e_bloodPumpIsOn">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="e_bloodPumpIsOn"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="e_ufPumpIsOn">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="e_ufPumpIsOn"/>
-</org.eventb.core.event>
 <org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="e_returnBlood">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="e_returnBlood"/>
 </org.eventb.core.event>
