@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="HDM1000001"/>
+<org.eventb.core.seesContext name="*" org.eventb.core.target="ActiveContext"/>
+<org.eventb.core.seesContext name="evt2" org.eventb.core.target="SystemPhaseCtx1"/>
+<org.eventb.core.variable name="(" org.eventb.core.identifier="c_bloodPump"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="c_heparimPump"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="c_ufPump"/>
+<org.eventb.core.variable name="/" org.eventb.core.identifier="c_heater"/>
+<org.eventb.core.variable name="5" org.eventb.core.identifier="c_alarm"/>
+<org.eventb.core.variable name="&gt;" org.eventb.core.identifier="m_bloodPumpAmount"/>
+<org.eventb.core.variable name="evt3" org.eventb.core.identifier="c_systemPhase"/>
+<org.eventb.core.variable name="evtF" org.eventb.core.identifier="c_systemSubPhase"/>
+<org.eventb.core.variable name="evtX" org.eventb.core.identifier="m_flowThroughSAD"/>
+<org.eventb.core.variable name="evt[" org.eventb.core.identifier="c_airVolumeLimitForSAD"/>
+<org.eventb.core.event name="evt\" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="m_balanceChamberLeft ≔ 0" org.eventb.core.label="act11"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="m_balanceChamberRight ≔ 0" org.eventb.core.label="act12"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt]" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toogleHeparimPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toogleHeparimPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt^" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleUfPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleUfPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt_" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleHeater">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleHeater"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt`" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toggleAlarm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toggleAlarm"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evta" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="e_bloodPumpIsOn">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="e_bloodPumpIsOn"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtb" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_turnOffBloodPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_turnOffBloodPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtc" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_turnOnBloodPump">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_turnOnBloodPump"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtd" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_changeSystemPhase">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_changeSystemPhase"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evte" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_actual2SetBloodFlowRatio">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ca_actual2SetBloodFlowRatio"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtf" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_bloodFlowRotation">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ca_bloodFlowRotation"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtg" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_venousPressureOutOfSafeRange">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ca_venousPressureOutOfSafeRange"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evth" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_arterialPressureOutOfSafeRange">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ca_arterialPressureOutOfSafeRange"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evti" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_noOrReverseBloodFlowWhileConnectingPatient">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ca_noOrReverseBloodFlowWhileConnectingPatient"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtj" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_fillingBloodVolumeExceedsLimit">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ca_fillingBloodVolumeExceedsLimit"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtk" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="m_changeFlowThrougSAD">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="m_changeFlowThrougSAD"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtl" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_flowThroughSADExceedsLimit">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ca_flowThroughSADExceedsLimit"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtm" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_setAirVolumeLimitLow">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_setAirVolumeLimitLow"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtn" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_setAirVolumeLimitMedium">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_setAirVolumeLimitMedium"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evto" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_setAirVolumeLimitHigh">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_setAirVolumeLimitHigh"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtp" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="ca_airVolumeExceedsSADLimit">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="ca_airVolumeExceedsSADLimit"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="evtq" org.eventb.core.identifier="m_balanceChamberLeft"/>
+<org.eventb.core.invariant name="evtr" org.eventb.core.label="inv1" org.eventb.core.predicate="m_balanceChamberLeft ∈ ℕ "/>
+<org.eventb.core.variable name="evts" org.eventb.core.identifier="m_balanceChamberRight"/>
+<org.eventb.core.invariant name="evtt" org.eventb.core.label="inv2" org.eventb.core.predicate="m_balanceChamberRight ∈ ℕ "/>
+<org.eventb.core.event name="evtw" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_pumpInLeftBChamber">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="amount"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="amount ∈ ℕ1 "/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="m_balanceChamberLeft ≔ m_balanceChamberLeft + amount" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtx" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_pumpOutLeftBChamber">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="amount"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="amount ≤ m_balanceChamberLeft"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="m_balanceChamberLeft ≔ m_balanceChamberLeft − amount" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="amount ∈ ℕ"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evty" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_pumpInRightBChamber">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="amount"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="amount ∈ ℕ1 "/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="m_balanceChamberRight ≔ m_balanceChamberRight + amount" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtz" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_pumpOutRightWasteBChamber">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="amount"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="amount ≤ m_balanceChamberRight"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="m_balanceChamberRight ≔ m_balanceChamberRight − amount" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="amount ∈ ℕ "/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt{" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_balanceToRight">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="diff"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="m_balanceChamberLeft &gt; m_balanceChamberRight"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="diff = (m_balanceChamberLeft − m_balanceChamberRight) ÷ 2"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="m_balanceChamberLeft ≔ m_balanceChamberLeft − diff" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="m_balanceChamberRight ≔ m_balanceChamberRight + diff" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="m_balanceChamberLeft − diff ∈ ℕ "/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="m_balanceChamberRight + diff ∈ ℕ "/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_balanceToLeft">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="diff"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="m_balanceChamberRight &gt; m_balanceChamberLeft"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="diff = (m_balanceChamberRight − m_balanceChamberLeft) ÷ 2"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="m_balanceChamberRight ≔ m_balanceChamberRight − diff" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="m_balanceChamberLeft ≔ m_balanceChamberLeft + diff" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="m_balanceChamberLeft + diff ∈ ℕ "/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="m_balanceChamberRight − diff ∈ ℕ "/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

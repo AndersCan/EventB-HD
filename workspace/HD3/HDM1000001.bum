@@ -8,13 +8,12 @@
 <org.eventb.core.variable name="-" org.eventb.core.identifier="c_ufPump"/>
 <org.eventb.core.variable name="/" org.eventb.core.identifier="c_heater"/>
 <org.eventb.core.variable name="5" org.eventb.core.identifier="c_alarm"/>
-<org.eventb.core.variable name="&gt;" org.eventb.core.identifier="m_bloodInSystem"/>
-<org.eventb.core.variable name="@" org.eventb.core.identifier="m_cleanedBloodInSystem"/>
+<org.eventb.core.variable name="&gt;" org.eventb.core.identifier="m_bloodPumpAmount"/>
 <org.eventb.core.variable name="evt3" org.eventb.core.identifier="c_systemPhase"/>
 <org.eventb.core.variable name="evtF" org.eventb.core.identifier="c_systemSubPhase"/>
 <org.eventb.core.event name="evtG" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
-<org.eventb.core.action name="'" org.eventb.core.assignment="m_flowThroughSAD ≔ 0" org.eventb.core.label="act10"/>
-<org.eventb.core.action name="(" org.eventb.core.assignment="c_airVolumeLimitForSAD ≔ 0" org.eventb.core.label="act11"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="m_flowThroughSAD ≔ 0" org.eventb.core.label="act9"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="c_airVolumeLimitForSAD ≔ 0" org.eventb.core.label="act10"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="evtH" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toogleHeparimPump">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toogleHeparimPump"/>
@@ -30,9 +29,6 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="evtL" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="e_bloodPumpIsOn">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="e_bloodPumpIsOn"/>
-</org.eventb.core.event>
-<org.eventb.core.event name="evtN" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="e_returnBlood">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="e_returnBlood"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="evtO" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_turnOffBloodPump">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_turnOffBloodPump"/>

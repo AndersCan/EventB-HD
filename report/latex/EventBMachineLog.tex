@@ -46,9 +46,13 @@ BloodPump and requirements regarding the System state has been added.
 HD10000001
 Added SAD events. Air volume limit, flow through the SAD. 
 
-HD10000002
-Can't figure out how the balance chamber, dialyser and UFPUmp work. 
 
+Refactored all the machines to remove UFPump and blood pump variables. BP in now abstracted. 
+
+HD10000002
+UFPump causes DF to flow and create pressure that removes toxins and water from the blood. Waste bucket contents - Used DF = water extracted.
+
+Main problem: I do not know how the dialysis machine truly works. Why they use certain components
 
 
 

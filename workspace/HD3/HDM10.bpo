@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poFile org.eventb.core.poStamp="8">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
 <org.eventb.core.poIdentifier name="OFF" org.eventb.core.type="ActiveStates"/>
 <org.eventb.core.poIdentifier name="ON" org.eventb.core.type="ActiveStates"/>
 <org.eventb.core.poPredicate name="ActiveStatet" org.eventb.core.predicate="partition(ActiveStates,{ON},{OFF})" org.eventb.core.source="/HD3/ActiveContext.buc|org.eventb.core.contextFile#ActiveContext|org.eventb.core.axiom#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="6">
 <org.eventb.core.poIdentifier name="c_alarm" org.eventb.core.type="ActiveStates"/>
 <org.eventb.core.poIdentifier name="c_bloodPump" org.eventb.core.type="ActiveStates"/>
 <org.eventb.core.poIdentifier name="c_heater" org.eventb.core.type="ActiveStates"/>
 <org.eventb.core.poIdentifier name="c_heparimPump" org.eventb.core.type="ActiveStates"/>
 <org.eventb.core.poIdentifier name="c_ufPump" org.eventb.core.type="ActiveStates"/>
-<org.eventb.core.poIdentifier name="m_bloodInSystem" org.eventb.core.type="ℤ"/>
-<org.eventb.core.poIdentifier name="m_cleanedBloodInSystem" org.eventb.core.type="ℤ"/>
-<org.eventb.core.poPredicate name="m_cleanedBloodInSysten" org.eventb.core.predicate="c_bloodPump∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#)"/>
-<org.eventb.core.poPredicate name="m_cleanedBloodInSysteo" org.eventb.core.predicate="c_heparimPump∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#,"/>
-<org.eventb.core.poPredicate name="m_cleanedBloodInSystep" org.eventb.core.predicate="c_ufPump∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#."/>
-<org.eventb.core.poPredicate name="m_cleanedBloodInSysteq" org.eventb.core.predicate="c_heater∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#0"/>
-<org.eventb.core.poPredicate name="m_cleanedBloodInSyster" org.eventb.core.predicate="c_alarm∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#6"/>
+<org.eventb.core.poIdentifier name="m_bloodPumpAmount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="m_bloodPumpAmounu" org.eventb.core.predicate="c_bloodPump∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#)"/>
+<org.eventb.core.poPredicate name="m_bloodPumpAmounv" org.eventb.core.predicate="c_heparimPump∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="m_bloodPumpAmounw" org.eventb.core.predicate="c_ufPump∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="m_bloodPumpAmounx" org.eventb.core.predicate="c_heater∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="m_bloodPumpAmouny" org.eventb.core.predicate="c_alarm∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#6"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTALLHYPm_cleanedBloodInSysten"/>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="7">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTALLHYPm_bloodPumpAmounu"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.invariant#?"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#'"/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.event#6"/>
@@ -29,99 +28,72 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTALLHYPm_cleanedBloodInSysten"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.invariant#A"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#'"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.event#6"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.invariant#A"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTm_cleanedBloodInSysten" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poIdentifier name="m_bloodInSystem'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTm_bloodPumpAmounu" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="m_bloodPumpAmount'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="c_ufPump'" org.eventb.core.type="ActiveStates"/>
-<org.eventb.core.poIdentifier name="m_cleanedBloodInSystem'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="c_heater'" org.eventb.core.type="ActiveStates"/>
 <org.eventb.core.poIdentifier name="c_heparimPump'" org.eventb.core.type="ActiveStates"/>
 <org.eventb.core.poIdentifier name="c_bloodPump'" org.eventb.core.type="ActiveStates"/>
 <org.eventb.core.poIdentifier name="c_alarm'" org.eventb.core.type="ActiveStates"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPm_cleanedBloodInSysten" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTIDENTm_cleanedBloodInSysten" org.eventb.core.poStamp="0"/>
-<org.eventb.core.poPredicateSet name="EVTIDENTm_cleanedBloodInSysteo" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTALLHYPm_bloodPumpAmounu" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTIDENTm_bloodPumpAmounu" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTm_bloodPumpAmounv" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
 <org.eventb.core.poIdentifier name="c_bloodPump'" org.eventb.core.type="ActiveStates"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPm_cleanedBloodInSysteo" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTIDENTm_cleanedBloodInSysteo" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTALLHYPm_bloodPumpAmounv" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTIDENTm_bloodPumpAmounv" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#1|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_bloodPump≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#1|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTm_cleanedBloodInSystep" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTIDENTm_bloodPumpAmounw" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
 <org.eventb.core.poIdentifier name="c_heparimPump'" org.eventb.core.type="ActiveStates"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPm_cleanedBloodInSystep" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTIDENTm_cleanedBloodInSystep" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTALLHYPm_bloodPumpAmounw" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTIDENTm_bloodPumpAmounw" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#2|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_heparimPump≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#2|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTm_cleanedBloodInSysteq" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTIDENTm_bloodPumpAmounx" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
 <org.eventb.core.poIdentifier name="c_ufPump'" org.eventb.core.type="ActiveStates"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPm_cleanedBloodInSysteq" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTIDENTm_cleanedBloodInSysteq" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTALLHYPm_bloodPumpAmounx" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTIDENTm_bloodPumpAmounx" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#3|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_ufPump≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#3|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTm_cleanedBloodInSyster" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTIDENTm_bloodPumpAmouny" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
 <org.eventb.core.poIdentifier name="c_heater'" org.eventb.core.type="ActiveStates"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPm_cleanedBloodInSyster" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTIDENTm_cleanedBloodInSyster" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTALLHYPm_bloodPumpAmouny" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTIDENTm_bloodPumpAmouny" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#4|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_heater≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#4|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTm_cleanedBloodInSystes" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTIDENTm_bloodPumpAmounz" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
 <org.eventb.core.poIdentifier name="c_alarm'" org.eventb.core.type="ActiveStates"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPm_cleanedBloodInSystes" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTIDENTm_cleanedBloodInSystes" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTALLHYPm_bloodPumpAmounz" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTIDENTm_bloodPumpAmounz" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_alarm≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="e_bloodPumpIsOn/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTALLHYPm_cleanedBloodInSystet"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="m_bloodInSystem+amount∈ℕ" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.invariant#?"/>
+<org.eventb.core.poSequent name="e_bloodPumpIsOn/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTALLHYPm_bloodPumpAmoun{"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="m_bloodPumpAmount+amount∈ℕ" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.invariant#?"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.event#="/>
 <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.invariant#?"/>
 <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poSequent#e_bloodPumpIsOn\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTm_cleanedBloodInSystet" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poIdentifier name="m_bloodInSystem'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTm_bloodPumpAmoun{" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="m_bloodPumpAmount'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPm_cleanedBloodInSystet" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTIDENTm_cleanedBloodInSystet" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTALLHYPm_bloodPumpAmoun{" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTIDENTm_bloodPumpAmoun{" org.eventb.core.poStamp="8">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c_bloodPump=ON" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.event#=|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.event#=|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="e_returnBlood/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTALLHYPm_cleanedBloodInSysteu"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="m_cleanedBloodInSystem − amount∈ℕ" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.invariant#A"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.event#C"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.invariant#A"/>
-<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poSequent#e_returnBlood\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTm_cleanedBloodInSysteu" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
-<org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
-<org.eventb.core.poIdentifier name="m_cleanedBloodInSystem'" org.eventb.core.type="ℤ"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPm_cleanedBloodInSysteu" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#EVTIDENTm_cleanedBloodInSysteu" org.eventb.core.poStamp="1">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.event#C|org.eventb.core.guard#("/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="amount&lt;m_cleanedBloodInSystem" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.event#C|org.eventb.core.guard#)"/>
-</org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="m_bloodInSystem∈ℕ" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.invariant#?"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="m_cleanedBloodInSystem∈ℕ" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.invariant#A"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD3/HDM10.bpo|org.eventb.core.poFile#HDM10|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="6">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="m_bloodPumpAmount∈ℕ" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.invariant#?"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

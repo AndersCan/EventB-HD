@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="ActiveStates" org.eventb.core.type="ℙ(ActiveStates)"/>
+<org.eventb.core.poIdentifier name="OFF" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="ON" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poPredicate name="ActiveStatet" org.eventb.core.predicate="partition(ActiveStates,{ON},{OFF})" org.eventb.core.source="/HD3/ActiveContext.buc|org.eventb.core.contextFile#ActiveContext|org.eventb.core.axiom#*"/>
+<org.eventb.core.poIdentifier name="SystemPhases" org.eventb.core.type="ℙ(SystemPhases)"/>
+<org.eventb.core.poIdentifier name="Ending" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.poIdentifier name="Initiation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.poIdentifier name="Preperation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.poPredicate name="SystemPhaset" org.eventb.core.predicate="partition(SystemPhases,{Preperation},{Initiation},{Ending})" org.eventb.core.source="/HD3/SystemPhaseCtx.buc|org.eventb.core.contextFile#SystemPhaseCtx|org.eventb.core.axiom#+"/>
+<org.eventb.core.poIdentifier name="SystemSubPhases" org.eventb.core.type="ℙ(SystemSubPhases)"/>
+<org.eventb.core.poIdentifier name="AutoSelfTest" org.eventb.core.type="SystemSubPhases"/>
+<org.eventb.core.poIdentifier name="ConnectingConcetrate" org.eventb.core.type="SystemSubPhases"/>
+<org.eventb.core.poIdentifier name="ConnectingPatientAndStarting" org.eventb.core.type="SystemSubPhases"/>
+<org.eventb.core.poIdentifier name="DuringTherapy" org.eventb.core.type="SystemSubPhases"/>
+<org.eventb.core.poIdentifier name="EmptyCartridge" org.eventb.core.type="SystemSubPhases"/>
+<org.eventb.core.poIdentifier name="EmptyDialyzer" org.eventb.core.type="SystemSubPhases"/>
+<org.eventb.core.poIdentifier name="IrtTubingSystem" org.eventb.core.type="SystemSubPhases"/>
+<org.eventb.core.poIdentifier name="OverviewOfTherapy" org.eventb.core.type="SystemSubPhases"/>
+<org.eventb.core.poIdentifier name="PrepHeparinPump" org.eventb.core.type="SystemSubPhases"/>
+<org.eventb.core.poIdentifier name="Reinfusion" org.eventb.core.type="SystemSubPhases"/>
+<org.eventb.core.poIdentifier name="RinsingDialyser" org.eventb.core.type="SystemSubPhases"/>
+<org.eventb.core.poIdentifier name="SUBPHASE" org.eventb.core.type="ℙ(SystemPhases×ℙ(SystemSubPhases))"/>
+<org.eventb.core.poIdentifier name="SUBPHASEORDER" org.eventb.core.type="ℙ(SystemSubPhases×ℤ)"/>
+<org.eventb.core.poIdentifier name="SettingRinsingParameters" org.eventb.core.type="SystemSubPhases"/>
+<org.eventb.core.poIdentifier name="SettingTreatmentParameters" org.eventb.core.type="SystemSubPhases"/>
+<org.eventb.core.poPredicate name="ConnectingPatientAndStartinh" org.eventb.core.predicate="partition(SystemSubPhases,{AutoSelfTest},{ConnectingConcetrate},{SettingRinsingParameters},{IrtTubingSystem},{PrepHeparinPump},{SettingTreatmentParameters},{RinsingDialyser},{ConnectingPatientAndStarting},{DuringTherapy},{Reinfusion},{EmptyDialyzer},{EmptyCartridge},{OverviewOfTherapy})" org.eventb.core.source="/HD3/SystemPhaseCtx1.buc|org.eventb.core.contextFile#SystemPhaseCtx1|org.eventb.core.axiom#A"/>
+<org.eventb.core.poPredicate name="ConnectingPatientAndStartini" org.eventb.core.predicate="SUBPHASE∈SystemPhases → ℙ(SystemSubPhases)" org.eventb.core.source="/HD3/SystemPhaseCtx1.buc|org.eventb.core.contextFile#SystemPhaseCtx1|org.eventb.core.axiom#("/>
+<org.eventb.core.poPredicate name="ConnectingPatientAndStartinj" org.eventb.core.predicate="SUBPHASE(Preperation)={AutoSelfTest,ConnectingConcetrate,SettingRinsingParameters,IrtTubingSystem,PrepHeparinPump,SettingTreatmentParameters,RinsingDialyser}" org.eventb.core.source="/HD3/SystemPhaseCtx1.buc|org.eventb.core.contextFile#SystemPhaseCtx1|org.eventb.core.axiom#1"/>
+<org.eventb.core.poPredicate name="ConnectingPatientAndStartink" org.eventb.core.predicate="SUBPHASE(Initiation)={ConnectingPatientAndStarting,DuringTherapy}" org.eventb.core.source="/HD3/SystemPhaseCtx1.buc|org.eventb.core.contextFile#SystemPhaseCtx1|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="ConnectingPatientAndStartinl" org.eventb.core.predicate="SUBPHASE(Ending)={Reinfusion,EmptyDialyzer,EmptyCartridge,OverviewOfTherapy}" org.eventb.core.source="/HD3/SystemPhaseCtx1.buc|org.eventb.core.contextFile#SystemPhaseCtx1|org.eventb.core.axiom#0"/>
+<org.eventb.core.poPredicate name="ConnectingPatientAndStartinm" org.eventb.core.predicate="SUBPHASEORDER∈SystemSubPhases → ℕ1" org.eventb.core.source="/HD3/SystemPhaseCtx1.buc|org.eventb.core.contextFile#SystemPhaseCtx1|org.eventb.core.axiom#C"/>
+<org.eventb.core.poPredicate name="ConnectingPatientAndStartinn" org.eventb.core.predicate="SUBPHASEORDER(AutoSelfTest)∈{1}" org.eventb.core.source="/HD3/SystemPhaseCtx1.buc|org.eventb.core.contextFile#SystemPhaseCtx1|org.eventb.core.axiom#D"/>
+<org.eventb.core.poPredicate name="ConnectingPatientAndStartino" org.eventb.core.predicate="SUBPHASEORDER(ConnectingConcetrate)∈{2}" org.eventb.core.source="/HD3/SystemPhaseCtx1.buc|org.eventb.core.contextFile#SystemPhaseCtx1|org.eventb.core.axiom#E"/>
+<org.eventb.core.poPredicate name="ConnectingPatientAndStartinp" org.eventb.core.predicate="SUBPHASEORDER(SettingRinsingParameters)∈{3}" org.eventb.core.source="/HD3/SystemPhaseCtx1.buc|org.eventb.core.contextFile#SystemPhaseCtx1|org.eventb.core.axiom#F"/>
+<org.eventb.core.poPredicate name="ConnectingPatientAndStartinq" org.eventb.core.predicate="SUBPHASEORDER(IrtTubingSystem)∈{4}" org.eventb.core.source="/HD3/SystemPhaseCtx1.buc|org.eventb.core.contextFile#SystemPhaseCtx1|org.eventb.core.axiom#G"/>
+<org.eventb.core.poPredicate name="ConnectingPatientAndStartinr" org.eventb.core.predicate="SUBPHASEORDER(PrepHeparinPump)∈{5}" org.eventb.core.source="/HD3/SystemPhaseCtx1.buc|org.eventb.core.contextFile#SystemPhaseCtx1|org.eventb.core.axiom#H"/>
+<org.eventb.core.poPredicate name="ConnectingPatientAndStartins" org.eventb.core.predicate="SUBPHASEORDER(SettingTreatmentParameters)∈{6}" org.eventb.core.source="/HD3/SystemPhaseCtx1.buc|org.eventb.core.contextFile#SystemPhaseCtx1|org.eventb.core.axiom#I"/>
+<org.eventb.core.poPredicate name="ConnectingPatientAndStartint" org.eventb.core.predicate="SUBPHASEORDER(RinsingDialyser)∈{7}" org.eventb.core.source="/HD3/SystemPhaseCtx1.buc|org.eventb.core.contextFile#SystemPhaseCtx1|org.eventb.core.axiom#J"/>
+<org.eventb.core.poPredicate name="ConnectingPatientAndStartinu" org.eventb.core.predicate="SUBPHASEORDER(ConnectingPatientAndStarting)∈{8}" org.eventb.core.source="/HD3/SystemPhaseCtx1.buc|org.eventb.core.contextFile#SystemPhaseCtx1|org.eventb.core.axiom#K"/>
+<org.eventb.core.poPredicate name="ConnectingPatientAndStartinv" org.eventb.core.predicate="SUBPHASEORDER(DuringTherapy)∈{9}" org.eventb.core.source="/HD3/SystemPhaseCtx1.buc|org.eventb.core.contextFile#SystemPhaseCtx1|org.eventb.core.axiom#L"/>
+<org.eventb.core.poPredicate name="ConnectingPatientAndStartinw" org.eventb.core.predicate="SUBPHASEORDER(Reinfusion)∈{10}" org.eventb.core.source="/HD3/SystemPhaseCtx1.buc|org.eventb.core.contextFile#SystemPhaseCtx1|org.eventb.core.axiom#M"/>
+<org.eventb.core.poPredicate name="ConnectingPatientAndStartinx" org.eventb.core.predicate="SUBPHASEORDER(EmptyDialyzer)∈{11}" org.eventb.core.source="/HD3/SystemPhaseCtx1.buc|org.eventb.core.contextFile#SystemPhaseCtx1|org.eventb.core.axiom#N"/>
+<org.eventb.core.poPredicate name="ConnectingPatientAndStartiny" org.eventb.core.predicate="SUBPHASEORDER(EmptyCartridge)∈{12}" org.eventb.core.source="/HD3/SystemPhaseCtx1.buc|org.eventb.core.contextFile#SystemPhaseCtx1|org.eventb.core.axiom#O"/>
+<org.eventb.core.poPredicate name="ConnectingPatientAndStartinz" org.eventb.core.predicate="SUBPHASEORDER(OverviewOfTherapy)∈{13}" org.eventb.core.source="/HD3/SystemPhaseCtx1.buc|org.eventb.core.contextFile#SystemPhaseCtx1|org.eventb.core.axiom#P"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="c_airVolumeLimitForSAD" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_alarm" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_bloodPump" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_heater" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_heparimPump" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_systemPhase" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.poIdentifier name="c_systemSubPhase" org.eventb.core.type="SystemSubPhases"/>
+<org.eventb.core.poIdentifier name="c_ufPump" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="m_balanceChamberLeft" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="m_balanceChamberRight" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="m_bloodPumpAmount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="m_flowThroughSAD" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="c_airVolumeLimitForSAE" org.eventb.core.predicate="c_bloodPump∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#)"/>
+<org.eventb.core.poPredicate name="c_airVolumeLimitForSAF" org.eventb.core.predicate="c_heparimPump∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="c_airVolumeLimitForSAG" org.eventb.core.predicate="c_ufPump∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="c_airVolumeLimitForSAH" org.eventb.core.predicate="c_heater∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="c_airVolumeLimitForSAI" org.eventb.core.predicate="c_alarm∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.invariant#6"/>
+<org.eventb.core.poPredicate name="c_airVolumeLimitForSAJ" org.eventb.core.predicate="m_bloodPumpAmount∈ℕ" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.invariant#?"/>
+<org.eventb.core.poPredicate name="c_airVolumeLimitForSAK" org.eventb.core.predicate="c_systemPhase∈SystemPhases" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.invariant#evt4"/>
+<org.eventb.core.poPredicate name="c_airVolumeLimitForSAL" org.eventb.core.predicate="c_systemSubPhase∈SystemSubPhases" org.eventb.core.source="/HD3/HDM100000.bum|org.eventb.core.machineFile#HDM100000|org.eventb.core.invariant#evtG"/>
+<org.eventb.core.poPredicate name="c_airVolumeLimitForSAM" org.eventb.core.predicate="m_flowThroughSAD∈ℕ" org.eventb.core.source="/HD3/HDM1000001.bum|org.eventb.core.machineFile#HDM1000001|org.eventb.core.invariant#evtY"/>
+<org.eventb.core.poPredicate name="c_airVolumeLimitForSAN" org.eventb.core.predicate="c_airVolumeLimitForSAD∈ℕ" org.eventb.core.source="/HD3/HDM1000001.bum|org.eventb.core.machineFile#HDM1000001|org.eventb.core.invariant#evt\\"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTALLHYPc_airVolumeLimitForSAE"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtr"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD3/HDM1000001.bum|org.eventb.core.machineFile#HDM1000001|org.eventb.core.event#evtG"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evt\\"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtr"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTALLHYPc_airVolumeLimitForSAE"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtt"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD3/HDM1000001.bum|org.eventb.core.machineFile#HDM1000001|org.eventb.core.event#evtG"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evt\\"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtt"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAE" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="m_bloodPumpAmount'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_ufPump'" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_heater'" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="m_flowThroughSAD'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="m_balanceChamberLeft'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_systemPhase'" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.poIdentifier name="c_airVolumeLimitForSAD'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_heparimPump'" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_systemSubPhase'" org.eventb.core.type="SystemSubPhases"/>
+<org.eventb.core.poIdentifier name="m_balanceChamberRight'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_bloodPump'" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_alarm'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAE" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAE" org.eventb.core.poStamp="11"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAF" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_heparimPump'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAF" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAF" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#2|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_heparimPump≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#2|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAG" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_ufPump'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAG" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAG" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#3|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_ufPump≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#3|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAH" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_heater'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAH" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAH" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#4|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_heater≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#4|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAI" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_alarm'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAI" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAI" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_alarm≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAJ" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="m_bloodPumpAmount'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAJ" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAJ" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="c_bloodPump=ON" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.event#=|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD3/HDM10.bum|org.eventb.core.machineFile#HDM10|org.eventb.core.event#=|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAK" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_bloodPump'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAK" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAK" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#1|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_bloodPump≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#1|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="as=OFF" org.eventb.core.source="/HD3/HDM100.bum|org.eventb.core.machineFile#HDM100|org.eventb.core.event#J|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAL" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_bloodPump'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAL" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAL" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#1|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_bloodPump≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#1|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="c_alarm=OFF" org.eventb.core.source="/HD3/HDM1000.bum|org.eventb.core.machineFile#HDM1000|org.eventb.core.event#evt1|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="as=ON" org.eventb.core.source="/HD3/HDM1000.bum|org.eventb.core.machineFile#HDM1000|org.eventb.core.event#evt1|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="SUBPHASEORDER(c_systemSubPhase)&lt;SUBPHASEORDER(EmptyDialyzer)" org.eventb.core.source="/HD3/HDM1000000.bum|org.eventb.core.machineFile#HDM1000000|org.eventb.core.event#evtP|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAM" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="phase" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.poIdentifier name="c_systemPhase'" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.poIdentifier name="subphase" org.eventb.core.type="SystemSubPhases"/>
+<org.eventb.core.poIdentifier name="c_systemSubPhase'" org.eventb.core.type="SystemSubPhases"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAM" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAM" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="phase∈SystemPhases" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt5|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="subphase∈SystemSubPhases" org.eventb.core.source="/HD3/HDM100000.bum|org.eventb.core.machineFile#HDM100000|org.eventb.core.event#evt?|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="subphase∈SUBPHASE(phase)" org.eventb.core.source="/HD3/HDM100000.bum|org.eventb.core.machineFile#HDM100000|org.eventb.core.event#evt?|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="SUBPHASEORDER(c_systemSubPhase)+1=SUBPHASEORDER(subphase)" org.eventb.core.source="/HD3/HDM100000.bum|org.eventb.core.machineFile#HDM100000|org.eventb.core.event#evt?|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAN" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="setBloodFlow" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="actualBloodFlow" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_alarm'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAN" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAN" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_alarm≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="as=ON" org.eventb.core.source="/HD3/HDM1000.bum|org.eventb.core.machineFile#HDM1000|org.eventb.core.event#evt2|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="c_systemPhase=Initiation" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt1|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="actualBloodFlow∈ℕ∧setBloodFlow∈ℕ1" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt1|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="actualBloodFlow ÷ setBloodFlow&lt;70" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt1|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAO" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="bloodFlowRotation" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_alarm'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAO" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAO" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_alarm≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="as=ON" org.eventb.core.source="/HD3/HDM1000.bum|org.eventb.core.machineFile#HDM1000|org.eventb.core.event#evt2|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="bloodFlowRotation∈{−1,0,1}" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt2|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="bloodFlowRotation=−1" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt2|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAP" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="maxPressure" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="minPressure" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="actualPressure" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_alarm'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAP" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAP" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_alarm≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="as=ON" org.eventb.core.source="/HD3/HDM1000.bum|org.eventb.core.machineFile#HDM1000|org.eventb.core.event#evt2|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="c_systemPhase=Initiation" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt6|org.eventb.core.guard#\/"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="minPressure∈ℕ1∧maxPressure∈ℕ1∧minPressure&lt;maxPressure" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt6|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="actualPressure∈ℕ" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt6|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="actualPressure&lt;minPressure∨actualPressure&gt;maxPressure" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt6|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAQ" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="maxPressure" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="minPressure" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="actualPressure" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_alarm'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAQ" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAQ" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_alarm≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="as=ON" org.eventb.core.source="/HD3/HDM1000.bum|org.eventb.core.machineFile#HDM1000|org.eventb.core.event#evt2|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="c_systemPhase=Initiation" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt7|org.eventb.core.guard#\/"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="minPressure∈ℕ1∧maxPressure∈ℕ1∧minPressure&lt;maxPressure" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt7|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="actualPressure∈ℕ" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt7|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="actualPressure&lt;minPressure∨actualPressure&gt;maxPressure" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt7|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAR" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="bloodFlowRotation" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_alarm'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAR" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAR" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_alarm≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="as=ON" org.eventb.core.source="/HD3/HDM1000.bum|org.eventb.core.machineFile#HDM1000|org.eventb.core.event#evt2|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="c_systemPhase=Initiation" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt8|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="bloodFlowRotation∈{−1,0,1}" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt8|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="bloodFlowRotation=−1∨bloodFlowRotation=0" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt8|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="c_systemSubPhase=ConnectingPatientAndStarting" org.eventb.core.source="/HD3/HDM1000000.bum|org.eventb.core.machineFile#HDM1000000|org.eventb.core.event#evtV|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAS" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="bloodVolume" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_alarm'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAS" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAS" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_alarm≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="as=ON" org.eventb.core.source="/HD3/HDM1000.bum|org.eventb.core.machineFile#HDM1000|org.eventb.core.event#evt2|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="bloodVolume∈ℕ" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt9|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="bloodVolume&gt;400" org.eventb.core.source="/HD3/HDM10000.bum|org.eventb.core.machineFile#HDM10000|org.eventb.core.event#evt9|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="c_systemSubPhase=ConnectingPatientAndStarting" org.eventb.core.source="/HD3/HDM1000000.bum|org.eventb.core.machineFile#HDM1000000|org.eventb.core.event#evtW|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAT" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="m_flowThroughSAD'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="flow" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAT" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAT" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="flow∈ℕ" org.eventb.core.source="/HD3/HDM1000001.bum|org.eventb.core.machineFile#HDM1000001|org.eventb.core.event#evtZ|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAU" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="c_alarm'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAU" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAU" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_alarm≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="as=ON" org.eventb.core.source="/HD3/HDM1000.bum|org.eventb.core.machineFile#HDM1000|org.eventb.core.event#evt2|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="c_systemSubPhase=RinsingDialyser∨c_systemPhase=Initiation∨c_systemSubPhase=Reinfusion" org.eventb.core.source="/HD3/HDM1000001.bum|org.eventb.core.machineFile#HDM1000001|org.eventb.core.event#evt1|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="m_flowThroughSAD&gt;1200" org.eventb.core.source="/HD3/HDM1000001.bum|org.eventb.core.machineFile#HDM1000001|org.eventb.core.event#evt1|org.eventb.core.guard#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAV" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="limit" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_airVolumeLimitForSAD'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAV" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAV" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="limit∈ℕ" org.eventb.core.source="/HD3/HDM1000001.bum|org.eventb.core.machineFile#HDM1000001|org.eventb.core.event#evt2|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="m_flowThroughSAD≥0∧m_flowThroughSAD≤200" org.eventb.core.source="/HD3/HDM1000001.bum|org.eventb.core.machineFile#HDM1000001|org.eventb.core.event#evt2|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="limit=20" org.eventb.core.source="/HD3/HDM1000001.bum|org.eventb.core.machineFile#HDM1000001|org.eventb.core.event#evt2|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAW" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="limit" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_airVolumeLimitForSAD'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAW" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAW" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="limit∈ℕ" org.eventb.core.source="/HD3/HDM1000001.bum|org.eventb.core.machineFile#HDM1000001|org.eventb.core.event#evt3|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="m_flowThroughSAD≥201∧m_flowThroughSAD≤400" org.eventb.core.source="/HD3/HDM1000001.bum|org.eventb.core.machineFile#HDM1000001|org.eventb.core.event#evt3|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="limit=30" org.eventb.core.source="/HD3/HDM1000001.bum|org.eventb.core.machineFile#HDM1000001|org.eventb.core.event#evt3|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAX" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="limit" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_airVolumeLimitForSAD'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAX" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAX" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="limit∈ℕ" org.eventb.core.source="/HD3/HDM1000001.bum|org.eventb.core.machineFile#HDM1000001|org.eventb.core.event#evt4|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="m_flowThroughSAD&gt;400" org.eventb.core.source="/HD3/HDM1000001.bum|org.eventb.core.machineFile#HDM1000001|org.eventb.core.event#evt4|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="limit=50" org.eventb.core.source="/HD3/HDM1000001.bum|org.eventb.core.machineFile#HDM1000001|org.eventb.core.event#evt4|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAY" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="as" org.eventb.core.type="ActiveStates"/>
+<org.eventb.core.poIdentifier name="volume" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="c_alarm'" org.eventb.core.type="ActiveStates"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAY" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAY" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="as∈ActiveStates" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="c_alarm≠as" org.eventb.core.source="/HD3/HDM1.bum|org.eventb.core.machineFile#HDM1|org.eventb.core.event#7|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="as=ON" org.eventb.core.source="/HD3/HDM1000.bum|org.eventb.core.machineFile#HDM1000|org.eventb.core.event#evt2|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="c_systemSubPhase=ConnectingPatientAndStarting∨c_systemPhase=Initiation∨c_systemSubPhase=Reinfusion" org.eventb.core.source="/HD3/HDM1000001.bum|org.eventb.core.machineFile#HDM1000001|org.eventb.core.event#evt]|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="volume∈ℕ" org.eventb.core.source="/HD3/HDM1000001.bum|org.eventb.core.machineFile#HDM1000001|org.eventb.core.event#evt]|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="volume&gt;c_airVolumeLimitForSAD" org.eventb.core.source="/HD3/HDM1000001.bum|org.eventb.core.machineFile#HDM1000001|org.eventb.core.event#evt]|org.eventb.core.guard#)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="m_pumpInLeftBChamber/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTALLHYPc_airVolumeLimitForSAZ"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="m_balanceChamberLeft+amount∈ℕ" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtr"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evtw"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtr"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poSequent#m_pumpInLeftBChamber\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSAZ" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="m_balanceChamberLeft'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSAZ" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSAZ" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evtw|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="m_pumpOutLeftBChamber/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTALLHYPc_airVolumeLimitForSA["/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="m_balanceChamberLeft − amount∈ℕ" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtr"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evtx"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtr"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poSequent#m_pumpOutLeftBChamber\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSA[" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="m_balanceChamberLeft'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSA[" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSA[" org.eventb.core.poStamp="32">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount≤m_balanceChamberLeft" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evtx|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="amount∈ℕ" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evtx|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="m_pumpInRightBChamber/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="33">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTALLHYPc_airVolumeLimitForSA\\"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="m_balanceChamberRight+amount∈ℕ" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtt"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evty"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtt"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poSequent#m_pumpInRightBChamber\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSA\" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="m_balanceChamberRight'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSA\" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSA\\" org.eventb.core.poStamp="33">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evty|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="m_pumpOutRightWasteBChamber/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="31">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTALLHYPc_airVolumeLimitForSA]"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="m_balanceChamberRight − amount∈ℕ" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtt"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evtz"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtt"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poSequent#m_pumpOutRightWasteBChamber\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSA]" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="m_balanceChamberRight'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSA]" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSA]" org.eventb.core.poStamp="31">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount≤m_balanceChamberRight" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evtz|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="amount∈ℕ" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evtz|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="m_balanceToRight/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="24">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTHYPc_airVolumeLimitForSA^'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2≠0" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evt{|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evt{|org.eventb.core.guard#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTHYPc_airVolumeLimitForSA^'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="m_balanceToRight/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTALLHYPc_airVolumeLimitForSA^"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="m_balanceChamberLeft − diff∈ℕ" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtr"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evt{"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtr"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poSequent#m_balanceToRight\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="m_balanceToRight/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTALLHYPc_airVolumeLimitForSA^"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="m_balanceChamberRight+diff∈ℕ" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtt"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evt{"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtt"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poSequent#m_balanceToRight\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSA^" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="diff" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="m_balanceChamberLeft'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="m_balanceChamberRight'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPc_airVolumeLimitForSA^'" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSA^" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="m_balanceChamberLeft&gt;m_balanceChamberRight" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evt{|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSA^" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTHYPc_airVolumeLimitForSA^'" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="diff=(m_balanceChamberLeft − m_balanceChamberRight) ÷ 2" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evt{|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="m_balanceChamberLeft − diff∈ℕ" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evt{|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="m_balanceChamberRight+diff∈ℕ" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evt{|org.eventb.core.guard#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="m_balanceToLeft/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTHYPc_airVolumeLimitForSA_'"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2≠0" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evt1|org.eventb.core.guard#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evt1|org.eventb.core.guard#)"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTHYPc_airVolumeLimitForSA_'"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="m_balanceToLeft/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTALLHYPc_airVolumeLimitForSA_"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="m_balanceChamberLeft+diff∈ℕ" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtr"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evt1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtr"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poSequent#m_balanceToLeft\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="m_balanceToLeft/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTALLHYPc_airVolumeLimitForSA_"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="m_balanceChamberRight − diff∈ℕ" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtt"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evt1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtt"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poSequent#m_balanceToLeft\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTc_airVolumeLimitForSA_" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="diff" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="m_balanceChamberLeft'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="m_balanceChamberRight'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPc_airVolumeLimitForSA_'" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTIDENTc_airVolumeLimitForSA_" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="m_balanceChamberRight&gt;m_balanceChamberLeft" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evt1|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPc_airVolumeLimitForSA_" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#EVTHYPc_airVolumeLimitForSA_'" org.eventb.core.poStamp="29">
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="diff=(m_balanceChamberRight − m_balanceChamberLeft) ÷ 2" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evt1|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="m_balanceChamberLeft+diff∈ℕ" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evt1|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="m_balanceChamberRight − diff∈ℕ" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.event#evt1|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD3/HDM1000002.bpo|org.eventb.core.poFile#HDM1000002|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="m_balanceChamberLeft∈ℕ" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtr"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="m_balanceChamberRight∈ℕ" org.eventb.core.source="/HD3/HDM1000002.bum|org.eventb.core.machineFile#HDM1000002|org.eventb.core.invariant#evtt"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

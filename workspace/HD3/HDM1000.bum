@@ -7,8 +7,7 @@
 <org.eventb.core.variable name="-" org.eventb.core.identifier="c_ufPump"/>
 <org.eventb.core.variable name="/" org.eventb.core.identifier="c_heater"/>
 <org.eventb.core.variable name="5" org.eventb.core.identifier="c_alarm"/>
-<org.eventb.core.variable name="&gt;" org.eventb.core.identifier="m_bloodInSystem"/>
-<org.eventb.core.variable name="@" org.eventb.core.identifier="m_cleanedBloodInSystem"/>
+<org.eventb.core.variable name="&gt;" org.eventb.core.identifier="m_bloodPumpAmount"/>
 <org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
 <org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_toogleHeparimPump">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_toogleHeparimPump"/>
@@ -24,9 +23,6 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="e_bloodPumpIsOn">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="e_bloodPumpIsOn"/>
-</org.eventb.core.event>
-<org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="e_returnBlood">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="e_returnBlood"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="c_turnOffBloodPump">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="c_turnOffBloodPump"/>
