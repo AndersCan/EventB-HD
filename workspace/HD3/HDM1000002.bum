@@ -88,9 +88,9 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="evtx" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_pumpOutLeftBChamber">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="amount"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="amount ≤ m_balanceChamberLeft"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="amount ∈ ℕ"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="amount ≤ m_balanceChamberLeft ∧ amount &gt; 0"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="m_balanceChamberLeft ≔ m_balanceChamberLeft − amount" org.eventb.core.label="act1"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="amount ∈ ℕ"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="evty" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_pumpInRightBChamber">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="amount"/>
@@ -99,26 +99,28 @@
 </org.eventb.core.event>
 <org.eventb.core.event name="evtz" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_pumpOutRightWasteBChamber">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="amount"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="amount ≤ m_balanceChamberRight"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="amount ∈ ℕ1  "/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="amount ≤ m_balanceChamberRight"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="m_balanceChamberRight ≔ m_balanceChamberRight − amount" org.eventb.core.label="act1"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="amount ∈ ℕ "/>
 </org.eventb.core.event>
-<org.eventb.core.event name="evt{" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_balanceToRight">
+<org.eventb.core.event name="evt{" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_balanceToRightChamber">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="diff"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="m_balanceChamberLeft &gt; m_balanceChamberRight"/>
-<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="diff = (m_balanceChamberLeft − m_balanceChamberRight) ÷ 2"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd1" org.eventb.core.predicate="diff ∈ ℕ1 "/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd2" org.eventb.core.predicate="m_balanceChamberLeft − diff ∈ ℕ "/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd3" org.eventb.core.predicate="m_balanceChamberLeft &gt; m_balanceChamberRight"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd4" org.eventb.core.predicate="diff = (m_balanceChamberLeft − m_balanceChamberRight) ÷ 2"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="m_balanceChamberLeft ≔ m_balanceChamberLeft − diff" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="m_balanceChamberRight ≔ m_balanceChamberRight + diff" org.eventb.core.label="act2"/>
-<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="m_balanceChamberLeft − diff ∈ ℕ "/>
 <org.eventb.core.guard name="." org.eventb.core.label="grd5" org.eventb.core.predicate="m_balanceChamberRight + diff ∈ ℕ "/>
 </org.eventb.core.event>
-<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_balanceToLeft">
+<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="m_balanceToLeftChamber">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="diff"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="m_balanceChamberRight &gt; m_balanceChamberLeft"/>
-<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="diff = (m_balanceChamberRight − m_balanceChamberLeft) ÷ 2"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd1" org.eventb.core.predicate="diff ∈ ℕ1 "/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="m_balanceChamberRight &gt; m_balanceChamberLeft"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="diff = (m_balanceChamberRight − m_balanceChamberLeft) ÷ 2"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="m_balanceChamberRight ≔ m_balanceChamberRight − diff" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="m_balanceChamberLeft ≔ m_balanceChamberLeft + diff" org.eventb.core.label="act2"/>
-<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="m_balanceChamberLeft + diff ∈ ℕ "/>
-<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="m_balanceChamberRight − diff ∈ ℕ "/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd4" org.eventb.core.predicate="m_balanceChamberLeft + diff ∈ ℕ "/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd5" org.eventb.core.predicate="m_balanceChamberRight − diff ∈ ℕ "/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>

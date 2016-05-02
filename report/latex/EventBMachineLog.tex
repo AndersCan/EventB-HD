@@ -52,11 +52,27 @@ Refactored all the machines to remove UFPump and blood pump variables. BP in now
 HD10000002
 UFPump causes DF to flow and create pressure that removes toxins and water from the blood. Waste bucket contents - Used DF = water extracted.
 
-Main problem: I do not know how the dialysis machine truly works. Why they use certain components
+Main problem: I do not know how the dialysis machine truly works. Why they use certain components.
 
 
+HD10000003
+
+Added bypass chamber. Left and right side of a chamber.
 
 
+HD10000004
+Adding Dialyzer.
+
+Dialyzer has inner tube with blood, and the other tube with dialyzing fluid. The blood tube is encased inside the dialyzing fluid. 
+
+Do I need to monitor that blood is in the tubes? The real system will not know. Only if the pump is on and that the VRD is detecting blood by the exit.
+
+Note: Gradual implementation or Refined implementation: Can implement "isBloodPumpOn" and use as guard for new events(Gradual implementation). Or do it all in one single refinement that adds a guard to all events. End result is the same, but doing everything in one refinement seems like the correct approach. 
+
+To build a machine:
+Create a machine that has the required events and variables to perform a valid/safe dialysis treatment. This machine should be thought of as a state graph were events trigger transitions. Our exit nodes should contain at least one valid/safe and successful run of a treatment. Further refinements should be dedicated to trimming the graph from nodes that are illegal w.r.t requirements.
+
+The KEEP method is very hard to do. If there exists independent components, it might be easier. In this system, all the components are linked together.  The state of one component has an effect on all other components (mostly). One could select the system that does not have any outbound dependencies, but this will require a full understanding of the system from the start. An incremental approach could allow for learning a system piece by piece. 
 
 
 
