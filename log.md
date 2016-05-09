@@ -1,5 +1,41 @@
 #Meetings
 
+## 03.05.16
+Should try and complete several Event-B models. Need to define a list of subjects to talk about in final report:
+ - Abstract
+  * Need safe medical devices that can pass certifications while abeiding by a budget.
+ - Introduction
+  * Active Medical Devices
+   * Challenges regarding safety of system
+   * Certification & Cost
+  * Event-B - briefly what it does and how/why it helps + refinement (introduce Rodin and ProB for animation (?))
+  * Co-modeling - Discrete events and continuous events together are co-modelling. (Hybrid Event-B)
+ - References
+  * Atif Mashkoor - the hemodialysis machine case study & Towards the Trustworthy Development of Active Medical Devices
+  * (Rest of readings from summary)
+ - Hemodialysis Machine - why it's needed, what it does, how it works.
+ - Event-B in general - Why do people use it? What is the value generated?
+  * Methods of composition - Abrial & Butler composition.
+  * How to ensure the safety of the system - nothing bad ever happens
+ - HD Event-B Model - Dicuss the model(s) created for modeling the HD machine and choice of abstraction on machines.
+  * How we chose to refine the machine.
+  * Our level of abstraction
+  * How we ensured the safety of the machine.
+  * How to add continuous events and variables to the model
+ - Problems encountered
+  * Not clear what the correct solution is until you have tried (and failed)
+  * Rodin does not hide useless information (Machines become quickly unreadable)
+  * Reformating or changing events/design come at a high time cost. Too much manual labour.
+  * Editor in general - Adding/editing new (events/guards/actions) etc is over complicated.
+ - Summary
+  * Were we able to create a HD machine that satisfies the requirements?
+  * Conclusion
+  * Future work
+
+  
+
+
+
 ## 12.04.16
 System tries to maintain some percentage that the human is no longer able to maintain himself
 Look at the global system that is simulating the kidney: What is the purpose of the machine? How is it interacting with the paitient?
