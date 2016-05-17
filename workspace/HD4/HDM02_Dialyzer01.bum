@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="HDM01_EBC01"/>
+<org.eventb.core.variable name="," org.eventb.core.identifier="A_EBC_M_CurrentFluid"/>
+<org.eventb.core.event name="-" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="A_Dialyzer_M_CurrentFluid ≔ 0" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_EBC_PumpInPatient">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_EBC_PumpInPatient"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_EBC_PumpOutPatient">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_EBC_PumpOutPatient"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A1_EBC_PumpInDialyzer">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_EBC_PumpInDialyzer"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="A_Dialyzer_M_CurrentFluid ≔ A_Dialyzer_M_CurrentFluid − amount" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="A_Dialyzer_M_CurrentFluid − amount ≥ 0"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A1_EBC_PumpOutDialyzer">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_EBC_PumpOutDialyzer"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="A_Dialyzer_M_CurrentFluid ≔ A_Dialyzer_M_CurrentFluid + amount" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="2" org.eventb.core.identifier="A_Dialyzer_M_CurrentFluid"/>
+<org.eventb.core.invariant name="3" org.eventb.core.label="inv1" org.eventb.core.predicate="A_Dialyzer_M_CurrentFluid ∈ ℕ"/>
+<org.eventb.core.invariant name="4" org.eventb.core.label="inv2" org.eventb.core.predicate="A_Dialyzer_M_CurrentFluid ≥ 0"/>
+<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_Dialyzer_PumpInBypass">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="amount"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="amount ∈ ℕ1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="A_Dialyzer_M_CurrentFluid ≔ A_Dialyzer_M_CurrentFluid + amount" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_Dialyzer_PumpOutBypass">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="amount"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="amount ∈ ℕ1 "/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="A_Dialyzer_M_CurrentFluid ≔ A_Dialyzer_M_CurrentFluid − amount" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="A_Dialyzer_M_CurrentFluid − amount ≥ 0"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>
