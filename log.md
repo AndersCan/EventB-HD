@@ -1,6 +1,7 @@
 #Meetings
 
 ## 03.05.16
+Base Event-B machine/refinements should perhaps contain the possible events of the system. After all the events are added we can begin introducing the physical limitations of the events (Bloodpump must be on, etc)
 Should try and complete several Event-B models. Need to define a list of subjects to talk about in final report:
  - Abstract
   * Need safe medical devices that can pass certifications while abeiding by a budget.
