@@ -13,9 +13,61 @@
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="A_Bypass_PumpInBalanceChamber/inv1/INV"/>
-<org.eventb.core.prProof name="A1_Bypass_PumpInBalanceChamber/inv1/INV"/>
+<org.eventb.core.prProof name="A1_Bypass_PumpInBalanceChamber/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2,p3,p1">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
+<org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="A_BalanceChamber_M_CurrentFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid − amount≥0"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="amount∈ℕ1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid − amount∈ℕ"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+</org.eventb.core.prProof>
 <org.eventb.core.prProof name="A_Bypass_PumpOutBalanceChamber/inv1/INV"/>
-<org.eventb.core.prProof name="A1_Bypass_PumpOutBalanceChamber/inv1/INV"/>
-<org.eventb.core.prProof name="A_BalanceChamber_PumpInDF/inv1/INV"/>
-<org.eventb.core.prProof name="A_BalanceChamber_PumpOutDrain/inv1/INV"/>
+<org.eventb.core.prProof name="A1_Bypass_PumpOutBalanceChamber/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
+<org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="A_BalanceChamber_M_CurrentFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_Bypass_M_CurrentFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid∈ℕ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid+amount∈ℕ"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="amount∈ℕ1"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="A_Bypass_M_CurrentFluid − amount≥0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="A_BalanceChamber_PumpInDF/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
+<org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="A_BalanceChamber_M_CurrentFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid∈ℕ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid+amount∈ℕ"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="amount∈ℕ1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="A_BalanceChamber_PumpOutDrain/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2,p3,p1">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
+<org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="A_BalanceChamber_M_CurrentFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid − amount≥0"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="amount∈ℕ1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid − amount∈ℕ"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+</org.eventb.core.prProof>
 </org.eventb.core.prFile>
