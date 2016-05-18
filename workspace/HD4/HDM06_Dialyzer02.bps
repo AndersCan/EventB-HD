@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="2" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="16" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="16" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="16" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A3_EBC_PumpInDialyzer/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="16" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="A3_EBC_PumpOutDialyzer/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="16" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="A2_Dialyzer_PumpInBypass/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="18" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="A1_Dialyzer_PumpOutBypass/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="20" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="A_Dialyzer_M_CleanBlood/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="A_Dialyzer_M_CleanBlood/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="21" org.eventb.core.psManual="true"/>
 </org.eventb.core.psFile>

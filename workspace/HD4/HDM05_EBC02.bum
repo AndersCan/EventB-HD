@@ -6,26 +6,26 @@
 <org.eventb.core.variable name=":" org.eventb.core.identifier="A_Bypass_M_CurrentFluid"/>
 <org.eventb.core.variable name="E" org.eventb.core.identifier="A_BalanceChamber_M_CurrentFluid"/>
 <org.eventb.core.event name="F" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
-<org.eventb.core.action name="'" org.eventb.core.assignment="A_EBC_M_UncleanedFluid ≔ 0" org.eventb.core.label="act5"/>
-<org.eventb.core.action name="(" org.eventb.core.assignment="A_EBC_M_CleanedFluid ≔ 0" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="A_EBC_M_UncleanedBlood ≔ 0" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="A_EBC_M_CleanedBlood ≔ 0" org.eventb.core.label="act6"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A1_EBC_PumpInPatient">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_EBC_PumpInPatient"/>
-<org.eventb.core.action name="(" org.eventb.core.assignment="A_EBC_M_UncleanedFluid ≔ A_EBC_M_UncleanedFluid + amount" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="A_EBC_M_UncleanedBlood ≔ A_EBC_M_UncleanedBlood + amount" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A1_EBC_PumpOutPatient">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_EBC_PumpOutPatient"/>
-<org.eventb.core.action name="(" org.eventb.core.assignment="A_EBC_M_CleanedFluid ≔ A_EBC_M_CleanedFluid − amount" org.eventb.core.label="act2"/>
-<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="A_EBC_M_CleanedFluid − amount ≥ 0"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="A_EBC_M_CleanedBlood ≔ A_EBC_M_CleanedBlood − amount" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="A_EBC_M_CleanedBlood − amount ≥ 0"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A1_EBC_PumpInDialyzer">
+<org.eventb.core.event name="I" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A2_EBC_PumpInDialyzer">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A1_EBC_PumpInDialyzer"/>
-<org.eventb.core.action name="(" org.eventb.core.assignment="A_EBC_M_CleanedFluid ≔ A_EBC_M_CleanedFluid + amount" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="A_EBC_M_CleanedBlood ≔ A_EBC_M_CleanedBlood + amount" org.eventb.core.label="act3"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A1_EBC_PumpOutDialyzer">
+<org.eventb.core.event name="J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A2_EBC_PumpOutDialyzer">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A1_EBC_PumpOutDialyzer"/>
-<org.eventb.core.action name="(" org.eventb.core.assignment="A_EBC_M_UncleanedFluid ≔ A_EBC_M_UncleanedFluid − amount" org.eventb.core.label="act3"/>
-<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="A_EBC_M_UncleanedFluid − amount ≥ 0"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="A_EBC_M_UncleanedBlood ≔ A_EBC_M_UncleanedBlood − amount" org.eventb.core.label="act3"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd3" org.eventb.core.predicate="A_EBC_M_UncleanedBlood − amount ≥ 0"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A1_Dialyzer_PumpInBypass">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A1_Dialyzer_PumpInBypass"/>
@@ -45,10 +45,10 @@
 <org.eventb.core.event name="P" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_BalanceChamber_PumpOutDrain">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_BalanceChamber_PumpOutDrain"/>
 </org.eventb.core.event>
-<org.eventb.core.variable name="Q" org.eventb.core.identifier="A_EBC_M_UncleanedFluid"/>
-<org.eventb.core.invariant name="R" org.eventb.core.label="inv1" org.eventb.core.predicate="A_EBC_M_UncleanedFluid ∈ ℕ"/>
-<org.eventb.core.variable name="S" org.eventb.core.identifier="A_EBC_M_CleanedFluid"/>
-<org.eventb.core.invariant name="T" org.eventb.core.label="inv2" org.eventb.core.predicate="A_EBC_M_CleanedFluid ∈ ℕ"/>
-<org.eventb.core.invariant name="U" org.eventb.core.label="inv3" org.eventb.core.predicate="A_EBC_M_CurrentFluid = A_EBC_M_UncleanedFluid + A_EBC_M_CleanedFluid"/>
-<org.eventb.core.invariant name="V" org.eventb.core.label="inv4" org.eventb.core.predicate="A_EBC_M_CleanedFluid = A_EBC_M_CurrentFluid − A_EBC_M_UncleanedFluid" org.eventb.core.theorem="true"/>
+<org.eventb.core.variable name="Q" org.eventb.core.identifier="A_EBC_M_UncleanedBlood"/>
+<org.eventb.core.invariant name="R" org.eventb.core.label="inv1" org.eventb.core.predicate="A_EBC_M_UncleanedBlood ∈ ℕ"/>
+<org.eventb.core.variable name="S" org.eventb.core.identifier="A_EBC_M_CleanedBlood"/>
+<org.eventb.core.invariant name="T" org.eventb.core.label="inv2" org.eventb.core.predicate="A_EBC_M_CleanedBlood ∈ ℕ"/>
+<org.eventb.core.invariant name="U" org.eventb.core.label="inv3" org.eventb.core.predicate="A_EBC_M_CurrentFluid = A_EBC_M_UncleanedBlood + A_EBC_M_CleanedBlood"/>
+<org.eventb.core.invariant name="V" org.eventb.core.label="inv4" org.eventb.core.predicate="A_EBC_M_CleanedBlood = A_EBC_M_CurrentFluid − A_EBC_M_UncleanedBlood" org.eventb.core.theorem="true"/>
 </org.eventb.core.machineFile>

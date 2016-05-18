@@ -24,4 +24,167 @@
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
+<org.eventb.core.prProof name="A1_EBC_PumpInDialyzer/inv2/INV"/>
+<org.eventb.core.prProof name="A3_EBC_PumpInDialyzer/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p4,p3">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
+<org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="A_Dialyzer_M_CleanedBlood" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_Dialyzer_M_CurrentFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_Dialyzer_M_CleanedBlood∈ℕ"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="amount∈ℕ1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_Dialyzer_M_CleanedBlood − amount∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="A_Dialyzer_M_CleanedBlood − amount≥0"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="A_Dialyzer_M_CurrentFluid − amount≥0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="A1_EBC_PumpOutDialyzer/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p6,p5,p9,p1,p2"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with A_EBC_M_CurrentFluid=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p7" org.eventb.core.prInfHyps="p10"/>
+<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p11"/>
+<org.eventb.core.prHypAction name="FORWARD_INF2" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p12"/>
+<org.eventb.core.prHypAction name="FORWARD_INF3" org.eventb.core.prHyps="p2" org.eventb.core.prInfHyps="p13"/>
+<org.eventb.core.prHypAction name="DESELECT4" org.eventb.core.prHyps="p7,p6,p5,p2"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p3,p8,p9,p1,p10,p11,p12,p13">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
+<org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="A_Dialyzer_M_UncleanedBlood" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_CleanedBlood" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_CurrentFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_UncleanedBlood" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_Dialyzer_M_UncleanedBlood+amount∈ℕ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_EBC_M_CurrentFluid=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood − amount≥0"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood≥0"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="A_EBC_M_CleanedBlood=A_EBC_M_CurrentFluid − A_EBC_M_UncleanedBlood"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="amount∈ℕ1"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="A_Dialyzer_M_UncleanedBlood∈ℕ"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="A_EBC_M_CurrentFluid∈ℕ"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="A_EBC_M_CurrentFluid − amount≥0"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="A_EBC_M_UncleanedBlood − amount≥0"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="A_EBC_M_UncleanedBlood∈ℕ"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood∈ℕ"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="A_EBC_M_CleanedBlood=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood − A_EBC_M_UncleanedBlood"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="A_EBC_M_CurrentFluid≥0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="A_Dialyzer_M_CleanBlood/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2,p1,p3">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
+<org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="A_Dialyzer_M_UncleanedBlood" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="cleanedAmount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_Dialyzer_M_UncleanedBlood − cleanedAmount∈ℕ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="cleanedAmount∈ℕ1"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="A_Dialyzer_M_UncleanedBlood∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="cleanedAmount≤A_Dialyzer_M_UncleanedBlood"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="cleanedAmount∈ℕ1∧cleanedAmount≤A_Dialyzer_M_UncleanedBlood"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="A_Dialyzer_M_CleanBlood/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
+<org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="A_Dialyzer_M_CleanedBlood" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_Dialyzer_M_UncleanedBlood" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="cleanedAmount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_Dialyzer_M_CleanedBlood∈ℕ"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="cleanedAmount∈ℕ1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_Dialyzer_M_CleanedBlood+cleanedAmount∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="cleanedAmount≤A_Dialyzer_M_UncleanedBlood"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="cleanedAmount∈ℕ1∧cleanedAmount≤A_Dialyzer_M_UncleanedBlood"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="A3_EBC_PumpOutDialyzer/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2,p1,p3,p4">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
+<org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="A_Dialyzer_M_UncleanedBlood" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_CurrentFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_UncleanedBlood" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_Dialyzer_M_UncleanedBlood+amount∈ℕ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="amount∈ℕ1"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="A_Dialyzer_M_UncleanedBlood∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="A_EBC_M_CurrentFluid − amount≥0"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="A_EBC_M_UncleanedBlood − amount≥0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="0∈ℕ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="A2_Dialyzer_PumpInBypass/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3,p1,p2">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
+<org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="A_Bypass_M_CurrentFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_Dialyzer_M_Dialysate" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_Dialyzer_M_Dialysate+amount∈ℕ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="amount∈ℕ1"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="A_Bypass_M_CurrentFluid − amount≥0"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="A_Dialyzer_M_Dialysate∈ℕ"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="A1_Dialyzer_PumpOutBypass/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3,p2,p4,p1">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
+<org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="A_Dialyzer_M_CurrentFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_Dialyzer_M_Dialysate" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_Dialyzer_M_Dialysate − amount∈ℕ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_Dialyzer_M_Dialysate − amount≥0"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="amount∈ℕ1"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="A_Dialyzer_M_Dialysate∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="A_Dialyzer_M_CurrentFluid − amount≥0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+</org.eventb.core.prProof>
 </org.eventb.core.prFile>

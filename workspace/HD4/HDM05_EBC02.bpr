@@ -28,31 +28,31 @@
 <org.eventb.core.prProof name="A_EBC_PumpOutPatient/inv2/INV"/>
 <org.eventb.core.prProof name="A1_EBC_PumpInPatient/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2,p1">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
 <org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="A_EBC_M_UncleanedFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_UncleanedBlood" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="amount" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_EBC_M_UncleanedFluid+amount∈ℕ"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_EBC_M_UncleanedFluid∈ℕ"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="amount∈ℕ1"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="amount∈ℕ1"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_EBC_M_UncleanedBlood+amount∈ℕ"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="A_EBC_M_UncleanedBlood∈ℕ"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="A1_EBC_PumpOutPatient/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p4,p3">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
 <org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="A_EBC_M_CleanedFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_CleanedBlood" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="A_EBC_M_CurrentFluid" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="amount" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_EBC_M_CleanedFluid∈ℕ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_EBC_M_CleanedBlood∈ℕ"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="amount∈ℕ1"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="A_EBC_M_CurrentFluid − amount≥0"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="A_EBC_M_CleanedFluid − amount≥0"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_EBC_M_CleanedFluid − amount∈ℕ"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="A_EBC_M_CleanedBlood − amount≥0"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_EBC_M_CleanedBlood − amount∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="A_EBC_M_CurrentFluid − amount≥0"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
@@ -67,21 +67,13 @@
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="A1_EBC_PumpInPatient/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6" org.eventb.core.psManual="true">
+<org.eventb.core.prProof name="A1_EBC_PumpInPatient/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with A_EBC_M_CurrentFluid=A_EBC_M_UncleanedFluid+A_EBC_M_CleanedFluid" org.eventb.core.prGoal="p7" org.eventb.core.prHyps="p4">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p6,p5,p3,p1"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with A_EBC_M_CurrentFluid=A_EBC_M_UncleanedFluid+A_EBC_M_CleanedFluid" org.eventb.core.prHyps="p4">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p6" org.eventb.core.prInfHyps="p9"/>
-<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p10"/>
-<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p6,p5"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="p4,p2,p3,p1,p9,p10">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with A_EBC_M_CurrentFluid=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="p1,p2">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
 <org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
 </org.eventb.core.prRule>
@@ -89,53 +81,42 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-<org.eventb.core.prIdent name="A_EBC_M_CleanedFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_CleanedBlood" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="A_EBC_M_CurrentFluid" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="A_EBC_M_UncleanedFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_UncleanedBlood" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="amount" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="A_EBC_M_CurrentFluid+amount=A_EBC_M_UncleanedFluid+amount+A_EBC_M_CleanedFluid"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_EBC_M_CleanedFluid∈ℕ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_EBC_M_CurrentFluid=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_EBC_M_CurrentFluid+amount=(A_EBC_M_UncleanedBlood+amount)+A_EBC_M_CleanedBlood"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="amount∈ℕ1"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="A_EBC_M_UncleanedFluid∈ℕ"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="A_EBC_M_UncleanedFluid+A_EBC_M_CleanedFluid+amount=A_EBC_M_UncleanedFluid+amount+A_EBC_M_CleanedFluid"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="A_EBC_M_UncleanedFluid+A_EBC_M_CleanedFluid≥0"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="A_EBC_M_UncleanedFluid+A_EBC_M_CleanedFluid∈ℕ"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="A_EBC_M_CurrentFluid=A_EBC_M_UncleanedFluid+A_EBC_M_CleanedFluid"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="A_EBC_M_CurrentFluid≥0"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="A_EBC_M_CurrentFluid∈ℕ"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_EBC_M_CurrentFluid+amount=(A_EBC_M_UncleanedFluid+amount)+A_EBC_M_CleanedFluid"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="A_EBC_M_CurrentFluid+amount=A_EBC_M_UncleanedBlood+amount+A_EBC_M_CleanedBlood"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood+amount=A_EBC_M_UncleanedBlood+amount+A_EBC_M_CleanedBlood"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="A1_EBC_PumpOutPatient/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with A_EBC_M_CurrentFluid=A_EBC_M_UncleanedFluid+A_EBC_M_CleanedFluid" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with A_EBC_M_CurrentFluid=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p5"/>
-<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p3"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p2,p1,p4,p5">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p4" org.eventb.core.prInfHyps="p5"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p1,p2,p3,p5">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
 <org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="A_EBC_M_CleanedFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_CleanedBlood" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="A_EBC_M_CurrentFluid" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="A_EBC_M_UncleanedFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_UncleanedBlood" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="amount" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="A_EBC_M_UncleanedFluid+A_EBC_M_CleanedFluid − amount≥0"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="amount∈ℕ1"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="A_EBC_M_UncleanedFluid+A_EBC_M_CleanedFluid − amount=A_EBC_M_UncleanedFluid+(A_EBC_M_CleanedFluid − amount)"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="A_EBC_M_CurrentFluid=A_EBC_M_UncleanedFluid+A_EBC_M_CleanedFluid"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="A_EBC_M_CurrentFluid − amount≥0"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="A_EBC_M_CleanedFluid − amount≥0"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_EBC_M_CurrentFluid − amount=A_EBC_M_UncleanedFluid+(A_EBC_M_CleanedFluid − amount)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_EBC_M_CurrentFluid=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood − amount≥0"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood − amount=A_EBC_M_UncleanedBlood+(A_EBC_M_CleanedBlood − amount)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="amount∈ℕ1"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="A_EBC_M_CleanedBlood − amount≥0"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_EBC_M_CurrentFluid − amount=A_EBC_M_UncleanedBlood+(A_EBC_M_CleanedBlood − amount)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="A_EBC_M_CurrentFluid − amount≥0"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
 </org.eventb.core.prProof>
@@ -143,7 +124,7 @@
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p2">
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with A_EBC_M_CurrentFluid=A_EBC_M_UncleanedFluid+A_EBC_M_CleanedFluid" org.eventb.core.prGoal="p2" org.eventb.core.prHyps="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with A_EBC_M_CurrentFluid=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood" org.eventb.core.prGoal="p2" org.eventb.core.prHyps="p1">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
@@ -154,15 +135,15 @@
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="A_EBC_M_CleanedFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_CleanedBlood" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="A_EBC_M_CurrentFluid" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="A_EBC_M_UncleanedFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_UncleanedBlood" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_EBC_M_CurrentFluid=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_EBC_M_CurrentFluid+amount=A_EBC_M_UncleanedBlood+(A_EBC_M_CleanedBlood+amount)"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="A_EBC_M_CurrentFluid+amount=A_EBC_M_UncleanedFluid+A_EBC_M_CleanedFluid+amount"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_EBC_M_CurrentFluid+amount=A_EBC_M_UncleanedFluid+(A_EBC_M_CleanedFluid+amount)"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_EBC_M_CurrentFluid=A_EBC_M_UncleanedFluid+A_EBC_M_CleanedFluid"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="A_EBC_M_UncleanedFluid+A_EBC_M_CleanedFluid+amount=A_EBC_M_UncleanedFluid+A_EBC_M_CleanedFluid+amount"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="A_EBC_M_CurrentFluid+amount=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood+amount"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood+amount=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood+amount"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
@@ -331,22 +312,107 @@
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="inv4/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with A_EBC_M_CurrentFluid=A_EBC_M_UncleanedFluid+A_EBC_M_CleanedFluid" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with A_EBC_M_CurrentFluid=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="p2,p1,p3">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="p3,p1,p2">
 <org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
 <org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="A_EBC_M_CleanedFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_CleanedBlood" org.eventb.core.type="ℤ"/>
 <org.eventb.core.prIdent name="A_EBC_M_CurrentFluid" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prIdent name="A_EBC_M_UncleanedFluid" org.eventb.core.type="ℤ"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="A_EBC_M_CleanedFluid=A_EBC_M_UncleanedFluid+A_EBC_M_CleanedFluid − A_EBC_M_UncleanedFluid"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_EBC_M_CleanedFluid∈ℕ"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="A_EBC_M_UncleanedFluid∈ℕ"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_EBC_M_CleanedFluid=A_EBC_M_CurrentFluid − A_EBC_M_UncleanedFluid"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="A_EBC_M_CurrentFluid=A_EBC_M_UncleanedFluid+A_EBC_M_CleanedFluid"/>
+<org.eventb.core.prIdent name="A_EBC_M_UncleanedBlood" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_EBC_M_CleanedBlood∈ℕ"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="A_EBC_M_CurrentFluid=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="A_EBC_M_CleanedBlood=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood − A_EBC_M_UncleanedBlood"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_EBC_M_CleanedBlood=A_EBC_M_CurrentFluid − A_EBC_M_UncleanedBlood"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="A_EBC_M_UncleanedBlood∈ℕ"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="A2_EBC_PumpInDialyzer/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
+<org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="A_Dialyzer_M_CurrentFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_CleanedBlood" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_EBC_M_CleanedBlood∈ℕ"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="amount∈ℕ1"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="A_Dialyzer_M_CurrentFluid − amount≥0"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_EBC_M_CleanedBlood+amount∈ℕ"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="A2_EBC_PumpInDialyzer/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p2">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with A_EBC_M_CurrentFluid=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood" org.eventb.core.prGoal="p2" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p3">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p3" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p4" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="A_EBC_M_CleanedBlood" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_CurrentFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_UncleanedBlood" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_EBC_M_CurrentFluid=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_EBC_M_CurrentFluid+amount=A_EBC_M_UncleanedBlood+(A_EBC_M_CleanedBlood+amount)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="A_EBC_M_CurrentFluid+amount=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood+amount"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood+amount=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood+amount"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="A2_EBC_PumpOutDialyzer/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3,p1,p2,p4">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
+<org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="A_EBC_M_CurrentFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_UncleanedBlood" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="amount∈ℕ1"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="A_EBC_M_CurrentFluid − amount≥0"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="A_EBC_M_UncleanedBlood∈ℕ"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="A_EBC_M_UncleanedBlood − amount≥0"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_EBC_M_UncleanedBlood − amount∈ℕ"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="A2_EBC_PumpOutDialyzer/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.psManual="true">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with A_EBC_M_CurrentFluid=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p3" org.eventb.core.prInfHyps="p5"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="p1,p2,p4,p5">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
+<org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="A_EBC_M_CleanedBlood" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_CurrentFluid" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="A_EBC_M_UncleanedBlood" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prIdent name="amount" org.eventb.core.type="ℤ"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="A_EBC_M_CurrentFluid=A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood − amount≥0"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_EBC_M_CurrentFluid − amount=A_EBC_M_UncleanedBlood − amount+A_EBC_M_CleanedBlood"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="amount∈ℕ1"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="A_EBC_M_CurrentFluid − amount≥0"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="A_EBC_M_UncleanedBlood − amount≥0"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="A_EBC_M_UncleanedBlood+A_EBC_M_CleanedBlood − amount=A_EBC_M_UncleanedBlood − amount+A_EBC_M_CleanedBlood"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
 </org.eventb.core.prProof>
