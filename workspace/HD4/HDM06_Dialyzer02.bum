@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.machineFile org.eventb.core.comment="Dialyzer has seperated fluid to be un\clean blood and dialysate fluid" org.eventb.core.configuration="org.eventb.core.fwd" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="HDM05_EBC02"/>
 <org.eventb.core.variable name="," org.eventb.core.identifier="A_EBC_M_CurrentFluid"/>
 <org.eventb.core.variable name="2" org.eventb.core.identifier="A_Dialyzer_M_CurrentFluid"/>
@@ -52,7 +52,7 @@
 <org.eventb.core.invariant name="`" org.eventb.core.label="inv1" org.eventb.core.predicate="A_Dialyzer_M_UncleanedBlood ∈ ℕ"/>
 <org.eventb.core.variable name="a" org.eventb.core.identifier="A_Dialyzer_M_CleanedBlood"/>
 <org.eventb.core.invariant name="b" org.eventb.core.label="inv2" org.eventb.core.predicate="A_Dialyzer_M_CleanedBlood ∈ ℕ"/>
-<org.eventb.core.event name="c" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_Dialyzer_M_CleanBlood">
+<org.eventb.core.event name="c" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_Dialyzer_CleanBlood">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="cleanedAmount"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="cleanedAmount ∈ ℕ1"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="A_Dialyzer_M_UncleanedBlood ≔ A_Dialyzer_M_UncleanedBlood − cleanedAmount" org.eventb.core.label="act1"/>

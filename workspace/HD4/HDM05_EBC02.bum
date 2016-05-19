@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.machineFile org.eventb.core.comment="Fluid has been seperated into two streams of cleaned and uncleaned blood" org.eventb.core.configuration="org.eventb.core.fwd" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="HDM04_BalanceChamber01"/>
 <org.eventb.core.variable name="," org.eventb.core.identifier="A_EBC_M_CurrentFluid"/>
 <org.eventb.core.variable name="2" org.eventb.core.identifier="A_Dialyzer_M_CurrentFluid"/>

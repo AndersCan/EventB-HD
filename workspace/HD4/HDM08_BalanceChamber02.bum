@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.machineFile org.eventb.core.comment="Balance chamber has split chambers and a Balacing event due do membrane walls" org.eventb.core.configuration="org.eventb.core.fwd" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="HDM07_Bypass02"/>
 <org.eventb.core.variable name="," org.eventb.core.identifier="A_EBC_M_CurrentFluid"/>
 <org.eventb.core.variable name="2" org.eventb.core.identifier="A_Dialyzer_M_CurrentFluid"/>
@@ -48,40 +48,40 @@
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_BalanceChamber_PumpInDF"/>
 <org.eventb.core.action name="(" org.eventb.core.assignment="A_BalanceChamber_M_LeftChamber ≔ A_BalanceChamber_M_LeftChamber + amount" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="')" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_BalanceChamber_PumpOutDrain">
+<org.eventb.core.event name="')" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A2_BalanceChamber_PumpOutDrain">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_BalanceChamber_PumpOutDrain"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd3" org.eventb.core.predicate="A_BalanceChamber_M_RightChamber − amount ≥ 0"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="A_BalanceChamber_M_RightChamber ≔ A_BalanceChamber_M_RightChamber − amount" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="'*" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_Dialyzer_M_CleanBlood">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_Dialyzer_M_CleanBlood"/>
+<org.eventb.core.event name="'*" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_Dialyzer_CleanBlood">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_Dialyzer_CleanBlood"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="'+" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_Bypass_C_PumpBypass">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_Bypass_C_PumpBypass"/>
+<org.eventb.core.event name="'+" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_Bypass_PumpBypass">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_Bypass_PumpBypass"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="'," org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_Bypass_C_ToggleBypass">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_Bypass_C_ToggleBypass"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="'-" org.eventb.core.identifier="A_BalanceChamber_M_LeftChamber"/>
-<org.eventb.core.invariant name="'." org.eventb.core.label="inv1" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber ∈ ℕ "/>
+<org.eventb.core.invariant name="'." org.eventb.core.comment="Is this a comment?" org.eventb.core.label="inv1" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber ∈ ℕ "/>
 <org.eventb.core.variable name="'/" org.eventb.core.identifier="A_BalanceChamber_M_RightChamber"/>
 <org.eventb.core.invariant name="'0" org.eventb.core.label="inv2" org.eventb.core.predicate="A_BalanceChamber_M_RightChamber ∈ ℕ "/>
 <org.eventb.core.invariant name="'1" org.eventb.core.label="inv3" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid = A_BalanceChamber_M_LeftChamber + A_BalanceChamber_M_RightChamber"/>
-<org.eventb.core.event name="'2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_BalanceChamber_M_BalanceChambersToRight">
+<org.eventb.core.event name="'2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_BalanceChamber_BalanceChambersToRight">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="diff"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="diff ∈ ℕ1"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="diff = (A_BalanceChamber_M_LeftChamber − A_BalanceChamber_M_RightChamber) ÷ 2"/>
-<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber − diff ≥ 0"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber &gt; A_BalanceChamber_M_RightChamber" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber − diff &gt; 0"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd4" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber &gt; A_BalanceChamber_M_RightChamber" org.eventb.core.theorem="true"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="A_BalanceChamber_M_LeftChamber ≔ A_BalanceChamber_M_LeftChamber − diff" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="A_BalanceChamber_M_RightChamber ≔ A_BalanceChamber_M_RightChamber + diff" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_BalanceChamber_M_BalanceChambersToLeft">
+<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_BalanceChamber_BalanceChambersToLeft">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="diff"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="diff ∈ ℕ1"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="diff = (A_BalanceChamber_M_RightChamber − A_BalanceChamber_M_LeftChamber) ÷ 2"/>
-<org.eventb.core.guard name="-" org.eventb.core.label="grd4" org.eventb.core.predicate="A_BalanceChamber_M_RightChamber − diff ≥ 0"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd3" org.eventb.core.predicate="A_BalanceChamber_M_RightChamber &gt; A_BalanceChamber_M_LeftChamber" org.eventb.core.theorem="true"/>
+<org.eventb.core.guard name="-" org.eventb.core.label="grd3" org.eventb.core.predicate="A_BalanceChamber_M_RightChamber − diff &gt; 0"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd4" org.eventb.core.predicate="A_BalanceChamber_M_RightChamber &gt; A_BalanceChamber_M_LeftChamber" org.eventb.core.theorem="true"/>
 <org.eventb.core.action name="+" org.eventb.core.assignment="A_BalanceChamber_M_RightChamber ≔ A_BalanceChamber_M_RightChamber − diff" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="A_BalanceChamber_M_LeftChamber ≔ A_BalanceChamber_M_LeftChamber + diff" org.eventb.core.label="act2"/>
 </org.eventb.core.event>

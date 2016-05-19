@@ -187,4 +187,6 @@
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="A_Dialyzer_M_CurrentFluid − amount≥0"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
 </org.eventb.core.prProof>
+<org.eventb.core.prProof name="A_Dialyzer_CleanBlood/inv1/INV"/>
+<org.eventb.core.prProof name="A_Dialyzer_CleanBlood/inv2/INV"/>
 </org.eventb.core.prFile>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.machineFile org.eventb.core.comment="Bypass has seperated dialysate fluid into two streams and added a Bypass event" org.eventb.core.configuration="org.eventb.core.fwd" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="HDM06_Dialyzer02"/>
 <org.eventb.core.variable name="," org.eventb.core.identifier="A_EBC_M_CurrentFluid"/>
 <org.eventb.core.variable name="2" org.eventb.core.identifier="A_Dialyzer_M_CurrentFluid"/>
@@ -51,8 +51,8 @@
 <org.eventb.core.event name="o" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_BalanceChamber_PumpOutDrain">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_BalanceChamber_PumpOutDrain"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="p" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_Dialyzer_M_CleanBlood">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_Dialyzer_M_CleanBlood"/>
+<org.eventb.core.event name="p" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_Dialyzer_CleanBlood">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_Dialyzer_CleanBlood"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="q" org.eventb.core.identifier="A_Bypass_M_OutDialyzer"/>
 <org.eventb.core.invariant name="r" org.eventb.core.label="inv1" org.eventb.core.predicate="A_Bypass_M_OutDialyzer ∈ ℕ "/>
@@ -61,7 +61,7 @@
 <org.eventb.core.invariant name="u" org.eventb.core.label="inv3" org.eventb.core.predicate="A_Bypass_M_CurrentFluid = A_Bypass_M_OutBalanceChamber + A_Bypass_M_OutDialyzer"/>
 <org.eventb.core.variable name="v" org.eventb.core.identifier="R_Bypass_C_BypassIsActive"/>
 <org.eventb.core.invariant name="w" org.eventb.core.label="inv4" org.eventb.core.predicate="R_Bypass_C_BypassIsActive ∈ BOOL"/>
-<org.eventb.core.event name="x" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_Bypass_C_PumpBypass">
+<org.eventb.core.event name="x" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_Bypass_PumpBypass">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="amount"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="amount ∈ ℕ1"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="A_Bypass_M_OutDialyzer − amount ≥ 0"/>

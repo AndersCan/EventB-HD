@@ -25,7 +25,7 @@
 <org.eventb.core.event name="B" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A1_Dialyzer_PumpOutBypass">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A1_Dialyzer_PumpOutBypass"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="C" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A1_Bypass_PumpInBalanceChamber">
+<org.eventb.core.event name="C" org.eventb.core.comment="BalanceChamber must contain fluid" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A1_Bypass_PumpInBalanceChamber">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_Bypass_PumpInBalanceChamber"/>
 <org.eventb.core.action name="(" org.eventb.core.assignment="A_BalanceChamber_M_CurrentFluid ≔ A_BalanceChamber_M_CurrentFluid − amount" org.eventb.core.label="act2"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid − amount ≥ 0"/>
@@ -36,12 +36,12 @@
 </org.eventb.core.event>
 <org.eventb.core.variable name="E" org.eventb.core.identifier="A_BalanceChamber_M_CurrentFluid"/>
 <org.eventb.core.invariant name="F" org.eventb.core.label="inv1" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid ∈ ℕ"/>
-<org.eventb.core.event name="H" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_BalanceChamber_PumpInDF">
+<org.eventb.core.event name="H" org.eventb.core.comment="Pump in dialyzing fluid" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_BalanceChamber_PumpInDF">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="amount"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="amount ∈ ℕ1"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="A_BalanceChamber_M_CurrentFluid ≔ A_BalanceChamber_M_CurrentFluid + amount" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="G" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_BalanceChamber_PumpOutDrain">
+<org.eventb.core.event name="G" org.eventb.core.comment="Pump out fluid to the drain" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_BalanceChamber_PumpOutDrain">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="amount"/>
 <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="amount ∈ ℕ1"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="A_BalanceChamber_M_CurrentFluid ≔ A_BalanceChamber_M_CurrentFluid − amount" org.eventb.core.label="act1"/>
