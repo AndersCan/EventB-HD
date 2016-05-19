@@ -1,5 +1,12 @@
 #Meetings
 
+## 19.05.16
+With regards to the event of cleaning the blood: 'Just observing the evolution of the cleaning. Can be modelled with a differential equation?'
+
+On the topic of Discrete to continuous - 'Interesting problem that should be discussed in the paper: When to add time? It it a seperate system or a refinement of the discrete system?'
+
+On the presentation: 'Present main problem: System for cleaning the blood, questions of discrete to continuous, chemical problems, what I solved and how I solved it, Maybe I can solve X with Hybrid Event-B'
+
 ## 03.05.16
 Base Event-B machine/refinements should perhaps contain the possible events of the system. After all the events are added we can begin introducing the physical limitations of the events (Bloodpump must be on, etc)
 Should try and complete several Event-B models. Need to define a list of subjects to talk about in final report:
