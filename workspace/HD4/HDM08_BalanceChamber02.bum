@@ -63,7 +63,7 @@
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_Bypass_C_ToggleBypass"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="'-" org.eventb.core.identifier="A_BalanceChamber_M_LeftChamber"/>
-<org.eventb.core.invariant name="'." org.eventb.core.comment="Is this a comment?" org.eventb.core.label="inv1" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber ∈ ℕ "/>
+<org.eventb.core.invariant name="'." org.eventb.core.label="inv1" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber ∈ ℕ "/>
 <org.eventb.core.variable name="'/" org.eventb.core.identifier="A_BalanceChamber_M_RightChamber"/>
 <org.eventb.core.invariant name="'0" org.eventb.core.label="inv2" org.eventb.core.predicate="A_BalanceChamber_M_RightChamber ∈ ℕ "/>
 <org.eventb.core.invariant name="'1" org.eventb.core.label="inv3" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid = A_BalanceChamber_M_LeftChamber + A_BalanceChamber_M_RightChamber"/>

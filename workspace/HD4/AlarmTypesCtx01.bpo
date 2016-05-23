@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="Alarms" org.eventb.core.type="ℙ(Alarms)"/>
+<org.eventb.core.poIdentifier name="ALARM01" org.eventb.core.type="Alarms"/>
+<org.eventb.core.poIdentifier name="ALARM02" org.eventb.core.type="Alarms"/>
+<org.eventb.core.poIdentifier name="ALARM03" org.eventb.core.type="Alarms"/>
+<org.eventb.core.poIdentifier name="ALARM04" org.eventb.core.type="Alarms"/>
+<org.eventb.core.poIdentifier name="ALARM05" org.eventb.core.type="Alarms"/>
+<org.eventb.core.poIdentifier name="ALARM06" org.eventb.core.type="Alarms"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD4/AlarmTypesCtx01.bpo|org.eventb.core.poFile#AlarmTypesCtx01|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(Alarms,{ALARM01},{ALARM02},{ALARM03},{ALARM04},{ALARM05},{ALARM06})" org.eventb.core.source="/HD4/AlarmTypesCtx01.buc|org.eventb.core.contextFile#AlarmTypesCtx01|org.eventb.core.axiom#."/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

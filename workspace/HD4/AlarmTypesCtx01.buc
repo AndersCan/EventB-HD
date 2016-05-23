@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
+<org.eventb.core.carrierSet name="'" org.eventb.core.identifier="Alarms"/>
+<org.eventb.core.constant name="(" org.eventb.core.comment="Blood-side entry pressure: VP exceeds upperlimit" org.eventb.core.identifier="ALARM01"/>
+<org.eventb.core.constant name=")" org.eventb.core.comment="Blood-side entry pressure: VP below lowerlimit" org.eventb.core.identifier="ALARM02"/>
+<org.eventb.core.constant name="*" org.eventb.core.comment="Blood-side entry pressure: AP exceeds upperlimit" org.eventb.core.identifier="ALARM03"/>
+<org.eventb.core.constant name="+" org.eventb.core.comment="Blood-side entry pressure: AP below lowerlimit" org.eventb.core.identifier="ALARM04"/>
+<org.eventb.core.constant name="," org.eventb.core.identifier="ALARM05"/>
+<org.eventb.core.constant name="-" org.eventb.core.identifier="ALARM06"/>
+<org.eventb.core.axiom name="." org.eventb.core.label="axm1" org.eventb.core.predicate="partition(Alarms, {ALARM01}, {ALARM02}, {ALARM03}, {ALARM04}, {ALARM05}, {ALARM06})"/>
+</org.eventb.core.contextFile>
