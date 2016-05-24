@@ -2,7 +2,7 @@
 <org.eventb.core.prFile version="1">
 <org.eventb.core.prProof name="axm3/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="SystemPhases,SystemSubPhases">
 <org.eventb.core.lang name="L"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(SystemPhases,{Preperation},{Initiation},{Ending}))" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(SystemPhases,{PREPERATION},{INITIATION},{ENDING}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4,p5,p6"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p4,p5,p6"/>
@@ -34,7 +34,7 @@
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="PREPERATION" org.eventb.core.type="SystemPhases"/>
 <org.eventb.core.prIdent name="SUBPHASE" org.eventb.core.type="ℙ(SystemPhases×ℙ(SystemSubPhases))"/>
 <org.eventb.core.prPred name="p50" org.eventb.core.predicate="¬IrtTubingSystem=OverviewOfTherapy">
 <org.eventb.core.prIdent name="IrtTubingSystem" org.eventb.core.type="SystemSubPhases"/>
@@ -68,11 +68,6 @@
 <org.eventb.core.prIdent name="EmptyCartridge" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="RinsingDialyser" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(SystemPhases,{Preperation},{Initiation},{Ending})">
-<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
-<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p88" org.eventb.core.predicate="Preperation∈SystemPhases"/>
 <org.eventb.core.prPred name="p73" org.eventb.core.predicate="¬ConnectingPatientAndStarting=Reinfusion">
 <org.eventb.core.prIdent name="ConnectingPatientAndStarting" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="Reinfusion" org.eventb.core.type="SystemSubPhases"/>
@@ -108,6 +103,10 @@
 <org.eventb.core.prPred name="p65" org.eventb.core.predicate="¬SettingTreatmentParameters=OverviewOfTherapy">
 <org.eventb.core.prIdent name="OverviewOfTherapy" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="SettingTreatmentParameters" org.eventb.core.type="SystemSubPhases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="SystemPhases={PREPERATION,INITIATION,ENDING}">
+<org.eventb.core.prIdent name="ENDING" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="INITIATION" org.eventb.core.type="SystemPhases"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p19" org.eventb.core.predicate="¬AutoSelfTest=EmptyCartridge">
 <org.eventb.core.prIdent name="AutoSelfTest" org.eventb.core.type="SystemSubPhases"/>
@@ -172,10 +171,6 @@
 <org.eventb.core.prIdent name="AutoSelfTest" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="DuringTherapy" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="SystemPhases={Preperation,Initiation,Ending}">
-<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
-<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p67" org.eventb.core.predicate="¬RinsingDialyser=DuringTherapy">
 <org.eventb.core.prIdent name="DuringTherapy" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="RinsingDialyser" org.eventb.core.type="SystemSubPhases"/>
@@ -227,7 +222,6 @@
 <org.eventb.core.prIdent name="IrtTubingSystem" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="PrepHeparinPump" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="Preperation∈dom(SUBPHASE)∧SUBPHASE∈SystemPhases ⇸ ℙ(SystemSubPhases)"/>
 <org.eventb.core.prPred name="p59" org.eventb.core.predicate="¬SettingTreatmentParameters=RinsingDialyser">
 <org.eventb.core.prIdent name="RinsingDialyser" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="SettingTreatmentParameters" org.eventb.core.type="SystemSubPhases"/>
@@ -248,7 +242,6 @@
 <org.eventb.core.prIdent name="DuringTherapy" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="IrtTubingSystem" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p87" org.eventb.core.predicate="Preperation∈dom(SUBPHASE)"/>
 <org.eventb.core.prPred name="p23" org.eventb.core.predicate="¬ConnectingConcetrate=PrepHeparinPump">
 <org.eventb.core.prIdent name="ConnectingConcetrate" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="PrepHeparinPump" org.eventb.core.type="SystemSubPhases"/>
@@ -261,6 +254,7 @@
 <org.eventb.core.prIdent name="RinsingDialyser" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="SettingRinsingParameters" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p88" org.eventb.core.predicate="PREPERATION∈SystemPhases"/>
 <org.eventb.core.prPred name="p79" org.eventb.core.predicate="¬DuringTherapy=EmptyCartridge">
 <org.eventb.core.prIdent name="DuringTherapy" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="EmptyCartridge" org.eventb.core.type="SystemSubPhases"/>
@@ -285,9 +279,6 @@
 <org.eventb.core.prIdent name="ConnectingConcetrate" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="Reinfusion" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬Preperation=Ending">
-<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p84" org.eventb.core.predicate="¬EmptyDialyzer=EmptyCartridge">
 <org.eventb.core.prIdent name="EmptyCartridge" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="EmptyDialyzer" org.eventb.core.type="SystemSubPhases"/>
@@ -296,9 +287,19 @@
 <org.eventb.core.prIdent name="EmptyDialyzer" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="RinsingDialyser" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬PREPERATION=INITIATION">
+<org.eventb.core.prIdent name="INITIATION" org.eventb.core.type="SystemPhases"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬AutoSelfTest=OverviewOfTherapy">
 <org.eventb.core.prIdent name="AutoSelfTest" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="OverviewOfTherapy" org.eventb.core.type="SystemSubPhases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(SystemPhases,{PREPERATION},{INITIATION},{ENDING})">
+<org.eventb.core.prIdent name="ENDING" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="INITIATION" org.eventb.core.type="SystemPhases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬PREPERATION=ENDING">
+<org.eventb.core.prIdent name="ENDING" org.eventb.core.type="SystemPhases"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬ConnectingConcetrate=SettingTreatmentParameters">
 <org.eventb.core.prIdent name="ConnectingConcetrate" org.eventb.core.type="SystemSubPhases"/>
@@ -328,14 +329,8 @@
 <org.eventb.core.prIdent name="IrtTubingSystem" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="SettingTreatmentParameters" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬Preperation=Initiation">
-<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p89" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬Initiation=Ending">
-<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
-<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
-</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p87" org.eventb.core.predicate="PREPERATION∈dom(SUBPHASE)"/>
 <org.eventb.core.prPred name="p33" org.eventb.core.predicate="¬SettingRinsingParameters=PrepHeparinPump">
 <org.eventb.core.prIdent name="PrepHeparinPump" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="SettingRinsingParameters" org.eventb.core.type="SystemSubPhases"/>
@@ -390,6 +385,10 @@
 <org.eventb.core.prIdent name="AutoSelfTest" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="RinsingDialyser" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬INITIATION=ENDING">
+<org.eventb.core.prIdent name="ENDING" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="INITIATION" org.eventb.core.type="SystemPhases"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬AutoSelfTest=Reinfusion">
 <org.eventb.core.prIdent name="AutoSelfTest" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="Reinfusion" org.eventb.core.type="SystemSubPhases"/>
@@ -398,17 +397,18 @@
 <org.eventb.core.prIdent name="ConnectingConcetrate" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="IrtTubingSystem" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="PREPERATION∈dom(SUBPHASE)∧SUBPHASE∈SystemPhases ⇸ ℙ(SystemSubPhases)"/>
 <org.eventb.core.prPred name="p53" org.eventb.core.predicate="¬PrepHeparinPump=ConnectingPatientAndStarting">
 <org.eventb.core.prIdent name="ConnectingPatientAndStarting" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="PrepHeparinPump" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prExpr name="e0" org.eventb.core.expression="SystemPhases"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
 <org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.isFunGoal"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="axm4/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
 <org.eventb.core.lang name="L"/>
@@ -484,7 +484,7 @@
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="axm4/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="SystemPhases,SystemSubPhases">
 <org.eventb.core.lang name="L"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(SystemPhases,{Preperation},{Initiation},{Ending}))" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(SystemPhases,{PREPERATION},{INITIATION},{ENDING}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5,p6,p7"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5,p6,p7"/>
@@ -517,7 +517,7 @@
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="INITIATION" org.eventb.core.type="SystemPhases"/>
 <org.eventb.core.prIdent name="SUBPHASE" org.eventb.core.type="ℙ(SystemPhases×ℙ(SystemSubPhases))"/>
 <org.eventb.core.prPred name="p51" org.eventb.core.predicate="¬IrtTubingSystem=OverviewOfTherapy">
 <org.eventb.core.prIdent name="IrtTubingSystem" org.eventb.core.type="SystemSubPhases"/>
@@ -551,10 +551,6 @@
 <org.eventb.core.prIdent name="EmptyCartridge" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="RinsingDialyser" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(SystemPhases,{Preperation},{Initiation},{Ending})">
-<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
-<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p74" org.eventb.core.predicate="¬ConnectingPatientAndStarting=Reinfusion">
 <org.eventb.core.prIdent name="ConnectingPatientAndStarting" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="Reinfusion" org.eventb.core.type="SystemSubPhases"/>
@@ -563,6 +559,7 @@
 <org.eventb.core.prIdent name="DuringTherapy" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="OverviewOfTherapy" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p89" org.eventb.core.predicate="INITIATION∈dom(SUBPHASE)"/>
 <org.eventb.core.prPred name="p75" org.eventb.core.predicate="¬ConnectingPatientAndStarting=EmptyDialyzer">
 <org.eventb.core.prIdent name="ConnectingPatientAndStarting" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="EmptyDialyzer" org.eventb.core.type="SystemSubPhases"/>
@@ -590,6 +587,10 @@
 <org.eventb.core.prPred name="p66" org.eventb.core.predicate="¬SettingTreatmentParameters=OverviewOfTherapy">
 <org.eventb.core.prIdent name="OverviewOfTherapy" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="SettingTreatmentParameters" org.eventb.core.type="SystemSubPhases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="SystemPhases={PREPERATION,INITIATION,ENDING}">
+<org.eventb.core.prIdent name="ENDING" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="PREPERATION" org.eventb.core.type="SystemPhases"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬AutoSelfTest=EmptyCartridge">
 <org.eventb.core.prIdent name="AutoSelfTest" org.eventb.core.type="SystemSubPhases"/>
@@ -654,11 +655,6 @@
 <org.eventb.core.prIdent name="AutoSelfTest" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="DuringTherapy" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="Initiation∈dom(SUBPHASE)∧SUBPHASE∈SystemPhases ⇸ ℙ(SystemSubPhases)"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="SystemPhases={Preperation,Initiation,Ending}">
-<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
-<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p68" org.eventb.core.predicate="¬RinsingDialyser=DuringTherapy">
 <org.eventb.core.prIdent name="DuringTherapy" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="RinsingDialyser" org.eventb.core.type="SystemSubPhases"/>
@@ -702,6 +698,7 @@
 <org.eventb.core.prIdent name="ConnectingPatientAndStarting" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="OverviewOfTherapy" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p90" org.eventb.core.predicate="INITIATION∈SystemPhases"/>
 <org.eventb.core.prPred name="p63" org.eventb.core.predicate="¬SettingTreatmentParameters=Reinfusion">
 <org.eventb.core.prIdent name="Reinfusion" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="SettingTreatmentParameters" org.eventb.core.type="SystemSubPhases"/>
@@ -710,7 +707,6 @@
 <org.eventb.core.prIdent name="IrtTubingSystem" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="PrepHeparinPump" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p89" org.eventb.core.predicate="Initiation∈dom(SUBPHASE)"/>
 <org.eventb.core.prPred name="p60" org.eventb.core.predicate="¬SettingTreatmentParameters=RinsingDialyser">
 <org.eventb.core.prIdent name="RinsingDialyser" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="SettingTreatmentParameters" org.eventb.core.type="SystemSubPhases"/>
@@ -731,6 +727,7 @@
 <org.eventb.core.prIdent name="DuringTherapy" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="IrtTubingSystem" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="INITIATION∈dom(SUBPHASE)∧SUBPHASE∈SystemPhases ⇸ ℙ(SystemSubPhases)"/>
 <org.eventb.core.prPred name="p24" org.eventb.core.predicate="¬ConnectingConcetrate=PrepHeparinPump">
 <org.eventb.core.prIdent name="ConnectingConcetrate" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="PrepHeparinPump" org.eventb.core.type="SystemSubPhases"/>
@@ -767,11 +764,6 @@
 <org.eventb.core.prIdent name="ConnectingConcetrate" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="Reinfusion" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬Preperation=Ending">
-<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
-<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p90" org.eventb.core.predicate="Initiation∈SystemPhases"/>
 <org.eventb.core.prPred name="p85" org.eventb.core.predicate="¬EmptyDialyzer=EmptyCartridge">
 <org.eventb.core.prIdent name="EmptyCartridge" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="EmptyDialyzer" org.eventb.core.type="SystemSubPhases"/>
@@ -780,9 +772,20 @@
 <org.eventb.core.prIdent name="EmptyDialyzer" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="RinsingDialyser" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬PREPERATION=INITIATION">
+<org.eventb.core.prIdent name="PREPERATION" org.eventb.core.type="SystemPhases"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬AutoSelfTest=OverviewOfTherapy">
 <org.eventb.core.prIdent name="AutoSelfTest" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="OverviewOfTherapy" org.eventb.core.type="SystemSubPhases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(SystemPhases,{PREPERATION},{INITIATION},{ENDING})">
+<org.eventb.core.prIdent name="ENDING" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="PREPERATION" org.eventb.core.type="SystemPhases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬PREPERATION=ENDING">
+<org.eventb.core.prIdent name="ENDING" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="PREPERATION" org.eventb.core.type="SystemPhases"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬ConnectingConcetrate=SettingTreatmentParameters">
 <org.eventb.core.prIdent name="ConnectingConcetrate" org.eventb.core.type="SystemSubPhases"/>
@@ -792,6 +795,7 @@
 <org.eventb.core.prIdent name="ConnectingConcetrate" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="EmptyDialyzer" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p88" org.eventb.core.predicate="INITIATION∈dom(SUBPHASE)∧⊤"/>
 <org.eventb.core.prPred name="p65" org.eventb.core.predicate="¬SettingTreatmentParameters=EmptyCartridge">
 <org.eventb.core.prIdent name="EmptyCartridge" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="SettingTreatmentParameters" org.eventb.core.type="SystemSubPhases"/>
@@ -812,14 +816,7 @@
 <org.eventb.core.prIdent name="IrtTubingSystem" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="SettingTreatmentParameters" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬Preperation=Initiation">
-<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p91" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬Initiation=Ending">
-<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p88" org.eventb.core.predicate="Initiation∈dom(SUBPHASE)∧⊤"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="SUBPHASE∈SystemPhases ⇸ ℙ(SystemSubPhases)"/>
 <org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬SettingRinsingParameters=PrepHeparinPump">
 <org.eventb.core.prIdent name="PrepHeparinPump" org.eventb.core.type="SystemSubPhases"/>
@@ -874,6 +871,9 @@
 <org.eventb.core.prIdent name="AutoSelfTest" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="RinsingDialyser" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬INITIATION=ENDING">
+<org.eventb.core.prIdent name="ENDING" org.eventb.core.type="SystemPhases"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬AutoSelfTest=Reinfusion">
 <org.eventb.core.prIdent name="AutoSelfTest" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="Reinfusion" org.eventb.core.type="SystemSubPhases"/>
@@ -887,16 +887,16 @@
 <org.eventb.core.prIdent name="PrepHeparinPump" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prExpr name="e0" org.eventb.core.expression="SystemPhases"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
-<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="axm5/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="SystemPhases,SystemSubPhases">
 <org.eventb.core.lang name="L"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(SystemPhases,{Preperation},{Initiation},{Ending}))" org.eventb.core.prHyps="">
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(SystemPhases,{PREPERATION},{INITIATION},{ENDING}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5,p6,p7"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5,p6,p7"/>
@@ -929,7 +929,7 @@
 </org.eventb.core.prAnte>
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
-<org.eventb.core.prIdent name="Ending" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="ENDING" org.eventb.core.type="SystemPhases"/>
 <org.eventb.core.prIdent name="SUBPHASE" org.eventb.core.type="ℙ(SystemPhases×ℙ(SystemSubPhases))"/>
 <org.eventb.core.prPred name="p51" org.eventb.core.predicate="¬IrtTubingSystem=OverviewOfTherapy">
 <org.eventb.core.prIdent name="IrtTubingSystem" org.eventb.core.type="SystemSubPhases"/>
@@ -963,10 +963,6 @@
 <org.eventb.core.prIdent name="EmptyCartridge" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="RinsingDialyser" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(SystemPhases,{Preperation},{Initiation},{Ending})">
-<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
-<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p74" org.eventb.core.predicate="¬ConnectingPatientAndStarting=Reinfusion">
 <org.eventb.core.prIdent name="ConnectingPatientAndStarting" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="Reinfusion" org.eventb.core.type="SystemSubPhases"/>
@@ -983,7 +979,6 @@
 <org.eventb.core.prIdent name="OverviewOfTherapy" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="Reinfusion" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p89" org.eventb.core.predicate="Ending∈dom(SUBPHASE)"/>
 <org.eventb.core.prPred name="p14" org.eventb.core.predicate="¬AutoSelfTest=SettingTreatmentParameters">
 <org.eventb.core.prIdent name="AutoSelfTest" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="SettingTreatmentParameters" org.eventb.core.type="SystemSubPhases"/>
@@ -996,6 +991,7 @@
 <org.eventb.core.prIdent name="EmptyDialyzer" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="PrepHeparinPump" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p89" org.eventb.core.predicate="ENDING∈dom(SUBPHASE)"/>
 <org.eventb.core.prPred name="p28" org.eventb.core.predicate="¬ConnectingConcetrate=DuringTherapy">
 <org.eventb.core.prIdent name="ConnectingConcetrate" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="DuringTherapy" org.eventb.core.type="SystemSubPhases"/>
@@ -1003,6 +999,10 @@
 <org.eventb.core.prPred name="p66" org.eventb.core.predicate="¬SettingTreatmentParameters=OverviewOfTherapy">
 <org.eventb.core.prIdent name="OverviewOfTherapy" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="SettingTreatmentParameters" org.eventb.core.type="SystemSubPhases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="SystemPhases={PREPERATION,INITIATION,ENDING}">
+<org.eventb.core.prIdent name="INITIATION" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="PREPERATION" org.eventb.core.type="SystemPhases"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p20" org.eventb.core.predicate="¬AutoSelfTest=EmptyCartridge">
 <org.eventb.core.prIdent name="AutoSelfTest" org.eventb.core.type="SystemSubPhases"/>
@@ -1040,7 +1040,6 @@
 <org.eventb.core.prIdent name="EmptyCartridge" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="PrepHeparinPump" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="Ending∈dom(SUBPHASE)∧SUBPHASE∈SystemPhases ⇸ ℙ(SystemSubPhases)"/>
 <org.eventb.core.prPred name="p76" org.eventb.core.predicate="¬ConnectingPatientAndStarting=EmptyCartridge">
 <org.eventb.core.prIdent name="ConnectingPatientAndStarting" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="EmptyCartridge" org.eventb.core.type="SystemSubPhases"/>
@@ -1067,10 +1066,6 @@
 <org.eventb.core.prPred name="p17" org.eventb.core.predicate="¬AutoSelfTest=DuringTherapy">
 <org.eventb.core.prIdent name="AutoSelfTest" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="DuringTherapy" org.eventb.core.type="SystemSubPhases"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="SystemPhases={Preperation,Initiation,Ending}">
-<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
-<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p68" org.eventb.core.predicate="¬RinsingDialyser=DuringTherapy">
 <org.eventb.core.prIdent name="DuringTherapy" org.eventb.core.type="SystemSubPhases"/>
@@ -1179,21 +1174,30 @@
 <org.eventb.core.prIdent name="ConnectingConcetrate" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="Reinfusion" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬Preperation=Ending">
-<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p90" org.eventb.core.predicate="Ending∈SystemPhases"/>
 <org.eventb.core.prPred name="p85" org.eventb.core.predicate="¬EmptyDialyzer=EmptyCartridge">
 <org.eventb.core.prIdent name="EmptyCartridge" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="EmptyDialyzer" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p90" org.eventb.core.predicate="ENDING∈SystemPhases"/>
 <org.eventb.core.prPred name="p70" org.eventb.core.predicate="¬RinsingDialyser=EmptyDialyzer">
 <org.eventb.core.prIdent name="EmptyDialyzer" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="RinsingDialyser" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="ENDING∈dom(SUBPHASE)∧SUBPHASE∈SystemPhases ⇸ ℙ(SystemSubPhases)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬PREPERATION=INITIATION">
+<org.eventb.core.prIdent name="INITIATION" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="PREPERATION" org.eventb.core.type="SystemPhases"/>
+</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p21" org.eventb.core.predicate="¬AutoSelfTest=OverviewOfTherapy">
 <org.eventb.core.prIdent name="AutoSelfTest" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="OverviewOfTherapy" org.eventb.core.type="SystemSubPhases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(SystemPhases,{PREPERATION},{INITIATION},{ENDING})">
+<org.eventb.core.prIdent name="INITIATION" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.prIdent name="PREPERATION" org.eventb.core.type="SystemPhases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬PREPERATION=ENDING">
+<org.eventb.core.prIdent name="PREPERATION" org.eventb.core.type="SystemPhases"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p25" org.eventb.core.predicate="¬ConnectingConcetrate=SettingTreatmentParameters">
 <org.eventb.core.prIdent name="ConnectingConcetrate" org.eventb.core.type="SystemSubPhases"/>
@@ -1223,14 +1227,7 @@
 <org.eventb.core.prIdent name="IrtTubingSystem" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="SettingTreatmentParameters" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬Preperation=Initiation">
-<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
-<org.eventb.core.prIdent name="Preperation" org.eventb.core.type="SystemPhases"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p91" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬Initiation=Ending">
-<org.eventb.core.prIdent name="Initiation" org.eventb.core.type="SystemPhases"/>
-</org.eventb.core.prPred>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="SUBPHASE∈SystemPhases ⇸ ℙ(SystemSubPhases)"/>
 <org.eventb.core.prPred name="p34" org.eventb.core.predicate="¬SettingRinsingParameters=PrepHeparinPump">
 <org.eventb.core.prIdent name="PrepHeparinPump" org.eventb.core.type="SystemSubPhases"/>
@@ -1280,11 +1277,14 @@
 <org.eventb.core.prIdent name="ConnectingPatientAndStarting" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="RinsingDialyser" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p88" org.eventb.core.predicate="Ending∈dom(SUBPHASE)∧⊤"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="SUBPHASE∈SystemPhases → ℙ(SystemSubPhases)"/>
+<org.eventb.core.prPred name="p88" org.eventb.core.predicate="ENDING∈dom(SUBPHASE)∧⊤"/>
 <org.eventb.core.prPred name="p15" org.eventb.core.predicate="¬AutoSelfTest=RinsingDialyser">
 <org.eventb.core.prIdent name="AutoSelfTest" org.eventb.core.type="SystemSubPhases"/>
 <org.eventb.core.prIdent name="RinsingDialyser" org.eventb.core.type="SystemSubPhases"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬INITIATION=ENDING">
+<org.eventb.core.prIdent name="INITIATION" org.eventb.core.type="SystemPhases"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p18" org.eventb.core.predicate="¬AutoSelfTest=Reinfusion">
 <org.eventb.core.prIdent name="AutoSelfTest" org.eventb.core.type="SystemSubPhases"/>
@@ -1299,12 +1299,12 @@
 <org.eventb.core.prIdent name="PrepHeparinPump" org.eventb.core.type="SystemSubPhases"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prExpr name="e0" org.eventb.core.expression="SystemPhases"/>
+<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.totalDom:2"/>
-<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="axm7/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="SystemSubPhases">
 <org.eventb.core.lang name="L"/>

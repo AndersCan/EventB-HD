@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="1">
 <org.eventb.core.poIdentifier name="SystemPhases" org.eventb.core.type="ℙ(SystemPhases)"/>
-<org.eventb.core.poIdentifier name="Ending" org.eventb.core.type="SystemPhases"/>
-<org.eventb.core.poIdentifier name="Initiation" org.eventb.core.type="SystemPhases"/>
-<org.eventb.core.poIdentifier name="Preperation" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.poIdentifier name="ENDING" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.poIdentifier name="INITIATION" org.eventb.core.type="SystemPhases"/>
+<org.eventb.core.poIdentifier name="PREPERATION" org.eventb.core.type="SystemPhases"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD4/SystemPhaseCtx01.bpo|org.eventb.core.poFile#SystemPhaseCtx01|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(SystemPhases,{Preperation},{Initiation},{Ending})" org.eventb.core.source="/HD4/SystemPhaseCtx01.buc|org.eventb.core.contextFile#SystemPhaseCtx01|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD4/SystemPhaseCtx01.bpo|org.eventb.core.poFile#SystemPhaseCtx01|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(SystemPhases,{PREPERATION},{INITIATION},{ENDING})" org.eventb.core.source="/HD4/SystemPhaseCtx01.buc|org.eventb.core.contextFile#SystemPhaseCtx01|org.eventb.core.axiom#+"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

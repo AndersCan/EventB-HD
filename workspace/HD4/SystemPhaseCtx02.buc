@@ -4,9 +4,9 @@
 <org.eventb.core.axiom name="A" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(SystemSubPhases, {AutoSelfTest}, {ConnectingConcetrate}, {SettingRinsingParameters}, {IrtTubingSystem}, {PrepHeparinPump}, {SettingTreatmentParameters}, {RinsingDialyser}, {ConnectingPatientAndStarting}, {DuringTherapy}, {Reinfusion}, {EmptyDialyzer}, {EmptyCartridge}, {OverviewOfTherapy})"/>
 <org.eventb.core.axiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="SUBPHASE ∈ SystemPhases → ℙ(SystemSubPhases)"/>
 <org.eventb.core.constant name="." org.eventb.core.identifier="SUBPHASE"/>
-<org.eventb.core.axiom name="1" org.eventb.core.label="axm3" org.eventb.core.predicate="SUBPHASE(Preperation) = {AutoSelfTest, ConnectingConcetrate, SettingRinsingParameters, IrtTubingSystem, PrepHeparinPump, SettingTreatmentParameters, RinsingDialyser}"/>
-<org.eventb.core.axiom name="/" org.eventb.core.label="axm4" org.eventb.core.predicate="SUBPHASE(Initiation) = {ConnectingPatientAndStarting, DuringTherapy}"/>
-<org.eventb.core.axiom name="0" org.eventb.core.label="axm5" org.eventb.core.predicate="SUBPHASE(Ending) = {Reinfusion, EmptyDialyzer, EmptyCartridge, OverviewOfTherapy}"/>
+<org.eventb.core.axiom name="1" org.eventb.core.label="axm3" org.eventb.core.predicate="SUBPHASE(PREPERATION) = {AutoSelfTest, ConnectingConcetrate, SettingRinsingParameters, IrtTubingSystem, PrepHeparinPump, SettingTreatmentParameters, RinsingDialyser}"/>
+<org.eventb.core.axiom name="/" org.eventb.core.label="axm4" org.eventb.core.predicate="SUBPHASE(INITIATION) = {ConnectingPatientAndStarting, DuringTherapy}"/>
+<org.eventb.core.axiom name="0" org.eventb.core.label="axm5" org.eventb.core.predicate="SUBPHASE(ENDING) = {Reinfusion, EmptyDialyzer, EmptyCartridge, OverviewOfTherapy}"/>
 <org.eventb.core.carrierSet name="2" org.eventb.core.identifier="SystemSubPhases"/>
 <org.eventb.core.constant name="B" org.eventb.core.identifier="SUBPHASEORDER"/>
 <org.eventb.core.constant name="3" org.eventb.core.identifier="AutoSelfTest"/>

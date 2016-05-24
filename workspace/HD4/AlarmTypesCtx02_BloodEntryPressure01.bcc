@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd">
+<org.eventb.core.scExtendsContext name="'" org.eventb.core.scTarget="/HD4/AlarmTypesCtx01.bcc|org.eventb.core.scContextFile#AlarmTypesCtx01" org.eventb.core.source="/HD4/AlarmTypesCtx02_BloodEntryPressure01.buc|org.eventb.core.contextFile#AlarmTypesCtx02_BloodEntryPressure01|org.eventb.core.extendsContext#'"/>
+<org.eventb.core.scInternalContext name="AlarmTypesCtx01">
+<org.eventb.core.scCarrierSet name="Alarms" org.eventb.core.source="/HD4/AlarmTypesCtx01.buc|org.eventb.core.contextFile#AlarmTypesCtx01|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(Alarms)"/>
+</org.eventb.core.scInternalContext>
+<org.eventb.core.scAxiom name="AlarmTypesCtx02" org.eventb.core.label="axm1" org.eventb.core.predicate="ALARM01∈Alarms" org.eventb.core.source="/HD4/AlarmTypesCtx02_BloodEntryPressure01.buc|org.eventb.core.contextFile#AlarmTypesCtx02_BloodEntryPressure01|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="ALARM01" org.eventb.core.source="/HD4/AlarmTypesCtx02_BloodEntryPressure01.buc|org.eventb.core.contextFile#AlarmTypesCtx02_BloodEntryPressure01|org.eventb.core.constant#(" org.eventb.core.type="Alarms"/>
+</org.eventb.core.scContextFile>
