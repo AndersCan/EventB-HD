@@ -97,13 +97,13 @@
 <org.eventb.core.invariant name="(8" org.eventb.core.label="inv1" org.eventb.core.predicate="SystemPhase_C_SystemPhase ∈ SystemPhases"/>
 <org.eventb.core.variable name="(9" org.eventb.core.identifier="SystemPhase_C_SystemSubPhase"/>
 <org.eventb.core.invariant name="(:" org.eventb.core.label="inv2" org.eventb.core.predicate="SystemPhase_C_SystemSubPhase ∈ SystemSubPhases"/>
-<org.eventb.core.event name="(;" org.eventb.core.comment="This event might be complete" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_SystemPhase_C_NextPhase">
+<org.eventb.core.event name="(;" org.eventb.core.comment="This event might be complete" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_SystemPhase_C_GotoNextPhase">
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="phase"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="subphase"/>
 <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="phase ∈ SystemPhases"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="subphase ∈ SystemSubPhases"/>
-<org.eventb.core.guard name="." org.eventb.core.label="grd3" org.eventb.core.predicate="subphase ∈ SUBPHASE(phase)"/>
-<org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="SUBPHASEORDER(subphase) = SUBPHASEORDER(SystemPhase_C_SystemSubPhase) + 1"/>
+<org.eventb.core.guard name="." org.eventb.core.comment="Subphase belongs to the given phase" org.eventb.core.label="grd3" org.eventb.core.predicate="subphase ∈ SUBPHASE(phase)"/>
+<org.eventb.core.guard name="+" org.eventb.core.comment="Subphase must progress by max 1 step" org.eventb.core.label="grd4" org.eventb.core.predicate="SUBPHASEORDER(subphase) = SUBPHASEORDER(SystemPhase_C_SystemSubPhase) + 1"/>
 <org.eventb.core.action name="," org.eventb.core.assignment="SystemPhase_C_SystemPhase ≔ phase" org.eventb.core.label="act1"/>
 <org.eventb.core.action name="-" org.eventb.core.assignment="SystemPhase_C_SystemSubPhase ≔ subphase" org.eventb.core.label="act2"/>
 </org.eventb.core.event>

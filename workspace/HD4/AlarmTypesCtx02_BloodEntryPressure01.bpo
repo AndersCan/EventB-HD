@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poFile org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="4">
 <org.eventb.core.poIdentifier name="Alarms" org.eventb.core.type="ℙ(Alarms)"/>
-<org.eventb.core.poIdentifier name="ALARM01" org.eventb.core.type="Alarms"/>
+<org.eventb.core.poIdentifier name="Alarm_APBelowLowerLimit" org.eventb.core.type="Alarms"/>
+<org.eventb.core.poIdentifier name="Alarm_APExceedsUpperLimit" org.eventb.core.type="Alarms"/>
+<org.eventb.core.poIdentifier name="Alarm_VPBelowLowerLimit" org.eventb.core.type="Alarms"/>
+<org.eventb.core.poIdentifier name="Alarm_VPExceedsUpperLimit" org.eventb.core.type="Alarms"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD4/AlarmTypesCtx02_BloodEntryPressure01.bpo|org.eventb.core.poFile#AlarmTypesCtx02_BloodEntryPressure01|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="ALARM01∈Alarms" org.eventb.core.source="/HD4/AlarmTypesCtx02_BloodEntryPressure01.buc|org.eventb.core.contextFile#AlarmTypesCtx02_BloodEntryPressure01|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD4/AlarmTypesCtx02_BloodEntryPressure01.bpo|org.eventb.core.poFile#AlarmTypesCtx02_BloodEntryPressure01|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="4">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Alarm_VPExceedsUpperLimit∈Alarms" org.eventb.core.source="/HD4/AlarmTypesCtx02_BloodEntryPressure01.buc|org.eventb.core.contextFile#AlarmTypesCtx02_BloodEntryPressure01|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Alarm_VPBelowLowerLimit∈Alarms" org.eventb.core.source="/HD4/AlarmTypesCtx02_BloodEntryPressure01.buc|org.eventb.core.contextFile#AlarmTypesCtx02_BloodEntryPressure01|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Alarm_APExceedsUpperLimit∈Alarms" org.eventb.core.source="/HD4/AlarmTypesCtx02_BloodEntryPressure01.buc|org.eventb.core.contextFile#AlarmTypesCtx02_BloodEntryPressure01|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="Alarm_APBelowLowerLimit∈Alarms" org.eventb.core.source="/HD4/AlarmTypesCtx02_BloodEntryPressure01.buc|org.eventb.core.contextFile#AlarmTypesCtx02_BloodEntryPressure01|org.eventb.core.axiom#\/"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

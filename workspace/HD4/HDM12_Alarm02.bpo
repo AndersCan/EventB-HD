@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="27">
+<org.eventb.core.poFile org.eventb.core.poStamp="30">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="27">
 <org.eventb.core.poIdentifier name="PowerStates" org.eventb.core.type="ℙ(PowerStates)"/>
 <org.eventb.core.poIdentifier name="OFF" org.eventb.core.type="PowerStates"/>
@@ -260,7 +260,7 @@
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="A_BalanceChamber_M_RightChamber − diff&gt;0" org.eventb.core.source="/HD4/HDM08_BalanceChamber02.bum|org.eventb.core.machineFile#HDM08_BalanceChamber02|org.eventb.core.event#evt1|org.eventb.core.guard#-"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="A_BalanceChamber_M_RightChamber&gt;A_BalanceChamber_M_LeftChamber" org.eventb.core.source="/HD4/HDM08_BalanceChamber02.bum|org.eventb.core.machineFile#HDM08_BalanceChamber02|org.eventb.core.event#evt1|org.eventb.core.guard#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="A2_Alarm_AddAlarm/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="27">
+<org.eventb.core.poSequent name="A2_Alarm_AddAlarm/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD4/HDM12_Alarm02.bpo|org.eventb.core.poFile#HDM12_Alarm02|org.eventb.core.poPredicateSet#EVTALLHYPSafetyAirDetector_M_CleanedBloou"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Alarm_C_ActiveAlarms∪{addAlarm}=(∅ ⦂ ℙ(Alarms))⇒ON=OFF" org.eventb.core.source="/HD4/HDM12_Alarm02.bum|org.eventb.core.machineFile#HDM12_Alarm02|org.eventb.core.invariant#'w"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD4/HDM11_SafetyAirDetector01.bum|org.eventb.core.machineFile#HDM11_SafetyAirDetector01|org.eventb.core.event#'V"/>
@@ -269,7 +269,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD4/HDM12_Alarm02.bpo|org.eventb.core.poFile#HDM12_Alarm02|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD4/HDM12_Alarm02.bpo|org.eventb.core.poFile#HDM12_Alarm02|org.eventb.core.poSequent#A2_Alarm_AddAlarm\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/HD4/HDM12_Alarm02.bpo|org.eventb.core.poFile#HDM12_Alarm02|org.eventb.core.poPredicateSet#HYPAlarmTypesCtx04|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="A2_Alarm_AddAlarm/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="27">
+<org.eventb.core.poSequent name="A2_Alarm_AddAlarm/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD4/HDM12_Alarm02.bpo|org.eventb.core.poFile#HDM12_Alarm02|org.eventb.core.poPredicateSet#EVTALLHYPSafetyAirDetector_M_CleanedBloou"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Alarm_C_ActiveAlarms∪{addAlarm}≠(∅ ⦂ ℙ(Alarms))⇒ON=ON" org.eventb.core.source="/HD4/HDM12_Alarm02.bum|org.eventb.core.machineFile#HDM12_Alarm02|org.eventb.core.invariant#inv1"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD4/HDM11_SafetyAirDetector01.bum|org.eventb.core.machineFile#HDM11_SafetyAirDetector01|org.eventb.core.event#'V"/>
@@ -283,10 +283,9 @@
 <org.eventb.core.poIdentifier name="Alarm_C_AlarmActivated'" org.eventb.core.type="PowerStates"/>
 <org.eventb.core.poIdentifier name="Alarm_C_ActiveAlarms'" org.eventb.core.type="ℙ(Alarms)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPSafetyAirDetector_M_CleanedBloou" org.eventb.core.parentSet="/HD4/HDM12_Alarm02.bpo|org.eventb.core.poFile#HDM12_Alarm02|org.eventb.core.poPredicateSet#EVTIDENTSafetyAirDetector_M_CleanedBloou" org.eventb.core.poStamp="27">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Alarm_C_AlarmActivated=OFF" org.eventb.core.source="/HD4/HDM09_Alarm01.bum|org.eventb.core.machineFile#HDM09_Alarm01|org.eventb.core.event#'W|org.eventb.core.guard#)"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="addAlarm∈Alarms" org.eventb.core.source="/HD4/HDM12_Alarm02.bum|org.eventb.core.machineFile#HDM12_Alarm02|org.eventb.core.event#'n|org.eventb.core.guard#*"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="addAlarm∉Alarm_C_ActiveAlarms" org.eventb.core.source="/HD4/HDM12_Alarm02.bum|org.eventb.core.machineFile#HDM12_Alarm02|org.eventb.core.event#'n|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPSafetyAirDetector_M_CleanedBloou" org.eventb.core.parentSet="/HD4/HDM12_Alarm02.bpo|org.eventb.core.poFile#HDM12_Alarm02|org.eventb.core.poPredicateSet#EVTIDENTSafetyAirDetector_M_CleanedBloou" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="addAlarm∈Alarms" org.eventb.core.source="/HD4/HDM12_Alarm02.bum|org.eventb.core.machineFile#HDM12_Alarm02|org.eventb.core.event#'n|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="addAlarm∉Alarm_C_ActiveAlarms" org.eventb.core.source="/HD4/HDM12_Alarm02.bum|org.eventb.core.machineFile#HDM12_Alarm02|org.eventb.core.event#'n|org.eventb.core.guard#+"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poSequent name="A_Alarm_RemoveSingleAlarm/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="27">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD4/HDM12_Alarm02.bpo|org.eventb.core.poFile#HDM12_Alarm02|org.eventb.core.poPredicateSet#EVTALLHYPSafetyAirDetector_M_CleanedBloov"/>
@@ -312,7 +311,7 @@
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="removeAlarm∈Alarm_C_ActiveAlarms" org.eventb.core.source="/HD4/HDM12_Alarm02.bum|org.eventb.core.machineFile#HDM12_Alarm02|org.eventb.core.event#inv2|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Alarm_C_ActiveAlarms ∖ {removeAlarm}≠(∅ ⦂ ℙ(Alarms))" org.eventb.core.source="/HD4/HDM12_Alarm02.bum|org.eventb.core.machineFile#HDM12_Alarm02|org.eventb.core.event#inv2|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="A2_Alarm_RemoveFinalAlarm/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="27">
+<org.eventb.core.poSequent name="A2_Alarm_RemoveFinalAlarm/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD4/HDM12_Alarm02.bpo|org.eventb.core.poFile#HDM12_Alarm02|org.eventb.core.poPredicateSet#EVTALLHYPSafetyAirDetector_M_CleanedBloow"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Alarm_C_ActiveAlarms ∖ {finalAlarm}=(∅ ⦂ ℙ(Alarms))⇒OFF=OFF" org.eventb.core.source="/HD4/HDM12_Alarm02.bum|org.eventb.core.machineFile#HDM12_Alarm02|org.eventb.core.invariant#'w"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD4/HDM11_SafetyAirDetector01.bum|org.eventb.core.machineFile#HDM11_SafetyAirDetector01|org.eventb.core.event#'W"/>
@@ -321,7 +320,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD4/HDM12_Alarm02.bpo|org.eventb.core.poFile#HDM12_Alarm02|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD4/HDM12_Alarm02.bpo|org.eventb.core.poFile#HDM12_Alarm02|org.eventb.core.poSequent#A2_Alarm_RemoveFinalAlarm\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/HD4/HDM12_Alarm02.bpo|org.eventb.core.poFile#HDM12_Alarm02|org.eventb.core.poPredicateSet#HYPAlarmTypesCtx04|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="A2_Alarm_RemoveFinalAlarm/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="27">
+<org.eventb.core.poSequent name="A2_Alarm_RemoveFinalAlarm/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="30">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD4/HDM12_Alarm02.bpo|org.eventb.core.poFile#HDM12_Alarm02|org.eventb.core.poPredicateSet#EVTALLHYPSafetyAirDetector_M_CleanedBloow"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Alarm_C_ActiveAlarms ∖ {finalAlarm}≠(∅ ⦂ ℙ(Alarms))⇒OFF=ON" org.eventb.core.source="/HD4/HDM12_Alarm02.bum|org.eventb.core.machineFile#HDM12_Alarm02|org.eventb.core.invariant#inv1"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD4/HDM11_SafetyAirDetector01.bum|org.eventb.core.machineFile#HDM11_SafetyAirDetector01|org.eventb.core.event#'W"/>
@@ -335,10 +334,9 @@
 <org.eventb.core.poIdentifier name="Alarm_C_AlarmActivated'" org.eventb.core.type="PowerStates"/>
 <org.eventb.core.poIdentifier name="Alarm_C_ActiveAlarms'" org.eventb.core.type="ℙ(Alarms)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPSafetyAirDetector_M_CleanedBloow" org.eventb.core.parentSet="/HD4/HDM12_Alarm02.bpo|org.eventb.core.poFile#HDM12_Alarm02|org.eventb.core.poPredicateSet#EVTIDENTSafetyAirDetector_M_CleanedBloow" org.eventb.core.poStamp="27">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Alarm_C_AlarmActivated=ON" org.eventb.core.source="/HD4/HDM09_Alarm01.bum|org.eventb.core.machineFile#HDM09_Alarm01|org.eventb.core.event#evt1|org.eventb.core.guard#)"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="finalAlarm∈Alarm_C_ActiveAlarms" org.eventb.core.source="/HD4/HDM12_Alarm02.bum|org.eventb.core.machineFile#HDM12_Alarm02|org.eventb.core.event#'o|org.eventb.core.guard#-"/>
-<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Alarm_C_ActiveAlarms ∖ {finalAlarm}=(∅ ⦂ ℙ(Alarms))" org.eventb.core.source="/HD4/HDM12_Alarm02.bum|org.eventb.core.machineFile#HDM12_Alarm02|org.eventb.core.event#'o|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPSafetyAirDetector_M_CleanedBloow" org.eventb.core.parentSet="/HD4/HDM12_Alarm02.bpo|org.eventb.core.poFile#HDM12_Alarm02|org.eventb.core.poPredicateSet#EVTIDENTSafetyAirDetector_M_CleanedBloow" org.eventb.core.poStamp="30">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="finalAlarm∈Alarm_C_ActiveAlarms" org.eventb.core.source="/HD4/HDM12_Alarm02.bum|org.eventb.core.machineFile#HDM12_Alarm02|org.eventb.core.event#'o|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Alarm_C_ActiveAlarms ∖ {finalAlarm}=(∅ ⦂ ℙ(Alarms))" org.eventb.core.source="/HD4/HDM12_Alarm02.bum|org.eventb.core.machineFile#HDM12_Alarm02|org.eventb.core.event#'o|org.eventb.core.guard#+"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTIDENTSafetyAirDetector_M_CleanedBloox" org.eventb.core.parentSet="/HD4/HDM12_Alarm02.bpo|org.eventb.core.poFile#HDM12_Alarm02|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="27">
 <org.eventb.core.poIdentifier name="BloodPump_C_Pump'" org.eventb.core.type="PowerStates"/>
