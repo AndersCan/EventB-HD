@@ -1,3 +1,6 @@
+#Notes
+Variables that can cause an 'alarmed event' must/should refine the 'AddAlarm event' so that illegal values cause an alarm. Also needs an event that allows legal values.
+
 #Meetings
 
 ## 19.05.16

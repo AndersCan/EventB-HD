@@ -27,6 +27,10 @@
 <org.eventb.core.event name="(:" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
 <org.eventb.core.action name="'" org.eventb.core.assignment="BloodSidePressure_M_VenousPressure ≔ 0" org.eventb.core.label="act22"/>
 <org.eventb.core.action name="(" org.eventb.core.assignment="BloodSidePressure_M_ArterialPressure ≔ 0" org.eventb.core.label="act23"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="BloodSidePressure_C_APUpperLimit ≔ 0" org.eventb.core.label="act24"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="BloodSidePressure_C_VPUpperLimit ≔ 0" org.eventb.core.label="act25"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="BloodSidePressure_C_VPLowerLimit ≔ 0" org.eventb.core.label="act26"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="BloodSidePressure_C_APLowerLimit ≔ 0" org.eventb.core.label="act27"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="(;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A1_EBC_PumpInPatient">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A1_EBC_PumpInPatient"/>
@@ -128,21 +132,17 @@
 <org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="Alarm_VPBelowLowerLimit ∉ Alarm_C_ActiveAlarms"/>
 <org.eventb.core.guard name="internal1" org.eventb.core.label="grd2" org.eventb.core.predicate="Alarm_VPBelowLowerLimit ∈ Alarms"/>
 <org.eventb.core.guard name="grd1" org.eventb.core.label="grd3" org.eventb.core.predicate="SystemPhase_C_SystemPhase = INITIATION"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd4" org.eventb.core.predicate="ap_lowerLimit ∈ ℕ"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="BloodSidePressure_M_VenousPressure &lt; ap_lowerLimit"/>
-<org.eventb.core.parameter name=")" org.eventb.core.identifier="ap_lowerLimit"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="BloodSidePressure_M_ArterialPressure &lt; BloodSidePressure_C_APLowerLimit"/>
 <org.eventb.core.witness name="+" org.eventb.core.label="addAlarm" org.eventb.core.predicate="addAlarm = Alarm_APBelowLowerLimit"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="evt4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A3_BloodSidePressure_APExceedsUpperLimitAlarm">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A2_Alarm_AddAlarm"/>
 <org.eventb.core.action name="*" org.eventb.core.assignment="Alarm_C_AlarmActivated ≔ ON" org.eventb.core.label="act1"/>
 <org.eventb.core.action name=")" org.eventb.core.assignment="Alarm_C_ActiveAlarms ≔ Alarm_C_ActiveAlarms ∪ {Alarm_APExceedsUpperLimit}" org.eventb.core.label="act2"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="BloodSidePressure_M_VenousPressure &gt; ap_upperLimit"/>
-<org.eventb.core.guard name="internal1" org.eventb.core.label="grd2" org.eventb.core.predicate="Alarm_VPExceedsUpperLimit ∈ Alarms"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="BloodSidePressure_M_ArterialPressure &gt; BloodSidePressure_C_APUpperLimit"/>
+<org.eventb.core.guard name="internal1" org.eventb.core.label="grd2" org.eventb.core.predicate="Alarm_APExceedsUpperLimit ∈ Alarms"/>
 <org.eventb.core.guard name="grd1" org.eventb.core.label="grd3" org.eventb.core.predicate="SystemPhase_C_SystemPhase = INITIATION"/>
-<org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="Alarm_VPExceedsUpperLimit ∉ Alarm_C_ActiveAlarms"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd5" org.eventb.core.predicate="ap_upperLimit ∈ ℕ"/>
-<org.eventb.core.parameter name=")" org.eventb.core.identifier="ap_upperLimit"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd4" org.eventb.core.predicate="Alarm_APExceedsUpperLimit ∉ Alarm_C_ActiveAlarms"/>
 <org.eventb.core.witness name="+" org.eventb.core.label="addAlarm" org.eventb.core.predicate="addAlarm = Alarm_APExceedsUpperLimit"/>
 </org.eventb.core.event>
 <org.eventb.core.variable name="(S" org.eventb.core.identifier="BloodSidePressure_M_VenousPressure"/>
@@ -150,4 +150,32 @@
 <org.eventb.core.variable name="evt2" org.eventb.core.identifier="BloodSidePressure_M_ArterialPressure"/>
 <org.eventb.core.invariant name="evt3" org.eventb.core.label="inv2" org.eventb.core.predicate="BloodSidePressure_M_ArterialPressure ∈ ℕ"/>
 <org.eventb.core.seesContext name="evt4" org.eventb.core.target="AlarmTypesCtx02_BloodEntryPressure01"/>
+<org.eventb.core.variable name="evt5" org.eventb.core.identifier="BloodSidePressure_C_APUpperLimit"/>
+<org.eventb.core.invariant name="evt6" org.eventb.core.label="inv3" org.eventb.core.predicate="BloodSidePressure_C_APUpperLimit ∈ ℕ "/>
+<org.eventb.core.variable name="evt;" org.eventb.core.identifier="BloodSidePressure_C_VPUpperLimit"/>
+<org.eventb.core.variable name="evt7" org.eventb.core.identifier="BloodSidePressure_C_APLowerLimit"/>
+<org.eventb.core.invariant name="evt=" org.eventb.core.label="inv4" org.eventb.core.predicate="BloodSidePressure_C_VPUpperLimit ∈ ℕ"/>
+<org.eventb.core.invariant name="evt8" org.eventb.core.label="inv5" org.eventb.core.predicate="BloodSidePressure_C_APLowerLimit ∈ ℕ"/>
+<org.eventb.core.variable name="evt9" org.eventb.core.identifier="BloodSidePressure_C_VPLowerLimit"/>
+<org.eventb.core.invariant name="evt:" org.eventb.core.label="inv6" org.eventb.core.predicate="BloodSidePressure_C_VPLowerLimit ∈ ℕ"/>
+<org.eventb.core.event name="evt&gt;" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BloodSidePressure_C_SetAPUpperLimit">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="limit"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="limit ∈ ℕ"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="BloodSidePressure_C_APUpperLimit ≔ limit" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt?" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BloodSidePressure_C_SetAPLowerLimit">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="limit"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="limit ∈ ℕ "/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="BloodSidePressure_C_APLowerLimit ≔ limit" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evt@" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BloodSidePressure_C_SetVPUpperLimit">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="limit"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="limit ∈ ℕ "/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="BloodSidePressure_C_VPUpperLimit ≔ limit" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="evtA" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="BloodSidePressure_C_SetVPLowerLimit">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="limit"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="limit ∈ ℕ"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="BloodSidePressure_C_VPLowerLimit ≔ limit" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
 </org.eventb.core.machineFile>
