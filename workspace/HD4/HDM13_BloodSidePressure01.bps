@@ -6,16 +6,36 @@
 <org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="39" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="39" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="39" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="A3_BloodSidePressure_VPBelowLowerLimitAlarm/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="38" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="A3_BloodSidePressure_VPBelowLowerLimitAlarm/act2/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="38" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="A3_BloodSidePressure_VPExceedsUpperLimitAlarm/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="38" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="A3_BloodSidePressure_VPExceedsUpperLimitAlarm/act2/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="38" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="A3_BloodSidePressure_APBelowLowerLimitAlarm/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="A3_BloodSidePressure_APBelowLowerLimitAlarm/act2/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="A3_BloodSidePressure_APExceedsUpperLimitAlarm/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="A3_BloodSidePressure_APExceedsUpperLimitAlarm/act2/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="49" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="BloodSidePressure_C_SetAPUpperLimit/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="40" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="BloodSidePressure_C_SetAPLowerLimit/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="40" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="BloodSidePressure_C_SetVPUpperLimit/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="40" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="BloodSidePressure_C_SetVPLowerLimit/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="40" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="69" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A2_Alarm_AddAlarm/inv7/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A_Alarm_RemoveSingleAlarm/inv7/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A2_Alarm_RemoveFinalAlarm/inv7/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A3_BloodSidePressure_VPBelowLowerLimitAlarm/grd7/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="87" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="A3_BloodSidePressure_VPBelowLowerLimitAlarm/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="87" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A3_BloodSidePressure_VPBelowLowerLimitAlarm/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="87" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A3_BloodSidePressure_VPBelowLowerLimitAlarm/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="87" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A3_BloodSidePressure_VPBelowLowerLimitAlarm/act2/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="87" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A3_BloodSidePressure_VPExceedsUpperLimitAlarm/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A3_BloodSidePressure_VPExceedsUpperLimitAlarm/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A3_BloodSidePressure_VPExceedsUpperLimitAlarm/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A3_BloodSidePressure_VPExceedsUpperLimitAlarm/act2/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A3_BloodSidePressure_APBelowLowerLimitAlarm/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A3_BloodSidePressure_APBelowLowerLimitAlarm/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="A3_BloodSidePressure_APBelowLowerLimitAlarm/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A3_BloodSidePressure_APBelowLowerLimitAlarm/act2/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A3_BloodSidePressure_APExceedsUpperLimitAlarm/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A3_BloodSidePressure_APExceedsUpperLimitAlarm/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psBroken="true" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="A3_BloodSidePressure_APExceedsUpperLimitAlarm/grd3/GRD" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A3_BloodSidePressure_APExceedsUpperLimitAlarm/act2/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="BloodSidePressure_C_SetAPUpperLimit/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="BloodSidePressure_C_SetAPUpperLimit/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="BloodSidePressure_C_SetAPLowerLimit/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="BloodSidePressure_C_SetAPLowerLimit/inv9/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="BloodSidePressure_C_SetVPUpperLimit/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="BloodSidePressure_C_SetVPUpperLimit/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="BloodSidePressure_C_SetVPUpperLimit/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="BloodSidePressure_C_SetVPLowerLimit/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="BloodSidePressure_C_SetVPLowerLimit/inv8/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="84" org.eventb.core.psManual="false"/>
 </org.eventb.core.psFile>
