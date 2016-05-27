@@ -105,5 +105,5 @@
 <org.eventb.core.seesContext name="'v" org.eventb.core.target="AlarmTypesCtx01"/>
 <org.eventb.core.invariant name="'w" org.eventb.core.label="inv2" org.eventb.core.predicate="Alarm_C_ActiveAlarms = ∅ ⇒ Alarm_C_AlarmActivated = OFF"/>
 <org.eventb.core.invariant name="inv1" org.eventb.core.label="inv3" org.eventb.core.predicate="Alarm_C_ActiveAlarms ≠ ∅ ⇒ Alarm_C_AlarmActivated = ON"/>
-<org.eventb.core.invariant name="inv3" org.eventb.core.comment="Active alarm is only empty when the Alarm is off" org.eventb.core.label="inv4" org.eventb.core.predicate="Alarm_C_ActiveAlarms ≠ ∅ ⇔ Alarm_C_AlarmActivated = ON" org.eventb.core.theorem="true"/>
+<org.eventb.core.invariant name="inv3" org.eventb.core.comment="ActiveAlarms is only empty when the Alarm is off" org.eventb.core.label="inv4" org.eventb.core.predicate="Alarm_C_ActiveAlarms ≠ ∅ ⇔ Alarm_C_AlarmActivated = ON" org.eventb.core.theorem="true"/>
 </org.eventb.core.machineFile>
