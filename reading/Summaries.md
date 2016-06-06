@@ -2,6 +2,23 @@ Summaries
 ==============
 Short summaries of papers & books read throughout the internship.
 
+## Proof-Based System Engineering and Embedded Systems
+Basically concludes that most errors reported as poor software engineering is actually due to poor system engineering. 
+
+> Our conclusions deviate significantly from the Inquiry Board findings. Basically, the Inquiry Board concludes that poor S/W engineering practice is the culprit, whereas we argue that the 501 failure results from poor system engineering decisions. Most of what is labelled as S/W errors are in fact manifestations of system engineering faults.
+
+So: Treating the symptoms, not the cause.
+
+* Safety: every possible system run (a collective execution of tasks) satisfies
+some set of invariants. Examples are mutual exclusion, serializability,
+data consistency, causal ordering, linearizability.
+consensus D_ causal broadcast D_ reliable broadcast
+* Liveness: for every possible system run, tasks that are invoked are activated
+and make progress. Examples are deadlock freedom, collision detection-andresolution
+in bounded time.
+* Timeliness: tasks are assigned timeliness constraints. ]:k)r every possible system
+run, every timeliness constraint is met.
+
 ## Towards the Trustworthy Development of Active Medical Devices: A Hemodialysis Case Study
 Their approach to developing an Active Medical Device (AMD):
  1. Specification step
