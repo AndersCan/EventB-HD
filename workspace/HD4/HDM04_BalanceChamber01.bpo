@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="12">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0"/>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_CurrentFluid" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Bypass_M_CurrentFluid" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Dialyzer_M_CurrentFluid" org.eventb.core.type="ℤ"/>
@@ -12,7 +12,7 @@
 <org.eventb.core.poPredicate name="A_BalanceChamber_M_CurrentFluih" org.eventb.core.predicate="A_Dialyzer_M_CurrentFluid≥0" org.eventb.core.source="/HD4/HDM02_Dialyzer01.bum|org.eventb.core.machineFile#HDM02_Dialyzer01|org.eventb.core.invariant#4"/>
 <org.eventb.core.poPredicate name="A_BalanceChamber_M_CurrentFluii" org.eventb.core.predicate="A_Bypass_M_CurrentFluid∈ℕ" org.eventb.core.source="/HD4/HDM03_Bypass01.bum|org.eventb.core.machineFile#HDM03_Bypass01|org.eventb.core.invariant#;"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#EVTALLHYPA_BalanceChamber_M_CurrentFluie"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/HD4/HDM04_BalanceChamber01.bum|org.eventb.core.machineFile#HDM04_BalanceChamber01|org.eventb.core.invariant#F"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD4/HDM03_Bypass01.bum|org.eventb.core.machineFile#HDM03_Bypass01|org.eventb.core.event#3"/>
@@ -43,43 +43,43 @@
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM01_EBC01.bum|org.eventb.core.machineFile#HDM01_EBC01|org.eventb.core.event#)|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="A_EBC_M_CurrentFluid − amount≥0" org.eventb.core.source="/HD4/HDM01_EBC01.bum|org.eventb.core.machineFile#HDM01_EBC01|org.eventb.core.event#)|org.eventb.core.guard#grd1"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_CurrentFluih" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_CurrentFluih" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Dialyzer_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_EBC_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_CurrentFluih" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_CurrentFluih" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_CurrentFluih" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_CurrentFluih" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM01_EBC01.bum|org.eventb.core.machineFile#HDM01_EBC01|org.eventb.core.event#*|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="A_Dialyzer_M_CurrentFluid − amount≥0" org.eventb.core.source="/HD4/HDM02_Dialyzer01.bum|org.eventb.core.machineFile#HDM02_Dialyzer01|org.eventb.core.event#0|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_CurrentFluii" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_CurrentFluii" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Dialyzer_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_EBC_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_CurrentFluii" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_CurrentFluii" org.eventb.core.poStamp="9">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_CurrentFluii" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_CurrentFluii" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM01_EBC01.bum|org.eventb.core.machineFile#HDM01_EBC01|org.eventb.core.event#+|org.eventb.core.guard#grd2"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="A_EBC_M_CurrentFluid − amount≥0" org.eventb.core.source="/HD4/HDM01_EBC01.bum|org.eventb.core.machineFile#HDM01_EBC01|org.eventb.core.event#+|org.eventb.core.guard#grd1"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_CurrentFluij" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_CurrentFluij" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Bypass_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Dialyzer_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_CurrentFluij" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_CurrentFluij" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_CurrentFluij" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_CurrentFluij" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM02_Dialyzer01.bum|org.eventb.core.machineFile#HDM02_Dialyzer01|org.eventb.core.event#6|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="A_Bypass_M_CurrentFluid − amount≥0" org.eventb.core.source="/HD4/HDM03_Bypass01.bum|org.eventb.core.machineFile#HDM03_Bypass01|org.eventb.core.event#8|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_CurrentFluik" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_CurrentFluik" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Bypass_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Dialyzer_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_CurrentFluik" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_CurrentFluik" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_CurrentFluik" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_CurrentFluik" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM02_Dialyzer01.bum|org.eventb.core.machineFile#HDM02_Dialyzer01|org.eventb.core.event#5|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="A_Dialyzer_M_CurrentFluid − amount≥0" org.eventb.core.source="/HD4/HDM02_Dialyzer01.bum|org.eventb.core.machineFile#HDM02_Dialyzer01|org.eventb.core.event#5|org.eventb.core.guard#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="A1_Bypass_PumpInBalanceChamber/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="12">
+<org.eventb.core.poSequent name="A1_Bypass_PumpInBalanceChamber/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#EVTALLHYPA_BalanceChamber_M_CurrentFluil"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid − amount∈ℕ" org.eventb.core.source="/HD4/HDM04_BalanceChamber01.bum|org.eventb.core.machineFile#HDM04_BalanceChamber01|org.eventb.core.invariant#F"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD4/HDM03_Bypass01.bum|org.eventb.core.machineFile#HDM03_Bypass01|org.eventb.core.event#="/>
@@ -93,11 +93,11 @@
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Bypass_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_CurrentFluil" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_CurrentFluil" org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_CurrentFluil" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_CurrentFluil" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM03_Bypass01.bum|org.eventb.core.machineFile#HDM03_Bypass01|org.eventb.core.event#=|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid − amount≥0" org.eventb.core.source="/HD4/HDM04_BalanceChamber01.bum|org.eventb.core.machineFile#HDM04_BalanceChamber01|org.eventb.core.event#C|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="A1_Bypass_PumpOutBalanceChamber/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poSequent name="A1_Bypass_PumpOutBalanceChamber/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#EVTALLHYPA_BalanceChamber_M_CurrentFluim"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid+amount∈ℕ" org.eventb.core.source="/HD4/HDM04_BalanceChamber01.bum|org.eventb.core.machineFile#HDM04_BalanceChamber01|org.eventb.core.invariant#F"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD4/HDM03_Bypass01.bum|org.eventb.core.machineFile#HDM03_Bypass01|org.eventb.core.event#&gt;"/>
@@ -115,7 +115,7 @@
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM03_Bypass01.bum|org.eventb.core.machineFile#HDM03_Bypass01|org.eventb.core.event#&gt;|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="A_Bypass_M_CurrentFluid − amount≥0" org.eventb.core.source="/HD4/HDM03_Bypass01.bum|org.eventb.core.machineFile#HDM03_Bypass01|org.eventb.core.event#&gt;|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="A_BalanceChamber_PumpInDF/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="10">
+<org.eventb.core.poSequent name="A_BalanceChamber_PumpInDF/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#EVTALLHYPA_BalanceChamber_M_CurrentFluin"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid+amount∈ℕ" org.eventb.core.source="/HD4/HDM04_BalanceChamber01.bum|org.eventb.core.machineFile#HDM04_BalanceChamber01|org.eventb.core.invariant#F"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD4/HDM04_BalanceChamber01.bum|org.eventb.core.machineFile#HDM04_BalanceChamber01|org.eventb.core.event#H"/>
@@ -130,7 +130,7 @@
 <org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_CurrentFluin" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_CurrentFluin" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM04_BalanceChamber01.bum|org.eventb.core.machineFile#HDM04_BalanceChamber01|org.eventb.core.event#H|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="A_BalanceChamber_PumpOutDrain/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="11">
+<org.eventb.core.poSequent name="A_BalanceChamber_PumpOutDrain/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#EVTALLHYPA_BalanceChamber_M_CurrentFluio"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid − amount∈ℕ" org.eventb.core.source="/HD4/HDM04_BalanceChamber01.bum|org.eventb.core.machineFile#HDM04_BalanceChamber01|org.eventb.core.invariant#F"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD4/HDM04_BalanceChamber01.bum|org.eventb.core.machineFile#HDM04_BalanceChamber01|org.eventb.core.event#G"/>
@@ -142,11 +142,11 @@
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_CurrentFluio" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_CurrentFluio" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_CurrentFluio" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_CurrentFluio" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM04_BalanceChamber01.bum|org.eventb.core.machineFile#HDM04_BalanceChamber01|org.eventb.core.event#G|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid − amount≥0" org.eventb.core.source="/HD4/HDM04_BalanceChamber01.bum|org.eventb.core.machineFile#HDM04_BalanceChamber01|org.eventb.core.event#G|org.eventb.core.guard#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD4/HDM04_BalanceChamber01.bpo|org.eventb.core.poFile#HDM04_BalanceChamber01|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid∈ℕ" org.eventb.core.source="/HD4/HDM04_BalanceChamber01.bum|org.eventb.core.machineFile#HDM04_BalanceChamber01|org.eventb.core.invariant#F"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

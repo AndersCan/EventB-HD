@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.machineFile org.eventb.core.comment="Adds the AlarmedEvents that can occure from BloodSidePressure requirements" org.eventb.core.configuration="org.eventb.core.fwd" version="5">
 <org.eventb.core.refinesMachine name="'" org.eventb.core.target="HDM12_SystemPhase01"/>
 <org.eventb.core.seesContext name="'C" org.eventb.core.target="PowerStates01"/>
 <org.eventb.core.seesContext name="(6" org.eventb.core.target="SystemPhaseCtx02"/>
@@ -77,14 +77,17 @@
 <org.eventb.core.event name="(J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_BalanceChamber_BalanceChambersToLeft">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_BalanceChamber_BalanceChambersToLeft"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="(K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A2_Alarm_AddAlarm">
+<org.eventb.core.event name="(K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A3_Alarm_AddAlarm">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A2_Alarm_AddAlarm"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd3" org.eventb.core.predicate="addAlarm ∉ EventedAlarms_BloodEntryPressure"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="(L" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_Alarm_RemoveSingleAlarm">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_Alarm_RemoveSingleAlarm"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd3" org.eventb.core.predicate="removeAlarm ∉ EventedAlarms_BloodEntryPressure"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="(M" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A2_Alarm_RemoveFinalAlarm">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A2_Alarm_RemoveFinalAlarm"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd3" org.eventb.core.predicate="finalAlarm ∉ EventedAlarms_BloodEntryPressure"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="(N" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_BloodPump_C_TurnOnPump">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_BloodPump_C_TurnOnPump"/>
@@ -194,7 +197,7 @@
 <org.eventb.core.action name=")" org.eventb.core.assignment="BloodSidePressure_C_VPLowerLimit ≔ limit" org.eventb.core.label="act1"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="limit &lt; BloodSidePressure_C_VPUpperLimit"/>
 </org.eventb.core.event>
-<org.eventb.core.invariant name="evtB" org.eventb.core.label="inv7" org.eventb.core.predicate="Alarm_VPExceedsUpperLimit ∈ Alarm_C_ActiveAlarms  ⇒ BloodSidePressure_M_VenousPressure &gt; BloodSidePressure_C_VPUpperLimit"/>
-<org.eventb.core.invariant name="evtC" org.eventb.core.label="inv8" org.eventb.core.predicate="BloodSidePressure_C_VPLowerLimit ≤ BloodSidePressure_C_VPUpperLimit"/>
-<org.eventb.core.invariant name="evtD" org.eventb.core.label="inv9" org.eventb.core.predicate="BloodSidePressure_C_APLowerLimit ≤ BloodSidePressure_C_APUpperLimit"/>
+<org.eventb.core.invariant name="evtC" org.eventb.core.label="inv7" org.eventb.core.predicate="BloodSidePressure_C_VPLowerLimit ≤ BloodSidePressure_C_VPUpperLimit"/>
+<org.eventb.core.invariant name="evtD" org.eventb.core.label="inv8" org.eventb.core.predicate="BloodSidePressure_C_APLowerLimit ≤ BloodSidePressure_C_APUpperLimit"/>
+<org.eventb.core.invariant name="evtB" org.eventb.core.label="inv10" org.eventb.core.predicate="Alarm_VPExceedsUpperLimit ∈ Alarm_C_ActiveAlarms  ⇒ BloodSidePressure_M_VenousPressure &gt; BloodSidePressure_C_VPUpperLimit"/>
 </org.eventb.core.machineFile>

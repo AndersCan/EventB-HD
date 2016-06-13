@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="7">
+<org.eventb.core.poIdentifier name="COUNTERMAX" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="COUNTERMAY" org.eventb.core.predicate="COUNTERMAX∈ℕ" org.eventb.core.source="/HD1/PresentationCtx.buc|org.eventb.core.contextFile#PresentationCtx|org.eventb.core.axiom#("/>
+<org.eventb.core.poPredicate name="COUNTERMAZ" org.eventb.core.predicate="COUNTERMAX&lt;1000" org.eventb.core.source="/HD1/PresentationCtx.buc|org.eventb.core.contextFile#PresentationCtx|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="COUNTERMA[" org.eventb.core.predicate="COUNTERMAX&gt;100" org.eventb.core.source="/HD1/PresentationCtx.buc|org.eventb.core.contextFile#PresentationCtx|org.eventb.core.axiom#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="7">
+<org.eventb.core.poIdentifier name="counter" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="inv3/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#HYPPresentationCtz"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="counter&lt;1000" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.invariant#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#HYPPresentationCtz"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#EVTALLHYPPresentationCt\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#HYPPresentationCtz|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#EVTALLHYPPresentationCt\|"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0&lt;COUNTERMAX" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#HYPPresentationCtz|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTPresentationCt|" org.eventb.core.parentSet="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="counter'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPPresentationCt|" org.eventb.core.parentSet="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#EVTIDENTPresentationCt\|" org.eventb.core.poStamp="8"/>
+<org.eventb.core.poSequent name="increaseCounter/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#EVTALLHYPPresentationCt}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="counter+1∈ℕ" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.event#*"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.invariant#)"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poSequent#increaseCounter\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#HYPPresentationCtz|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="increaseCounter/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#EVTALLHYPPresentationCt}"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="counter+1&lt;COUNTERMAX" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.event#*"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.invariant#,"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poSequent#increaseCounter\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#HYPPresentationCtz|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTPresentationCt}" org.eventb.core.parentSet="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="counter'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPPresentationCt}" org.eventb.core.parentSet="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#EVTIDENTPresentationCt}" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="counter+1&lt;COUNTERMAX" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.event#*|org.eventb.core.guard#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="HYPPresentationCtz" org.eventb.core.parentSet="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="counter∈ℕ" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.invariant#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="counter&lt;COUNTERMAX" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.invariant#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD1/Presentation.bpo|org.eventb.core.poFile#Presentation|org.eventb.core.poPredicateSet#HYPPresentationCtz" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="counter&lt;1000" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.invariant#-"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

@@ -1067,9 +1067,9 @@
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="(A_BalanceChamber_M_LeftChamber − A_BalanceChamber_M_RightChamber) ÷ 2∈ℕ1"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="diff=(A_BalanceChamber_M_LeftChamber − A_BalanceChamber_M_RightChamber) ÷ 2"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber − diff&gt;0"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="A_BalanceChamber_BalanceChambersToRight/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
 <org.eventb.core.lang name="L"/>
@@ -1104,9 +1104,9 @@
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="diff=(A_BalanceChamber_M_LeftChamber − A_BalanceChamber_M_RightChamber) ÷ 2"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber − diff∈ℕ"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber − diff&gt;0"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="A_BalanceChamber_BalanceChambersToRight/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
 <org.eventb.core.lang name="L"/>
@@ -1141,9 +1141,9 @@
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="diff=(A_BalanceChamber_M_LeftChamber − A_BalanceChamber_M_RightChamber) ÷ 2"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="A_BalanceChamber_M_RightChamber+(A_BalanceChamber_M_LeftChamber − A_BalanceChamber_M_RightChamber) ÷ 2∈ℕ"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber − diff&gt;0"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="A_BalanceChamber_BalanceChambersToRight/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
 <org.eventb.core.lang name="L"/>
@@ -1186,9 +1186,9 @@
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber+A_BalanceChamber_M_RightChamber=A_BalanceChamber_M_LeftChamber − diff+A_BalanceChamber_M_RightChamber+diff"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid=A_BalanceChamber_M_LeftChamber − diff+A_BalanceChamber_M_RightChamber+diff"/>
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber − diff&gt;0"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="A_BalanceChamber_BalanceChambersToLeft/grd2/WD" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
 <org.eventb.core.lang name="L"/>
@@ -1233,9 +1233,9 @@
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="diff=(A_BalanceChamber_M_RightChamber − A_BalanceChamber_M_LeftChamber) ÷ 2"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="A_BalanceChamber_M_RightChamber − diff&gt;0"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="(A_BalanceChamber_M_RightChamber − A_BalanceChamber_M_LeftChamber) ÷ 2∈ℕ1"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="A_BalanceChamber_BalanceChambersToLeft/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
 <org.eventb.core.lang name="L"/>
@@ -1270,9 +1270,9 @@
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber+diff∈ℕ"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber+(A_BalanceChamber_M_RightChamber − A_BalanceChamber_M_LeftChamber) ÷ 2∈ℕ"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="(A_BalanceChamber_M_RightChamber − A_BalanceChamber_M_LeftChamber) ÷ 2∈ℕ1"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="A_BalanceChamber_BalanceChambersToLeft/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
 <org.eventb.core.lang name="L"/>
@@ -1307,9 +1307,9 @@
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="A_BalanceChamber_M_RightChamber − diff∈ℕ"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="A_BalanceChamber_M_RightChamber − diff&gt;0"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="(A_BalanceChamber_M_RightChamber − A_BalanceChamber_M_LeftChamber) ÷ 2∈ℕ1"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="A_BalanceChamber_BalanceChambersToLeft/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2">
 <org.eventb.core.lang name="L"/>
@@ -1352,8 +1352,8 @@
 <org.eventb.core.prPred name="p9" org.eventb.core.predicate="A_BalanceChamber_M_RightChamber − diff&gt;0"/>
 <org.eventb.core.prPred name="p11" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber+A_BalanceChamber_M_RightChamber=A_BalanceChamber_M_LeftChamber+(A_BalanceChamber_M_RightChamber − A_BalanceChamber_M_LeftChamber) ÷ 2+(A_BalanceChamber_M_RightChamber − (A_BalanceChamber_M_RightChamber − A_BalanceChamber_M_LeftChamber) ÷ 2)"/>
 <org.eventb.core.prPred name="p8" org.eventb.core.predicate="(A_BalanceChamber_M_RightChamber − A_BalanceChamber_M_LeftChamber) ÷ 2∈ℕ1"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 </org.eventb.core.prProof>
 </org.eventb.core.prFile>

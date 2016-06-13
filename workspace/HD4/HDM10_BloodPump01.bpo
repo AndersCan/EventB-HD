@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="11">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="PowerStates" org.eventb.core.type="ℙ(PowerStates)"/>
 <org.eventb.core.poIdentifier name="OFF" org.eventb.core.type="PowerStates"/>
 <org.eventb.core.poIdentifier name="ON" org.eventb.core.type="PowerStates"/>
 <org.eventb.core.poPredicate name="PowerStatet" org.eventb.core.predicate="partition(PowerStates,{ON},{OFF})" org.eventb.core.source="/HD4/PowerStates01.buc|org.eventb.core.contextFile#PowerStates01|org.eventb.core.axiom#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_CurrentFluid" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_LeftChamber" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_RightChamber" org.eventb.core.type="ℤ"/>
@@ -45,7 +45,7 @@
 <org.eventb.core.poPredicate name="A_BalanceChamber_M_RightChambf." org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid=A_BalanceChamber_M_LeftChamber+A_BalanceChamber_M_RightChamber" org.eventb.core.source="/HD4/HDM08_BalanceChamber02.bum|org.eventb.core.machineFile#HDM08_BalanceChamber02|org.eventb.core.invariant#'1"/>
 <org.eventb.core.poPredicate name="A_BalanceChamber_M_RightChambf/" org.eventb.core.predicate="Alarm_C_AlarmActivated∈PowerStates" org.eventb.core.source="/HD4/HDM09_Alarm01.bum|org.eventb.core.machineFile#HDM09_Alarm01|org.eventb.core.invariant#'V"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambes" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambes" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_LeftChamber'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Bypass_M_OutBalanceChamber'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_EBC_M_CleanedBlood'" org.eventb.core.type="ℤ"/>
@@ -63,188 +63,188 @@
 <org.eventb.core.poIdentifier name="A_EBC_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_RightChamber'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambes" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambes" org.eventb.core.poStamp="10"/>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambet" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambes" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambes" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambet" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_EBC_M_UncleanedBlood'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_EBC_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambet" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambet" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambet" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambet" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM01_EBC01.bum|org.eventb.core.machineFile#HDM01_EBC01|org.eventb.core.event#(|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="BloodPump_C_Pump=ON" org.eventb.core.source="/HD4/HDM10_BloodPump01.bum|org.eventb.core.machineFile#HDM10_BloodPump01|org.eventb.core.event#'1|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambeu" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambeu" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_EBC_M_CleanedBlood'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_EBC_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambeu" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambeu" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambeu" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambeu" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM01_EBC01.bum|org.eventb.core.machineFile#HDM01_EBC01|org.eventb.core.event#)|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="A_EBC_M_CurrentFluid − amount≥0" org.eventb.core.source="/HD4/HDM01_EBC01.bum|org.eventb.core.machineFile#HDM01_EBC01|org.eventb.core.event#)|org.eventb.core.guard#grd1"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="A_EBC_M_CleanedBlood − amount≥0" org.eventb.core.source="/HD4/HDM05_EBC02.bum|org.eventb.core.machineFile#HDM05_EBC02|org.eventb.core.event#H|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambev" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambev" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_EBC_M_CleanedBlood'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Dialyzer_M_CleanedBlood'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Dialyzer_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_EBC_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambev" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambev" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambev" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambev" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM01_EBC01.bum|org.eventb.core.machineFile#HDM01_EBC01|org.eventb.core.event#*|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="A_Dialyzer_M_CurrentFluid − amount≥0" org.eventb.core.source="/HD4/HDM02_Dialyzer01.bum|org.eventb.core.machineFile#HDM02_Dialyzer01|org.eventb.core.event#0|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="A_Dialyzer_M_CleanedBlood − amount≥0" org.eventb.core.source="/HD4/HDM06_Dialyzer02.bum|org.eventb.core.machineFile#HDM06_Dialyzer02|org.eventb.core.event#W|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambew" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambew" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_EBC_M_UncleanedBlood'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Dialyzer_M_UncleanedBlood'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Dialyzer_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_EBC_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambew" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambew" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambew" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambew" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM01_EBC01.bum|org.eventb.core.machineFile#HDM01_EBC01|org.eventb.core.event#+|org.eventb.core.guard#grd2"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="A_EBC_M_CurrentFluid − amount≥0" org.eventb.core.source="/HD4/HDM01_EBC01.bum|org.eventb.core.machineFile#HDM01_EBC01|org.eventb.core.event#+|org.eventb.core.guard#grd1"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="A_EBC_M_UncleanedBlood − amount≥0" org.eventb.core.source="/HD4/HDM05_EBC02.bum|org.eventb.core.machineFile#HDM05_EBC02|org.eventb.core.event#J|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambex" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambex" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Bypass_M_OutDialyzer'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Dialyzer_M_Dialysate'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Bypass_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Dialyzer_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambex" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambex" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambex" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambex" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM02_Dialyzer01.bum|org.eventb.core.machineFile#HDM02_Dialyzer01|org.eventb.core.event#6|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="A_Bypass_M_CurrentFluid − amount≥0" org.eventb.core.source="/HD4/HDM03_Bypass01.bum|org.eventb.core.machineFile#HDM03_Bypass01|org.eventb.core.event#8|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="A_Bypass_M_OutDialyzer − amount≥0" org.eventb.core.source="/HD4/HDM07_Bypass02.bum|org.eventb.core.machineFile#HDM07_Bypass02|org.eventb.core.event#j|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambey" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambey" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Bypass_M_OutBalanceChamber'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Dialyzer_M_Dialysate'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Bypass_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Dialyzer_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambey" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambey" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambey" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambey" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM02_Dialyzer01.bum|org.eventb.core.machineFile#HDM02_Dialyzer01|org.eventb.core.event#5|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="A_Dialyzer_M_CurrentFluid − amount≥0" org.eventb.core.source="/HD4/HDM02_Dialyzer01.bum|org.eventb.core.machineFile#HDM02_Dialyzer01|org.eventb.core.event#5|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="A_Dialyzer_M_Dialysate − amount≥0" org.eventb.core.source="/HD4/HDM06_Dialyzer02.bum|org.eventb.core.machineFile#HDM06_Dialyzer02|org.eventb.core.event#Z|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambez" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambez" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_LeftChamber'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Bypass_M_OutDialyzer'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Bypass_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambez" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambez" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambez" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambez" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM03_Bypass01.bum|org.eventb.core.machineFile#HDM03_Bypass01|org.eventb.core.event#=|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid − amount≥0" org.eventb.core.source="/HD4/HDM04_BalanceChamber01.bum|org.eventb.core.machineFile#HDM04_BalanceChamber01|org.eventb.core.event#C|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber − amount≥0" org.eventb.core.source="/HD4/HDM08_BalanceChamber02.bum|org.eventb.core.machineFile#HDM08_BalanceChamber02|org.eventb.core.event#~|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambe{" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambe{" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Bypass_M_OutBalanceChamber'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Bypass_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_RightChamber'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambe{" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambe{" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambe{" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambe{" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM03_Bypass01.bum|org.eventb.core.machineFile#HDM03_Bypass01|org.eventb.core.event#&gt;|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="A_Bypass_M_CurrentFluid − amount≥0" org.eventb.core.source="/HD4/HDM03_Bypass01.bum|org.eventb.core.machineFile#HDM03_Bypass01|org.eventb.core.event#&gt;|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="A_Bypass_M_OutBalanceChamber − amount≥0" org.eventb.core.source="/HD4/HDM07_Bypass02.bum|org.eventb.core.machineFile#HDM07_Bypass02|org.eventb.core.event#m|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambe|" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambe|" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_LeftChamber'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambe|" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambe\|" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambe|" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambe\|" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM04_BalanceChamber01.bum|org.eventb.core.machineFile#HDM04_BalanceChamber01|org.eventb.core.event#H|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambe}" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambe}" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_CurrentFluid'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_RightChamber'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambe}" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambe}" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambe}" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambe}" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM04_BalanceChamber01.bum|org.eventb.core.machineFile#HDM04_BalanceChamber01|org.eventb.core.event#G|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="A_BalanceChamber_M_CurrentFluid − amount≥0" org.eventb.core.source="/HD4/HDM04_BalanceChamber01.bum|org.eventb.core.machineFile#HDM04_BalanceChamber01|org.eventb.core.event#G|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="A_BalanceChamber_M_RightChamber − amount≥0" org.eventb.core.source="/HD4/HDM08_BalanceChamber02.bum|org.eventb.core.machineFile#HDM08_BalanceChamber02|org.eventb.core.event#')|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambe~" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambe~" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="cleanedAmount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Dialyzer_M_UncleanedBlood'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Dialyzer_M_CleanedBlood'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambe~" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambe~" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambe~" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambe~" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="cleanedAmount∈ℕ1" org.eventb.core.source="/HD4/HDM06_Dialyzer02.bum|org.eventb.core.machineFile#HDM06_Dialyzer02|org.eventb.core.event#c|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="cleanedAmount≤A_Dialyzer_M_UncleanedBlood" org.eventb.core.source="/HD4/HDM06_Dialyzer02.bum|org.eventb.core.machineFile#HDM06_Dialyzer02|org.eventb.core.event#c|org.eventb.core.guard#+"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="A_Dialyzer_M_Dialysate&gt;0" org.eventb.core.source="/HD4/HDM06_Dialyzer02.bum|org.eventb.core.machineFile#HDM06_Dialyzer02|org.eventb.core.event#c|org.eventb.core.guard#,"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambf'" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambf'" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="amount" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Bypass_M_OutBalanceChamber'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_Bypass_M_OutDialyzer'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambf'" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambf'" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambf'" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambf'" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="amount∈ℕ1" org.eventb.core.source="/HD4/HDM07_Bypass02.bum|org.eventb.core.machineFile#HDM07_Bypass02|org.eventb.core.event#x|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="A_Bypass_M_OutDialyzer − amount≥0" org.eventb.core.source="/HD4/HDM07_Bypass02.bum|org.eventb.core.machineFile#HDM07_Bypass02|org.eventb.core.event#x|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="R_Bypass_C_BypassIsActive=TRUE" org.eventb.core.source="/HD4/HDM07_Bypass02.bum|org.eventb.core.machineFile#HDM07_Bypass02|org.eventb.core.event#x|org.eventb.core.guard#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambf(" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambf(" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="R_Bypass_C_BypassIsActive'" org.eventb.core.type="BOOL"/>
 <org.eventb.core.poIdentifier name="status" org.eventb.core.type="BOOL"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambf(" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambf(" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambf(" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambf(" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="status∈BOOL" org.eventb.core.source="/HD4/HDM07_Bypass02.bum|org.eventb.core.machineFile#HDM07_Bypass02|org.eventb.core.event#y|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="status≠R_Bypass_C_BypassIsActive" org.eventb.core.source="/HD4/HDM07_Bypass02.bum|org.eventb.core.machineFile#HDM07_Bypass02|org.eventb.core.event#y|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambf)" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambf)" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_LeftChamber'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="diff" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_RightChamber'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambf)" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambf)" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambf)" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambf)" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="diff∈ℕ1" org.eventb.core.source="/HD4/HDM08_BalanceChamber02.bum|org.eventb.core.machineFile#HDM08_BalanceChamber02|org.eventb.core.event#'2|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="diff=(A_BalanceChamber_M_LeftChamber − A_BalanceChamber_M_RightChamber) ÷ 2" org.eventb.core.source="/HD4/HDM08_BalanceChamber02.bum|org.eventb.core.machineFile#HDM08_BalanceChamber02|org.eventb.core.event#'2|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber − diff&gt;0" org.eventb.core.source="/HD4/HDM08_BalanceChamber02.bum|org.eventb.core.machineFile#HDM08_BalanceChamber02|org.eventb.core.event#'2|org.eventb.core.guard#-"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="A_BalanceChamber_M_LeftChamber&gt;A_BalanceChamber_M_RightChamber" org.eventb.core.source="/HD4/HDM08_BalanceChamber02.bum|org.eventb.core.machineFile#HDM08_BalanceChamber02|org.eventb.core.event#'2|org.eventb.core.guard#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambf*" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambf*" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_LeftChamber'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="diff" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="A_BalanceChamber_M_RightChamber'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambf*" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambf*" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambf*" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambf*" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="diff∈ℕ1" org.eventb.core.source="/HD4/HDM08_BalanceChamber02.bum|org.eventb.core.machineFile#HDM08_BalanceChamber02|org.eventb.core.event#evt1|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="diff=(A_BalanceChamber_M_RightChamber − A_BalanceChamber_M_LeftChamber) ÷ 2" org.eventb.core.source="/HD4/HDM08_BalanceChamber02.bum|org.eventb.core.machineFile#HDM08_BalanceChamber02|org.eventb.core.event#evt1|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="A_BalanceChamber_M_RightChamber − diff&gt;0" org.eventb.core.source="/HD4/HDM08_BalanceChamber02.bum|org.eventb.core.machineFile#HDM08_BalanceChamber02|org.eventb.core.event#evt1|org.eventb.core.guard#-"/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="A_BalanceChamber_M_RightChamber&gt;A_BalanceChamber_M_LeftChamber" org.eventb.core.source="/HD4/HDM08_BalanceChamber02.bum|org.eventb.core.machineFile#HDM08_BalanceChamber02|org.eventb.core.event#evt1|org.eventb.core.guard#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambf+" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambf+" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="Alarm_C_AlarmActivated'" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambf+" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambf+" org.eventb.core.poStamp="11"/>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambf," org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambf+" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambf+" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambf," org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="Alarm_C_AlarmActivated'" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambf," org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambf," org.eventb.core.poStamp="11"/>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambf-" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambf," org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambf," org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambf-" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="BloodPump_C_Pump'" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambf-" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambf-" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambf-" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambf-" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="BloodPump_C_Pump=OFF" org.eventb.core.source="/HD4/HDM10_BloodPump01.bum|org.eventb.core.machineFile#HDM10_BloodPump01|org.eventb.core.event#'D|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Alarm_C_AlarmActivated=OFF" org.eventb.core.source="/HD4/HDM10_BloodPump01.bum|org.eventb.core.machineFile#HDM10_BloodPump01|org.eventb.core.event#'D|org.eventb.core.guard#+"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambf." org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambf." org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="BloodPump_C_Pump'" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambf." org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambf." org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambf." org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambf." org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="BloodPump_C_Pump=ON" org.eventb.core.source="/HD4/HDM10_BloodPump01.bum|org.eventb.core.machineFile#HDM10_BloodPump01|org.eventb.core.event#evt4|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="10">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD4/HDM10_BloodPump01.bpo|org.eventb.core.poFile#HDM10_BloodPump01|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="BloodPump_C_Pump∈PowerStates" org.eventb.core.source="/HD4/HDM10_BloodPump01.bum|org.eventb.core.machineFile#HDM10_BloodPump01|org.eventb.core.invariant#'B"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

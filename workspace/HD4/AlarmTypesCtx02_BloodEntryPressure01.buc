@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd" version="3">
 <org.eventb.core.extendsContext name="'" org.eventb.core.target="AlarmTypesCtx01"/>
+<org.eventb.core.constant name="axm7" org.eventb.core.comment="Evented alarms for BloodEntryPressure" org.eventb.core.identifier="EventedAlarms_BloodEntryPressure"/>
 <org.eventb.core.constant name="(" org.eventb.core.identifier="Alarm_VPExceedsUpperLimit"/>
-<org.eventb.core.axiom name=")" org.eventb.core.label="axm1" org.eventb.core.predicate="Alarm_VPExceedsUpperLimit ∈ Alarms"/>
+<org.eventb.core.axiom name="axm6" org.eventb.core.label="axm1" org.eventb.core.predicate="EventedAlarms_BloodEntryPressure ⊆ Alarms"/>
+<org.eventb.core.axiom name=")" org.eventb.core.label="axm2" org.eventb.core.predicate="Alarm_VPExceedsUpperLimit ∈ Alarms"/>
+<org.eventb.core.axiom name="/" org.eventb.core.label="axm3" org.eventb.core.predicate="Alarm_APBelowLowerLimit ∈ Alarms"/>
 <org.eventb.core.constant name="*" org.eventb.core.identifier="Alarm_VPBelowLowerLimit"/>
-<org.eventb.core.axiom name="+" org.eventb.core.label="axm2" org.eventb.core.predicate="Alarm_VPBelowLowerLimit ∈ Alarms"/>
+<org.eventb.core.axiom name="+" org.eventb.core.label="axm4" org.eventb.core.predicate="Alarm_VPBelowLowerLimit ∈ Alarms"/>
 <org.eventb.core.constant name="," org.eventb.core.identifier="Alarm_APExceedsUpperLimit"/>
-<org.eventb.core.axiom name="-" org.eventb.core.label="axm3" org.eventb.core.predicate="Alarm_APExceedsUpperLimit ∈ Alarms"/>
+<org.eventb.core.axiom name="-" org.eventb.core.label="axm5" org.eventb.core.predicate="Alarm_APExceedsUpperLimit ∈ Alarms"/>
+<org.eventb.core.axiom name="axm1" org.eventb.core.label="axm6" org.eventb.core.predicate="Alarm_VPExceedsUpperLimit ∈ EventedAlarms_BloodEntryPressure"/>
+<org.eventb.core.axiom name="axm2" org.eventb.core.label="axm7" org.eventb.core.predicate="Alarm_APBelowLowerLimit ∈ EventedAlarms_BloodEntryPressure"/>
+<org.eventb.core.axiom name="axm3" org.eventb.core.label="axm8" org.eventb.core.predicate="Alarm_VPBelowLowerLimit ∈ EventedAlarms_BloodEntryPressure" org.eventb.core.theorem="true"/>
+<org.eventb.core.axiom name="axm4" org.eventb.core.label="axm9" org.eventb.core.predicate="Alarm_APExceedsUpperLimit ∈ EventedAlarms_BloodEntryPressure"/>
 <org.eventb.core.constant name="." org.eventb.core.identifier="Alarm_APBelowLowerLimit"/>
-<org.eventb.core.axiom name="/" org.eventb.core.label="axm4" org.eventb.core.predicate="Alarm_APBelowLowerLimit ∈ Alarms"/>
 </org.eventb.core.contextFile>
