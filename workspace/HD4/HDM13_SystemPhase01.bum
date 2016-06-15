@@ -74,8 +74,8 @@
 <org.eventb.core.event name="(/" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A2_Alarm_AddAlarm">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A2_Alarm_AddAlarm"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="(0" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_Alarm_RemoveSingleAlarm">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_Alarm_RemoveSingleAlarm"/>
+<org.eventb.core.event name="(=" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_Alarm_RemoveAlarm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_Alarm_RemoveAlarm"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="(1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A2_Alarm_RemoveFinalAlarm">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A2_Alarm_RemoveFinalAlarm"/>

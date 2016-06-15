@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="0">
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="PowerStates" org.eventb.core.type="ℙ(PowerStates)"/>
 <org.eventb.core.poIdentifier name="OFF" org.eventb.core.type="PowerStates"/>
@@ -277,9 +277,8 @@
 <org.eventb.core.poPredicateSet name="EVTIDENTSafetyAirDetector_M_CleanedBloow" org.eventb.core.parentSet="/HD4/HDM11_SafetyAirDetector01.bpo|org.eventb.core.poFile#HDM11_SafetyAirDetector01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="BloodPump_C_Pump'" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPSafetyAirDetector_M_CleanedBloow" org.eventb.core.parentSet="/HD4/HDM11_SafetyAirDetector01.bpo|org.eventb.core.poFile#HDM11_SafetyAirDetector01|org.eventb.core.poPredicateSet#EVTIDENTSafetyAirDetector_M_CleanedBloow" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTALLHYPSafetyAirDetector_M_CleanedBloow" org.eventb.core.parentSet="/HD4/HDM11_SafetyAirDetector01.bpo|org.eventb.core.poFile#HDM11_SafetyAirDetector01|org.eventb.core.poPredicateSet#EVTIDENTSafetyAirDetector_M_CleanedBloow" org.eventb.core.poStamp="1">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="BloodPump_C_Pump=OFF" org.eventb.core.source="/HD4/HDM10_BloodPump01.bum|org.eventb.core.machineFile#HDM10_BloodPump01|org.eventb.core.event#'D|org.eventb.core.guard#)"/>
-<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Alarm_C_AlarmActivated=OFF" org.eventb.core.source="/HD4/HDM10_BloodPump01.bum|org.eventb.core.machineFile#HDM10_BloodPump01|org.eventb.core.event#'D|org.eventb.core.guard#+"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTIDENTSafetyAirDetector_M_CleanedBloox" org.eventb.core.parentSet="/HD4/HDM11_SafetyAirDetector01.bpo|org.eventb.core.poFile#HDM11_SafetyAirDetector01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="BloodPump_C_Pump'" org.eventb.core.type="PowerStates"/>
