@@ -10,6 +10,8 @@
 <org.eventb.core.scCarrierSet name="PowerStates" org.eventb.core.source="/HD4/PowerStates01.buc|org.eventb.core.contextFile#PowerStates01|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(PowerStates)"/>
 </org.eventb.core.scInternalContext>
 <org.eventb.core.scInternalContext name="AlarmTypesCtx01">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="Alarm_DefaultAlarm∈Alarms" org.eventb.core.source="/HD4/AlarmTypesCtx01.buc|org.eventb.core.contextFile#AlarmTypesCtx01|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="Alarm_DefaultAlarm" org.eventb.core.source="/HD4/AlarmTypesCtx01.buc|org.eventb.core.contextFile#AlarmTypesCtx01|org.eventb.core.constant#(" org.eventb.core.type="Alarms"/>
 <org.eventb.core.scCarrierSet name="Alarms" org.eventb.core.source="/HD4/AlarmTypesCtx01.buc|org.eventb.core.contextFile#AlarmTypesCtx01|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(Alarms)"/>
 </org.eventb.core.scInternalContext>
 <org.eventb.core.scInvariant name="'" org.eventb.core.label="inv1" org.eventb.core.predicate="A_EBC_M_CurrentFluid∈ℕ" org.eventb.core.source="/HD4/HDM01_EBC01.bum|org.eventb.core.machineFile#HDM01_EBC01|org.eventb.core.invariant#-" org.eventb.core.theorem="false"/>

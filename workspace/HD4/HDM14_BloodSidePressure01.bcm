@@ -56,6 +56,8 @@
 <org.eventb.core.scCarrierSet name="SystemSubPhases" org.eventb.core.source="/HD4/SystemPhaseCtx02.buc|org.eventb.core.contextFile#SystemPhaseCtx02|org.eventb.core.carrierSet#2" org.eventb.core.type="ℙ(SystemSubPhases)"/>
 </org.eventb.core.scInternalContext>
 <org.eventb.core.scInternalContext name="AlarmTypesCtx01">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="Alarm_DefaultAlarm∈Alarms" org.eventb.core.source="/HD4/AlarmTypesCtx01.buc|org.eventb.core.contextFile#AlarmTypesCtx01|org.eventb.core.axiom#)" org.eventb.core.theorem="false"/>
+<org.eventb.core.scConstant name="Alarm_DefaultAlarm" org.eventb.core.source="/HD4/AlarmTypesCtx01.buc|org.eventb.core.contextFile#AlarmTypesCtx01|org.eventb.core.constant#(" org.eventb.core.type="Alarms"/>
 <org.eventb.core.scCarrierSet name="Alarms" org.eventb.core.source="/HD4/AlarmTypesCtx01.buc|org.eventb.core.contextFile#AlarmTypesCtx01|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(Alarms)"/>
 </org.eventb.core.scInternalContext>
 <org.eventb.core.scInternalContext name="AlarmTypesCtx02_BloodEntryPressure01">
