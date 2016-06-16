@@ -16,12 +16,28 @@
 <org.eventb.core.variable name="v" org.eventb.core.identifier="R_Bypass_C_BypassIsActive"/>
 <org.eventb.core.variable name="'-" org.eventb.core.identifier="A_BalanceChamber_M_LeftChamber"/>
 <org.eventb.core.variable name="'/" org.eventb.core.identifier="A_BalanceChamber_M_RightChamber"/>
-<org.eventb.core.variable name="'E" org.eventb.core.identifier="Alarm_C_AlarmActivated"/>
 <org.eventb.core.variable name="'A" org.eventb.core.identifier="BloodPump_C_Pump"/>
 <org.eventb.core.variable name="'Z" org.eventb.core.identifier="SafetyAirDetector_M_VRD"/>
 <org.eventb.core.variable name="']" org.eventb.core.identifier="SafetyAirDetector_M_CleanedBlood"/>
-<org.eventb.core.event name="'^" org.eventb.core.comment="Alarm_C_AlarmActivated removed" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
-<org.eventb.core.action name="'" org.eventb.core.assignment="Alarm_C_ActiveAlarms ≔ ∅" org.eventb.core.label="act19"/>
+<org.eventb.core.event name="'^" org.eventb.core.comment="Alarm_C_AlarmActivated removed" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="internal1" org.eventb.core.assignment="A_EBC_M_CurrentFluid ≔ 0" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="internal2" org.eventb.core.assignment="A_Dialyzer_M_CurrentFluid ≔ 0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="internal3" org.eventb.core.assignment="A_Bypass_M_CurrentFluid ≔ 0" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="internal4" org.eventb.core.assignment="A_BalanceChamber_M_CurrentFluid ≔ 0" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="internal5" org.eventb.core.assignment="A_EBC_M_UncleanedBlood ≔ 0" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="A_EBC_M_CleanedBlood ≔ 0" org.eventb.core.label="act6"/>
+<org.eventb.core.action name="internal6" org.eventb.core.assignment="A_Dialyzer_M_UncleanedBlood ≔ 0" org.eventb.core.label="act7"/>
+<org.eventb.core.action name="internal7" org.eventb.core.assignment="A_Dialyzer_M_CleanedBlood ≔ 0" org.eventb.core.label="act8"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="A_Dialyzer_M_Dialysate ≔ 0" org.eventb.core.label="act9"/>
+<org.eventb.core.action name="internal8" org.eventb.core.assignment="A_Bypass_M_OutDialyzer ≔ 0" org.eventb.core.label="act10"/>
+<org.eventb.core.action name="internal9" org.eventb.core.assignment="A_Bypass_M_OutBalanceChamber ≔ 0" org.eventb.core.label="act11"/>
+<org.eventb.core.action name="internal10" org.eventb.core.assignment="R_Bypass_C_BypassIsActive ≔ FALSE" org.eventb.core.label="act12"/>
+<org.eventb.core.action name="internal11" org.eventb.core.assignment="A_BalanceChamber_M_LeftChamber ≔ 0" org.eventb.core.label="act13"/>
+<org.eventb.core.action name="internal12" org.eventb.core.assignment="A_BalanceChamber_M_RightChamber ≔ 0" org.eventb.core.label="act14"/>
+<org.eventb.core.action name="internal14" org.eventb.core.assignment="BloodPump_C_Pump ≔ OFF" org.eventb.core.label="act15"/>
+<org.eventb.core.action name="internal15" org.eventb.core.assignment="SafetyAirDetector_M_VRD ≔ FALSE" org.eventb.core.label="act16"/>
+<org.eventb.core.action name="internal16" org.eventb.core.assignment="SafetyAirDetector_M_CleanedBlood ≔ 0 " org.eventb.core.label="act17"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="Alarm_C_ActiveAlarms ≔ ∅" org.eventb.core.label="act18"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="'_" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A1_EBC_PumpInPatient">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A1_EBC_PumpInPatient"/>
@@ -68,30 +84,23 @@
 <org.eventb.core.event name="'m" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_BalanceChamber_BalanceChambersToLeft">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_BalanceChamber_BalanceChambersToLeft"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="'n" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A2_Alarm_AddAlarm">
+<org.eventb.core.event name="'n" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A2_Alarm_AddAlarm">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_Alarm_TurnOnAlarm"/>
 <org.eventb.core.parameter name="(" org.eventb.core.identifier="addAlarm"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="Alarm_C_ActiveAlarms ≔ Alarm_C_ActiveAlarms ∪ {addAlarm}" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="Alarm_C_ActiveAlarms ≔ Alarm_C_ActiveAlarms ∪ {addAlarm}" org.eventb.core.label="act1"/>
 <org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="addAlarm ∈ Alarms"/>
 <org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="addAlarm ∉ Alarm_C_ActiveAlarms"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="'o" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_Alarm_RemoveAlarm">
-<org.eventb.core.guard name="-" org.eventb.core.label="grd1" org.eventb.core.predicate="removeAlarm ∈ Alarm_C_ActiveAlarms"/>
-<org.eventb.core.parameter name="," org.eventb.core.identifier="removeAlarm"/>
-<org.eventb.core.action name="." org.eventb.core.assignment="Alarm_C_ActiveAlarms ≔ Alarm_C_ActiveAlarms ∖ {removeAlarm}" org.eventb.core.label="act2"/>
-<org.eventb.core.guard name="/" org.eventb.core.label="grd2" org.eventb.core.predicate="Alarm_C_ActiveAlarms ∖ {removeAlarm} ≠ ∅"/>
-</org.eventb.core.event>
-<org.eventb.core.event name="evt1" org.eventb.core.comment="The GLUING invariants lets us remove Alarm_C_AlarmActivated" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A2_Alarm_RemoveFinalAlarm">
+<org.eventb.core.event name="evt1" org.eventb.core.comment="The GLUING invariants lets us remove Alarm_C_AlarmActivated" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A2_Alarm_RemoveAlarm">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_Alarm_TurnOffAlarm"/>
-<org.eventb.core.guard name="-" org.eventb.core.label="grd1" org.eventb.core.predicate="finalAlarm ∈ Alarm_C_ActiveAlarms"/>
-<org.eventb.core.parameter name="," org.eventb.core.identifier="finalAlarm"/>
-<org.eventb.core.action name="." org.eventb.core.assignment="Alarm_C_ActiveAlarms ≔ Alarm_C_ActiveAlarms ∖ {finalAlarm}" org.eventb.core.label="act2"/>
-<org.eventb.core.guard name="/" org.eventb.core.label="grd2" org.eventb.core.predicate="Alarm_C_ActiveAlarms ∖ {finalAlarm} = ∅"/>
+<org.eventb.core.guard name="-" org.eventb.core.comment="We do not care if the alarm is on or off" org.eventb.core.label="grd1" org.eventb.core.predicate="removeAlarm ∈ Alarms" org.eventb.core.theorem="true"/>
+<org.eventb.core.parameter name="," org.eventb.core.identifier="removeAlarm"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="Alarm_C_ActiveAlarms ≔ Alarm_C_ActiveAlarms ∖ {removeAlarm}" org.eventb.core.label="act1"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="'p" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_BloodPump_C_TurnOnPump">
+<org.eventb.core.event name="'q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_BloodPump_C_TurnOnPump">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_BloodPump_C_TurnOnPump"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="'q" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_BloodPump_C_TurnOffPump">
+<org.eventb.core.event name="evt2" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_BloodPump_C_TurnOffPump">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_BloodPump_C_TurnOffPump"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="'r" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_SafetyAirDetector_M_PumpOutPatient">
@@ -104,6 +113,6 @@
 <org.eventb.core.invariant name="'u" org.eventb.core.label="inv1" org.eventb.core.predicate="Alarm_C_ActiveAlarms ⊆ Alarms "/>
 <org.eventb.core.seesContext name="'v" org.eventb.core.target="AlarmTypesCtx01"/>
 <org.eventb.core.invariant name="'w" org.eventb.core.label="inv2" org.eventb.core.predicate="Alarm_C_ActiveAlarms = ∅ ⇔ Alarm_C_AlarmActivated = OFF"/>
-<org.eventb.core.invariant name="inv1" org.eventb.core.label="inv3" org.eventb.core.predicate="Alarm_C_ActiveAlarms ≠ ∅ ⇔ Alarm_C_AlarmActivated = ON"/>
+<org.eventb.core.invariant name="inv1" org.eventb.core.label="inv3" org.eventb.core.predicate="Alarm_C_ActiveAlarms ≠ ∅ ⇔ Alarm_C_AlarmActivated = ON" org.eventb.core.theorem="true"/>
 <org.eventb.core.invariant name="inv3" org.eventb.core.comment="ActiveAlarms is only empty when the Alarm is off" org.eventb.core.label="inv4" org.eventb.core.predicate="Alarm_C_ActiveAlarms ≠ ∅ ⇔ Alarm_C_AlarmActivated = ON" org.eventb.core.theorem="true"/>
 </org.eventb.core.machineFile>
