@@ -15,8 +15,8 @@ rectangle System {
 
 Nurse -> UI : Sets parameters \n Presses buttons
 UI -> Controller : Updates
-Controller -> Hardware : Changes state
-Sensors -> Controller : Updates
-Patient <-left-> Hardware : Blood exchange
-Patient -left-> Sensors : State change
+Controller --> Hardware : Changes state
+Controller --> Sensors : Reads
+Patient <-> Hardware : Blood exchange
+Patient <-left- Sensors : Reads
 @enduml
