@@ -15,8 +15,8 @@
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="OFF" org.eventb.core.type="PowerStates"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(Alarms))=(∅ ⦂ ℙ(Alarms))⇒OFF=OFF"/>
 <org.eventb.core.prPred name="p4" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(Alarms))=(∅ ⦂ ℙ(Alarms))⇔OFF=OFF"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ON=OFF">
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
@@ -26,8 +26,8 @@
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(PowerStates,{ON},{OFF})">
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="A2_Alarm_TurnOnAlarm/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="Alarms,PowerStates">
@@ -323,13 +323,13 @@
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="PowerStates"/>
 <org.eventb.core.prPred name="p5" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ON=OFF"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="(∅ ⦂ ℙ(Alarms))≠(∅ ⦂ ℙ(Alarms))⇔⊥"/>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="PowerStates={ON,OFF}"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(Alarms))≠(∅ ⦂ ℙ(Alarms))⇔OFF=ON"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="(∅ ⦂ ℙ(Alarms))≠(∅ ⦂ ℙ(Alarms))⇒⊥"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(Alarms))≠(∅ ⦂ ℙ(Alarms))⇒OFF=ON"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(PowerStates,{ON},{OFF})"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="A2_Alarm_TurnOnAlarm/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="Alarms,PowerStates">
@@ -617,10 +617,11 @@
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
 <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p11">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
 <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p9" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p11" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -632,23 +633,29 @@
 <org.eventb.core.prIdent name="OFF" org.eventb.core.type="PowerStates"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="PowerStates"/>
 <org.eventb.core.prIdent name="addAlarm" org.eventb.core.type="Alarms"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="Alarm_C_ActiveAlarms≠(∅ ⦂ ℙ(Alarms))⇔Alarm_C_AlarmActivated=ON">
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="Alarm_C_ActiveAlarms≠(∅ ⦂ ℙ(Alarms))⇔Alarm_C_AlarmActivated=ON">
 <org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="Alarm_C_ActiveAlarms∪{addAlarm}=(∅ ⦂ ℙ(Alarms))⇒⊥"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ON=OFF"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="Alarm_C_ActiveAlarms∪{addAlarm}=(∅ ⦂ ℙ(Alarms))⇔⊥"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬Alarm_C_ActiveAlarms=(∅ ⦂ ℙ(Alarms))⇔Alarm_C_AlarmActivated=ON">
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬Alarm_C_ActiveAlarms=(∅ ⦂ ℙ(Alarms))⇔Alarm_C_AlarmActivated=ON">
+<org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="Alarm_C_ActiveAlarms≠(∅ ⦂ ℙ(Alarms))⇒Alarm_C_AlarmActivated=ON">
 <org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="PowerStates={ON,OFF}"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="Alarm_C_ActiveAlarms∪{addAlarm}=(∅ ⦂ ℙ(Alarms))⇔ON=OFF"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬addAlarm∈Alarm_C_ActiveAlarms"/>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="addAlarm∉Alarm_C_ActiveAlarms"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬addAlarm∈Alarm_C_ActiveAlarms"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="Alarm_C_ActiveAlarms∪{addAlarm}=(∅ ⦂ ℙ(Alarms))⇒ON=OFF"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬Alarm_C_ActiveAlarms=(∅ ⦂ ℙ(Alarms))⇒Alarm_C_AlarmActivated=ON">
+<org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="addAlarm∉Alarm_C_ActiveAlarms"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(PowerStates,{ON},{OFF})"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="A2_Alarm_AddAlarm/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="Alarms,PowerStates">
@@ -658,10 +665,11 @@
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
 <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p10">
 <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5"/>
 <org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
+<org.eventb.core.prHypAction name="REWRITE2" org.eventb.core.prHidden="p8" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p10" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -670,27 +678,33 @@
 <org.eventb.core.prIdent name="Alarm_C_ActiveAlarms" org.eventb.core.type="ℙ(Alarms)"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="PowerStates"/>
 <org.eventb.core.prIdent name="addAlarm" org.eventb.core.type="Alarms"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="Alarm_C_ActiveAlarms∪{addAlarm}≠(∅ ⦂ ℙ(Alarms))⇔ON=ON"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="Alarm_C_ActiveAlarms≠(∅ ⦂ ℙ(Alarms))⇔Alarm_C_AlarmActivated=ON">
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="Alarm_C_ActiveAlarms≠(∅ ⦂ ℙ(Alarms))⇔Alarm_C_AlarmActivated=ON">
 <org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="⊤"/>
 <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ON=OFF">
 <org.eventb.core.prIdent name="OFF" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬Alarm_C_ActiveAlarms=(∅ ⦂ ℙ(Alarms))⇔Alarm_C_AlarmActivated=ON">
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬Alarm_C_ActiveAlarms=(∅ ⦂ ℙ(Alarms))⇔Alarm_C_AlarmActivated=ON">
+<org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="Alarm_C_ActiveAlarms∪{addAlarm}≠(∅ ⦂ ℙ(Alarms))⇒ON=ON"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="Alarm_C_ActiveAlarms≠(∅ ⦂ ℙ(Alarms))⇒Alarm_C_AlarmActivated=ON">
 <org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p2" org.eventb.core.predicate="PowerStates={ON,OFF}">
 <org.eventb.core.prIdent name="OFF" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬addAlarm∈Alarm_C_ActiveAlarms"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="addAlarm∉Alarm_C_ActiveAlarms"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬addAlarm∈Alarm_C_ActiveAlarms"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬Alarm_C_ActiveAlarms=(∅ ⦂ ℙ(Alarms))⇒Alarm_C_AlarmActivated=ON">
+<org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="addAlarm∉Alarm_C_ActiveAlarms"/>
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(PowerStates,{ON},{OFF})">
 <org.eventb.core.prIdent name="OFF" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="A_Alarm_RemoveAlarm/grd2/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="Alarms">
@@ -2111,14 +2125,60 @@
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="inv4/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0" org.eventb.core.prSets="Alarms,PowerStates">
+<org.eventb.core.prProof name="inv4/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="Alarms,PowerStates" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L"/>
-<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="CVC3" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="p2,p4,p3">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R1000"/>
+<org.eventb.core.prString name=".config_id" org.eventb.core.prSValue="CVC3"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
 <org.eventb.core.prIdent name="Alarm_C_ActiveAlarms" org.eventb.core.type="ℙ(Alarms)"/>
 <org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="PowerStates"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="PowerStates"/>
 <org.eventb.core.prPred name="p0" org.eventb.core.predicate="Alarm_C_ActiveAlarms≠(∅ ⦂ ℙ(Alarms))⇔Alarm_C_AlarmActivated=ON"/>
-<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="R_Bypass_C_BypassIsActive∈BOOL">
+<org.eventb.core.prIdent name="R_Bypass_C_BypassIsActive" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬Alarm_C_ActiveAlarms=(∅ ⦂ ℙ(Alarms))⇔Alarm_C_AlarmActivated=ON"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="Alarm_C_ActiveAlarms≠(∅ ⦂ ℙ(Alarms))⇒Alarm_C_AlarmActivated=ON"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="BloodPump_C_Pump∈PowerStates">
+<org.eventb.core.prIdent name="BloodPump_C_Pump" org.eventb.core.type="PowerStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="SafetyAirDetector_M_VRD∈BOOL">
+<org.eventb.core.prIdent name="SafetyAirDetector_M_VRD" org.eventb.core.type="BOOL"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="Alarm_C_ActiveAlarms⊆Alarms"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="Alarm_C_ActiveAlarms=(∅ ⦂ ℙ(Alarms))⇒Alarm_C_AlarmActivated=OFF"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬Alarm_C_ActiveAlarms=(∅ ⦂ ℙ(Alarms))⇒Alarm_C_AlarmActivated=ON"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="Alarm_C_AlarmActivated∈PowerStates"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(PowerStates,{ON},{OFF})"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="Alarm_DefaultAlarm∈Alarms">
+<org.eventb.core.prIdent name="Alarm_DefaultAlarm" org.eventb.core.type="Alarms"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.smt.core.externalSMT"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="A2_Alarm_RemoveSingleAlarm/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="Alarms,PowerStates">
 <org.eventb.core.lang name="L"/>
@@ -2413,21 +2473,17 @@
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
 <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="A2_Alarm_RemoveAlarm/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="Alarms,PowerStates">
+<org.eventb.core.prProof name="A2_Alarm_RemoveAlarm/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="Alarms,PowerStates">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(PowerStates,{ON},{OFF}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p4"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p5">
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p5" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
-<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p9" org.eventb.core.prHyps=""/>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p8" org.eventb.core.prHyps=""/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -2435,83 +2491,65 @@
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="Alarm_C_ActiveAlarms" org.eventb.core.type="ℙ(Alarms)"/>
 <org.eventb.core.prIdent name="OFF" org.eventb.core.type="PowerStates"/>
-<org.eventb.core.prIdent name="finalAlarm" org.eventb.core.type="Alarms"/>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="Alarm_C_ActiveAlarms⊆{finalAlarm}"/>
+<org.eventb.core.prIdent name="removeAlarm" org.eventb.core.type="Alarms"/>
 <org.eventb.core.prPred name="p6" org.eventb.core.predicate="Alarm_C_ActiveAlarms≠(∅ ⦂ ℙ(Alarms))⇔Alarm_C_AlarmActivated=ON">
 <org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="⊤"/>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬ON=OFF">
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="Alarm_C_ActiveAlarms ∖ {removeAlarm}=(∅ ⦂ ℙ(Alarms))⇒OFF=OFF"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬ON=OFF">
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
 <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬Alarm_C_ActiveAlarms=(∅ ⦂ ℙ(Alarms))⇔Alarm_C_AlarmActivated=ON">
 <org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="Alarm_C_ActiveAlarms ∖ {finalAlarm}=(∅ ⦂ ℙ(Alarms))⇔OFF=OFF"/>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="Alarm_C_ActiveAlarms ∖ {finalAlarm}=(∅ ⦂ ℙ(Alarms))"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="PowerStates={ON,OFF}">
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="Alarm_C_ActiveAlarms≠(∅ ⦂ ℙ(Alarms))⇒Alarm_C_AlarmActivated=ON">
+<org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="⊤⇔OFF=OFF"/>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(PowerStates,{ON},{OFF})">
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="PowerStates={ON,OFF}">
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬Alarm_C_ActiveAlarms=(∅ ⦂ ℙ(Alarms))⇒Alarm_C_AlarmActivated=ON">
+<org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
+<org.eventb.core.prIdent name="ON" org.eventb.core.type="PowerStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(PowerStates,{ON},{OFF})">
+<org.eventb.core.prIdent name="ON" org.eventb.core.type="PowerStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
-<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
 </org.eventb.core.prProof>
-<org.eventb.core.prProof name="A2_Alarm_RemoveAlarm/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="Alarms,PowerStates">
+<org.eventb.core.prProof name="A2_Alarm_RemoveAlarm/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="Alarms,PowerStates" org.eventb.core.psManual="true">
 <org.eventb.core.lang name="L"/>
 <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(PowerStates,{ON},{OFF}))" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p3" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p4,p5"/>
-<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p4,p5"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2,p3"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2,p3"/>
 <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p2">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6">
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p6" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p4">
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p4" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p7"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prGoal="p9" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p9">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p10" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p11"/>
-<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="generalized MP" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p12" org.eventb.core.prHyps="p11" org.eventb.core.prInfHyps="p13"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
-<org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p13" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p14"/>
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p7" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p8"/>
 <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p15"/>
-<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p16"/>
-<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p17"/>
-<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p18"/>
-<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p19"/>
-<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with Alarm_C_ActiveAlarms=∅" org.eventb.core.prHyps="p11">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE4" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE5" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prHypAction name="HIDE6" org.eventb.core.prHyps="p16"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p20" org.eventb.core.prInfHyps="p21"/>
-<org.eventb.core.prHypAction name="FORWARD_INF1" org.eventb.core.prHyps="p8" org.eventb.core.prInfHyps="p22"/>
-<org.eventb.core.prHypAction name="DESELECT2" org.eventb.core.prHyps="p20,p8"/>
-<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p17"/>
+<org.eventb.core.prRule name="r4" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="sl/ds" org.eventb.core.prHyps="">
 <org.eventb.core.prAnte name="'">
-<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p21" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
-<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p22" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p23"/>
-<org.eventb.core.prRule name="r5" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊥ hyp" org.eventb.core.prHyps="p23"/>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
-</org.eventb.core.prAnte>
-</org.eventb.core.prRule>
+<org.eventb.core.prHypAction name="SELECT0" org.eventb.core.prHyps="p18,p8"/>
 </org.eventb.core.prAnte>
 </org.eventb.core.prRule>
 </org.eventb.core.prAnte>
@@ -2526,56 +2564,54 @@
 <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
 </org.eventb.core.prRule>
 <org.eventb.core.prIdent name="Alarm_C_ActiveAlarms" org.eventb.core.type="ℙ(Alarms)"/>
-<org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
+<org.eventb.core.prIdent name="OFF" org.eventb.core.type="PowerStates"/>
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="PowerStates"/>
 <org.eventb.core.prIdent name="removeAlarm" org.eventb.core.type="Alarms"/>
-<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬Alarm_C_ActiveAlarms=(∅ ⦂ ℙ(Alarms))⇔⊥"/>
-<org.eventb.core.prPred name="p13" org.eventb.core.predicate="⊤⇔Alarm_C_AlarmActivated=OFF">
-<org.eventb.core.prIdent name="OFF" org.eventb.core.type="PowerStates"/>
-</org.eventb.core.prPred>
-<org.eventb.core.prPred name="p21" org.eventb.core.predicate="removeAlarm∈(∅ ⦂ ℙ(Alarms))"/>
-<org.eventb.core.prPred name="p23" org.eventb.core.predicate="⊥"/>
-<org.eventb.core.prPred name="p15" org.eventb.core.predicate="R_Bypass_C_BypassIsActive∈BOOL">
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="Alarm_C_ActiveAlarms⊆{removeAlarm}"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="Alarm_C_ActiveAlarms ∖ {removeAlarm}≠(∅ ⦂ ℙ(Alarms))⇒⊥"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="R_Bypass_C_BypassIsActive∈BOOL">
 <org.eventb.core.prIdent name="R_Bypass_C_BypassIsActive" org.eventb.core.type="BOOL"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p18" org.eventb.core.predicate="SafetyAirDetector_M_VRD∈BOOL">
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="Alarm_C_ActiveAlarms ∖ {removeAlarm}≠(∅ ⦂ ℙ(Alarms))⇒OFF=ON"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="SafetyAirDetector_M_VRD∈BOOL">
 <org.eventb.core.prIdent name="SafetyAirDetector_M_VRD" org.eventb.core.type="BOOL"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p2" org.eventb.core.predicate="Alarm_C_ActiveAlarms ∖ {removeAlarm}≠(∅ ⦂ ℙ(Alarms))"/>
-<org.eventb.core.prPred name="p16" org.eventb.core.predicate="Alarm_C_AlarmActivated∈PowerStates"/>
-<org.eventb.core.prPred name="p3" org.eventb.core.predicate="partition(PowerStates,{ON},{OFF})">
-<org.eventb.core.prIdent name="OFF" org.eventb.core.type="PowerStates"/>
+<org.eventb.core.prPred name="p16" org.eventb.core.predicate="removeAlarm∈Alarms"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="Alarm_C_AlarmActivated∈PowerStates">
+<org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p1" org.eventb.core.predicate="Alarm_C_ActiveAlarms≠(∅ ⦂ ℙ(Alarms))⇔Alarm_C_AlarmActivated=ON"/>
-<org.eventb.core.prPred name="p22" org.eventb.core.predicate="¬(∅ ⦂ ℙ(Alarms))⊆{removeAlarm}"/>
-<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬ON=OFF">
-<org.eventb.core.prIdent name="OFF" org.eventb.core.type="PowerStates"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(PowerStates,{ON},{OFF})"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="Alarm_C_ActiveAlarms≠(∅ ⦂ ℙ(Alarms))⇔Alarm_C_AlarmActivated=ON">
+<org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬Alarm_C_ActiveAlarms=(∅ ⦂ ℙ(Alarms))⇔Alarm_C_AlarmActivated=ON"/>
-<org.eventb.core.prPred name="p17" org.eventb.core.predicate="BloodPump_C_Pump∈PowerStates">
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬ON=OFF"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬Alarm_C_ActiveAlarms=(∅ ⦂ ℙ(Alarms))⇔Alarm_C_AlarmActivated=ON">
+<org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="Alarm_C_ActiveAlarms≠(∅ ⦂ ℙ(Alarms))⇒Alarm_C_AlarmActivated=ON">
+<org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="BloodPump_C_Pump∈PowerStates">
 <org.eventb.core.prIdent name="BloodPump_C_Pump" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p4" org.eventb.core.predicate="PowerStates={ON,OFF}">
-<org.eventb.core.prIdent name="OFF" org.eventb.core.type="PowerStates"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="PowerStates={ON,OFF}"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="Alarm_C_ActiveAlarms⊆Alarms"/>
+<org.eventb.core.prPred name="p18" org.eventb.core.predicate="Alarm_C_ActiveAlarms=(∅ ⦂ ℙ(Alarms))⇒Alarm_C_AlarmActivated=OFF">
+<org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬Alarm_C_ActiveAlarms⊆{removeAlarm}"/>
-<org.eventb.core.prPred name="p19" org.eventb.core.predicate="Alarm_C_ActiveAlarms⊆Alarms"/>
-<org.eventb.core.prPred name="p6" org.eventb.core.predicate="⊤⇔Alarm_C_AlarmActivated=ON"/>
-<org.eventb.core.prPred name="p12" org.eventb.core.predicate="Alarm_C_ActiveAlarms=(∅ ⦂ ℙ(Alarms))⇔Alarm_C_AlarmActivated=OFF">
-<org.eventb.core.prIdent name="OFF" org.eventb.core.type="PowerStates"/>
+<org.eventb.core.prPred name="p17" org.eventb.core.predicate="Alarm_C_ActiveAlarms=(∅ ⦂ ℙ(Alarms))⇔Alarm_C_AlarmActivated=OFF">
+<org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p20" org.eventb.core.predicate="removeAlarm∈Alarm_C_ActiveAlarms"/>
-<org.eventb.core.prPred name="p14" org.eventb.core.predicate="Alarm_C_AlarmActivated=OFF">
-<org.eventb.core.prIdent name="OFF" org.eventb.core.type="PowerStates"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬Alarm_C_ActiveAlarms=(∅ ⦂ ℙ(Alarms))⇒Alarm_C_AlarmActivated=ON">
+<org.eventb.core.prIdent name="Alarm_C_AlarmActivated" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prPred name="p11" org.eventb.core.predicate="Alarm_C_ActiveAlarms=(∅ ⦂ ℙ(Alarms))"/>
-<org.eventb.core.prPred name="p9" org.eventb.core.predicate="Alarm_C_AlarmActivated=ON"/>
-<org.eventb.core.prPred name="p0" org.eventb.core.predicate="Alarm_C_ActiveAlarms ∖ {removeAlarm}≠(∅ ⦂ ℙ(Alarms))⇔Alarm_C_AlarmActivated=ON"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="Alarm_DefaultAlarm∈Alarms">
+<org.eventb.core.prIdent name="Alarm_DefaultAlarm" org.eventb.core.type="Alarms"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.mngHyp"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.genMPL2"/>
-<org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
-<org.eventb.core.prReas name="r4" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
-<org.eventb.core.prReas name="r5" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="A2_Alarm_RemoveAlarm/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="PowerStates">
@@ -3557,8 +3593,8 @@
 <org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(PowerStates,{ON},{OFF})">
 <org.eventb.core.prIdent name="ON" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.prPred>
-<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
 <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
 </org.eventb.core.prProof>
 <org.eventb.core.prProof name="inv3/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2" org.eventb.core.prSets="Alarms,PowerStates" org.eventb.core.psManual="true">

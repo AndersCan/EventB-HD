@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.psFile>
-<org.eventb.core.psStatus name="inv3/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="true"/>
-<org.eventb.core.psStatus name="inv4/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="inv4/THM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="53" org.eventb.core.psManual="true"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="53" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="53" org.eventb.core.psManual="false"/>
 <org.eventb.core.psStatus name="INITIALISATION/act16/SIM" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="A2_Alarm_AddAlarm/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psManual="false"/>
-<org.eventb.core.psStatus name="A2_Alarm_RemoveAlarm/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="51" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A2_Alarm_AddAlarm/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="53" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A2_Alarm_AddAlarm/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="53" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A2_Alarm_RemoveAlarm/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="53" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="A2_Alarm_RemoveAlarm/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="53" org.eventb.core.psManual="true"/>
 </org.eventb.core.psFile>
