@@ -68,11 +68,8 @@
 <org.eventb.core.variable name="'A" org.eventb.core.identifier="BloodPump_C_Pump"/>
 <org.eventb.core.invariant name="'B" org.eventb.core.label="inv1" org.eventb.core.predicate="BloodPump_C_Pump ∈ PowerStates"/>
 <org.eventb.core.seesContext name="'C" org.eventb.core.target="PowerStates01"/>
-<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_Alarm_TurnOnAlarm">
-<org.eventb.core.refinesEvent name="+" org.eventb.core.target="A_Alarm_TurnOnAlarm"/>
-</org.eventb.core.event>
-<org.eventb.core.event name="evt3" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_Alarm_TurnOffAlarm">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_Alarm_TurnOffAlarm"/>
+<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_Alarm_SetAlarm">
+<org.eventb.core.refinesEvent name="+" org.eventb.core.target="A_Alarm_SetAlarm"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="'D" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_BloodPump_C_TurnOnPump">
 <org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="BloodPump_C_Pump = OFF"/>

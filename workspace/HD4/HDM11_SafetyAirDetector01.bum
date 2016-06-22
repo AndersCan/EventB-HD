@@ -69,11 +69,8 @@
 <org.eventb.core.event name="'U" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_BalanceChamber_BalanceChambersToLeft">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_BalanceChamber_BalanceChambersToLeft"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="'V" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_Alarm_TurnOnAlarm">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_Alarm_TurnOnAlarm"/>
-</org.eventb.core.event>
-<org.eventb.core.event name="'W" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_Alarm_TurnOffAlarm">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_Alarm_TurnOffAlarm"/>
+<org.eventb.core.event name="'V" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_Alarm_SetAlarm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_Alarm_SetAlarm"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="'X" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_BloodPump_C_TurnOnPump">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_BloodPump_C_TurnOnPump"/>

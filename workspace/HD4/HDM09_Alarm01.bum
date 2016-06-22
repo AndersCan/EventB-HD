@@ -66,10 +66,9 @@
 </org.eventb.core.event>
 <org.eventb.core.variable name="'U" org.eventb.core.identifier="Alarm_C_AlarmActivated"/>
 <org.eventb.core.invariant name="'V" org.eventb.core.label="inv1" org.eventb.core.predicate="Alarm_C_AlarmActivated ∈ PowerStates"/>
-<org.eventb.core.event name="'W" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_Alarm_TurnOnAlarm">
-<org.eventb.core.action name="*" org.eventb.core.assignment="Alarm_C_AlarmActivated ≔ ON" org.eventb.core.label="act1"/>
-</org.eventb.core.event>
-<org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_Alarm_TurnOffAlarm">
-<org.eventb.core.action name="*" org.eventb.core.assignment="Alarm_C_AlarmActivated ≔ OFF" org.eventb.core.label="act1"/>
+<org.eventb.core.event name="'W" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_Alarm_SetAlarm">
+<org.eventb.core.action name="*" org.eventb.core.assignment="Alarm_C_AlarmActivated ≔ newAlarmState" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name="+" org.eventb.core.identifier="newAlarmState"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd1" org.eventb.core.predicate="newAlarmState ∈ PowerStates"/>
 </org.eventb.core.event>
 </org.eventb.core.machineFile>

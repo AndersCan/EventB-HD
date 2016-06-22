@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="36">
+<org.eventb.core.poFile org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="COUNTERMAX" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poPredicate name="COUNTERMAY" org.eventb.core.predicate="COUNTERMAX∈ℕ" org.eventb.core.source="/HD1/PresentationCtx.buc|org.eventb.core.contextFile#PresentationCtx|org.eventb.core.axiom#("/>
 <org.eventb.core.poPredicate name="COUNTERMAZ" org.eventb.core.predicate="COUNTERMAX&lt;1000" org.eventb.core.source="/HD1/PresentationCtx.buc|org.eventb.core.contextFile#PresentationCtx|org.eventb.core.axiom#)"/>
 <org.eventb.core.poPredicate name="COUNTERMA[" org.eventb.core.predicate="COUNTERMAX&gt;100" org.eventb.core.source="/HD1/PresentationCtx.buc|org.eventb.core.contextFile#PresentationCtx|org.eventb.core.axiom#*"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="IsEven" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="counter" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poPredicate name="countes" org.eventb.core.predicate="counter∈ℕ" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.invariant#)"/>
 <org.eventb.core.poPredicate name="countet" org.eventb.core.predicate="counter&lt;COUNTERMAX" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.invariant#,"/>
 <org.eventb.core.poPredicate name="counteu" org.eventb.core.predicate="counter&lt;1000" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.invariant#-"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="inv3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="27">
+<org.eventb.core.poSequent name="inv3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Invariant" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#HYPPresentationCt}"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="IsEven=1⇒2≠0" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.invariant#1"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.invariant#1"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#HYPPresentationCt}"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="17">
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTALLHYPPresentationCu'"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈ℕ" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.invariant#0"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.event#'"/>
@@ -28,7 +28,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#HYPPresentationCt}|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="18">
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTALLHYPPresentationCu'"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1=0∨1=1" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.invariant#2"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.event#'"/>
@@ -37,7 +37,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#HYPPresentationCt}|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="27">
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTALLHYPPresentationCu'"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1=1⇒0 ÷ 2∗2=0" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.invariant#1"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.event#'"/>
@@ -46,18 +46,18 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTPresentationCu'" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="17">
+<org.eventb.core.poPredicateSet name="EVTIDENTPresentationCu'" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="counter'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="IsEven'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPPresentationCu'" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTIDENTPresentationCu'" org.eventb.core.poStamp="17"/>
-<org.eventb.core.poSequent name="increaseEvenCounter/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="36">
+<org.eventb.core.poPredicateSet name="EVTALLHYPPresentationCu'" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTIDENTPresentationCu'" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="increaseEvenCounter/grd2/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTHYPPresentationCu('"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2≠0" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.event#-|org.eventb.core.guard#("/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.event#-|org.eventb.core.guard#("/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTHYPPresentationCu('"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="increaseEvenCounter/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="36">
+<org.eventb.core.poSequent name="increaseEvenCounter/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTALLHYPPresentationCu("/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.invariant#0"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.event#*"/>
@@ -66,7 +66,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poSequent#increaseEvenCounter\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#HYPPresentationCt}|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="increaseEvenCounter/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="36">
+<org.eventb.core.poSequent name="increaseEvenCounter/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTALLHYPPresentationCu("/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0=0∨0=1" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.invariant#2"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.event#*"/>
@@ -75,7 +75,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poSequent#increaseEvenCounter\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#HYPPresentationCt}|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="increaseEvenCounter/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="36">
+<org.eventb.core.poSequent name="increaseEvenCounter/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTALLHYPPresentationCu("/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0=1⇒(counter+1) ÷ 2∗2=counter+1" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.invariant#1"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.event#*"/>
@@ -84,23 +84,23 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poSequent#increaseEvenCounter\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTPresentationCu(" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="36">
+<org.eventb.core.poPredicateSet name="EVTIDENTPresentationCu(" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="counter'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="IsEven'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPPresentationCu('" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTIDENTPresentationCu(" org.eventb.core.poStamp="36">
+<org.eventb.core.poPredicateSet name="EVTHYPPresentationCu('" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTIDENTPresentationCu(" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="counter+1&lt;COUNTERMAX" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.event#*|org.eventb.core.guard#'"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPPresentationCu(" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTHYPPresentationCu('" org.eventb.core.poStamp="36">
+<org.eventb.core.poPredicateSet name="EVTALLHYPPresentationCu(" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTHYPPresentationCu('" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="counter ÷ 2∗2=counter" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.event#-|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="increaseOddCounter/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="36">
+<org.eventb.core.poSequent name="increaseOddCounter/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTHYPPresentationCu))"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2≠0" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.event#.|org.eventb.core.guard#+"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.event#.|org.eventb.core.guard#+"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTHYPPresentationCu))"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="increaseOddCounter/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="36">
+<org.eventb.core.poSequent name="increaseOddCounter/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTALLHYPPresentationCu)"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈ℕ" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.invariant#0"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.event#*"/>
@@ -109,7 +109,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poSequent#increaseOddCounter\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#HYPPresentationCt}|org.eventb.core.poPredicate#PRD0"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="increaseOddCounter/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="36">
+<org.eventb.core.poSequent name="increaseOddCounter/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTALLHYPPresentationCu)"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1=0∨1=1" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.invariant#2"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.event#*"/>
@@ -118,7 +118,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poSequent#increaseOddCounter\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#HYPPresentationCt}|org.eventb.core.poPredicate#PRD1"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="increaseOddCounter/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="36">
+<org.eventb.core.poSequent name="increaseOddCounter/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTALLHYPPresentationCu)"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1=1⇒(counter+1) ÷ 2∗2=counter+1" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.invariant#1"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.event#*"/>
@@ -127,7 +127,7 @@
 <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poSequent#increaseOddCounter\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
 <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTPresentationCu)" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="36">
+<org.eventb.core.poPredicateSet name="EVTIDENTPresentationCu)" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poIdentifier name="counter'" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poIdentifier name="IsEven'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
@@ -135,14 +135,14 @@
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="counter+1&lt;COUNTERMAX" org.eventb.core.source="/HD1/Presentation.bum|org.eventb.core.machineFile#Presentation|org.eventb.core.event#*|org.eventb.core.guard#'"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="IsEven=0" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.event#.|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPPresentationCu)" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTHYPPresentationCu))" org.eventb.core.poStamp="36">
+<org.eventb.core.poPredicateSet name="EVTALLHYPPresentationCu)" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#EVTHYPPresentationCu))" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="(counter+1) ÷ 2∗2=counter+1" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.event#.|org.eventb.core.guard#+"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="HYPPresentationCt}" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="IsEven∈ℕ" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.invariant#0"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="IsEven=0∨IsEven=1" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.invariant#2"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#HYPPresentationCt}" org.eventb.core.poStamp="27">
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD1/Presentation1.bpo|org.eventb.core.poFile#Presentation1|org.eventb.core.poPredicateSet#HYPPresentationCt}" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="IsEven=1⇒counter ÷ 2∗2=counter" org.eventb.core.source="/HD1/Presentation1.bum|org.eventb.core.machineFile#Presentation1|org.eventb.core.invariant#1"/>
 </org.eventb.core.poPredicateSet>
 </org.eventb.core.poFile>

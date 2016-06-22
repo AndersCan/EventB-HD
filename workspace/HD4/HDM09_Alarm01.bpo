@@ -220,13 +220,12 @@
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="A_BalanceChamber_M_RightChamber&gt;A_BalanceChamber_M_LeftChamber" org.eventb.core.source="/HD4/HDM08_BalanceChamber02.bum|org.eventb.core.machineFile#HDM08_BalanceChamber02|org.eventb.core.event#evt1|org.eventb.core.guard#*"/>
 </org.eventb.core.poPredicateSet>
 <org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambf+" org.eventb.core.parentSet="/HD4/HDM09_Alarm01.bpo|org.eventb.core.poFile#HDM09_Alarm01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="newAlarmState" org.eventb.core.type="PowerStates"/>
 <org.eventb.core.poIdentifier name="Alarm_C_AlarmActivated'" org.eventb.core.type="PowerStates"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambf+" org.eventb.core.parentSet="/HD4/HDM09_Alarm01.bpo|org.eventb.core.poFile#HDM09_Alarm01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambf+" org.eventb.core.poStamp="0"/>
-<org.eventb.core.poPredicateSet name="EVTIDENTA_BalanceChamber_M_RightChambf," org.eventb.core.parentSet="/HD4/HDM09_Alarm01.bpo|org.eventb.core.poFile#HDM09_Alarm01|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
-<org.eventb.core.poIdentifier name="Alarm_C_AlarmActivated'" org.eventb.core.type="PowerStates"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambf+" org.eventb.core.parentSet="/HD4/HDM09_Alarm01.bpo|org.eventb.core.poFile#HDM09_Alarm01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambf+" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="newAlarmState∈PowerStates" org.eventb.core.source="/HD4/HDM09_Alarm01.bum|org.eventb.core.machineFile#HDM09_Alarm01|org.eventb.core.event#'W|org.eventb.core.guard#,"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPA_BalanceChamber_M_RightChambf," org.eventb.core.parentSet="/HD4/HDM09_Alarm01.bpo|org.eventb.core.poFile#HDM09_Alarm01|org.eventb.core.poPredicateSet#EVTIDENTA_BalanceChamber_M_RightChambf," org.eventb.core.poStamp="0"/>
 <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/HD4/HDM09_Alarm01.bpo|org.eventb.core.poFile#HDM09_Alarm01|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="0">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="Alarm_C_AlarmActivated∈PowerStates" org.eventb.core.source="/HD4/HDM09_Alarm01.bum|org.eventb.core.machineFile#HDM09_Alarm01|org.eventb.core.invariant#'V"/>
 </org.eventb.core.poPredicateSet>

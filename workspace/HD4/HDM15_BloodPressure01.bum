@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
-<org.eventb.core.refinesMachine name="'" org.eventb.core.target="HDM13_SystemPhase01"/>
+<org.eventb.core.refinesMachine name="'" org.eventb.core.target="HDM14_SystemPhase01"/>
 <org.eventb.core.seesContext name="'C" org.eventb.core.target="PowerStates01"/>
 <org.eventb.core.seesContext name="(6" org.eventb.core.target="SystemPhaseCtx02"/>
 <org.eventb.core.variable name="," org.eventb.core.identifier="A_EBC_M_CurrentFluid"/>
@@ -17,17 +17,18 @@
 <org.eventb.core.variable name="v" org.eventb.core.identifier="R_Bypass_C_BypassIsActive"/>
 <org.eventb.core.variable name="'-" org.eventb.core.identifier="A_BalanceChamber_M_LeftChamber"/>
 <org.eventb.core.variable name="'/" org.eventb.core.identifier="A_BalanceChamber_M_RightChamber"/>
+<org.eventb.core.variable name="inv;" org.eventb.core.identifier="Alarm_C_AlarmActivated"/>
 <org.eventb.core.variable name="'A" org.eventb.core.identifier="BloodPump_C_Pump"/>
 <org.eventb.core.variable name="'Z" org.eventb.core.identifier="SafetyAirDetector_M_VRD"/>
 <org.eventb.core.variable name="']" org.eventb.core.identifier="SafetyAirDetector_M_CleanedBlood"/>
 <org.eventb.core.variable name="'t" org.eventb.core.identifier="Alarm_C_ActiveAlarms"/>
+<org.eventb.core.variable name="inv=" org.eventb.core.identifier="Alarm_C_UncheckedAlarms"/>
 <org.eventb.core.variable name="(7" org.eventb.core.identifier="SystemPhase_C_SystemPhase"/>
 <org.eventb.core.variable name="(9" org.eventb.core.identifier="SystemPhase_C_SystemSubPhase"/>
 <org.eventb.core.event name="(:" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION">
-<org.eventb.core.action name="'" org.eventb.core.assignment="BloodPressure_M_VenousPressure ≔ 0" org.eventb.core.label="act21"/>
-<org.eventb.core.action name="(" org.eventb.core.assignment="BloodPressure_C_VPUpperLimit ≔ 0" org.eventb.core.label="act22"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="BloodPressure_C_VPLowerLimit ≔ 0" org.eventb.core.label="act23"/>
-<org.eventb.core.action name="*" org.eventb.core.assignment="BloodPressure_C_TransitionState ≔ Transitioning" org.eventb.core.label="act24"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="BloodPressure_M_VenousPressure ≔ 0" org.eventb.core.label="act23"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="BloodPressure_C_VPUpperLimit ≔ 0" org.eventb.core.label="act24"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="BloodPressure_C_VPLowerLimit ≔ 0" org.eventb.core.label="act25"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="(;" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A1_EBC_PumpInPatient">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A1_EBC_PumpInPatient"/>
@@ -74,12 +75,13 @@
 <org.eventb.core.event name="(J" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_BalanceChamber_BalanceChambersToLeft">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_BalanceChamber_BalanceChambersToLeft"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="(K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A2_Alarm_AddAlarm">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A2_Alarm_AddAlarm"/>
+<org.eventb.core.event name="(K" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A4_Alarm_AddAlarm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A3_Alarm_AddAlarm"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd4" org.eventb.core.predicate="addAlarm ∉ EventedAlarms_BloodEntryPressure"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="(L" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A2_Alarm_RemoveAlarm">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A2_Alarm_RemoveAlarm"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="removeAlarm ∉ EventedAlarms_BloodEntryPressure"/>
+<org.eventb.core.event name="(L" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A4_Alarm_RemoveAlarm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A3_Alarm_RemoveAlarm"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd5" org.eventb.core.predicate="removeAlarm ∉ EventedAlarms_BloodEntryPressure"/>
 </org.eventb.core.event>
 <org.eventb.core.event name="(M" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_BloodPump_C_TurnOnPump">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_BloodPump_C_TurnOnPump"/>
@@ -93,6 +95,9 @@
 <org.eventb.core.event name="(P" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_SafetyAirDetector_M_PumpOutPatientEmpty">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_SafetyAirDetector_M_PumpOutPatientEmpty"/>
 </org.eventb.core.event>
+<org.eventb.core.event name="evt3" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_Alarm_AddUncheckedAlarm">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_Alarm_AddUncheckedAlarm"/>
+</org.eventb.core.event>
 <org.eventb.core.event name="(Q" org.eventb.core.comment="Progress machine state." org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_SystemPhase_C_GotoNextPhase">
 <org.eventb.core.refinesEvent name="'" org.eventb.core.target="A_SystemPhase_C_GotoNextPhase"/>
 </org.eventb.core.event>
@@ -103,32 +108,30 @@
 <org.eventb.core.variable name="inv3" org.eventb.core.identifier="BloodPressure_C_VPUpperLimit"/>
 <org.eventb.core.variable name="inv4" org.eventb.core.identifier="BloodPressure_C_VPLowerLimit"/>
 <org.eventb.core.seesContext name="inv5" org.eventb.core.target="ControlCtx01"/>
-<org.eventb.core.variable name="inv6" org.eventb.core.identifier="BloodPressure_C_TransitionState"/>
-<org.eventb.core.invariant name="inv7" org.eventb.core.label="inv4" org.eventb.core.predicate="BloodPressure_C_TransitionState ∈ Transition"/>
 <org.eventb.core.event name="evt1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_BloodPressure_VPOverLimit">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A2_Alarm_AddAlarm"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="Alarm_C_ActiveAlarms ≔ Alarm_C_ActiveAlarms ∪ {Alarm_VPExceedsUpperLimit}" org.eventb.core.label="act1"/>
-<org.eventb.core.guard name="*" org.eventb.core.label="grd1" org.eventb.core.predicate="Alarm_VPExceedsUpperLimit ∈ Alarms"/>
-<org.eventb.core.guard name="+" org.eventb.core.label="grd2" org.eventb.core.predicate="Alarm_VPExceedsUpperLimit ∉ Alarm_C_ActiveAlarms"/>
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A3_Alarm_AddAlarm"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="Alarm_C_AlarmActivated ≔ ON" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="Alarm_C_UncheckedAlarms ≔ Alarm_C_UncheckedAlarms ∖ {Alarm_VPExceedsUpperLimit}" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="+" org.eventb.core.label="grd1" org.eventb.core.predicate="Alarm_VPExceedsUpperLimit ∉ Alarm_C_ActiveAlarms"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="Alarm_VPExceedsUpperLimit ∈ Alarm_C_UncheckedAlarms"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="Alarm_C_ActiveAlarms ≔ Alarm_C_ActiveAlarms ∪ {Alarm_VPExceedsUpperLimit}" org.eventb.core.label="act3"/>
 <org.eventb.core.witness name="(" org.eventb.core.label="addAlarm" org.eventb.core.predicate="addAlarm = Alarm_VPExceedsUpperLimit"/>
 <org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="BloodPressure_M_VenousPressure &gt; BloodPressure_C_VPUpperLimit"/>
-<org.eventb.core.action name="-" org.eventb.core.assignment="BloodPressure_C_TransitionState ≔ Transitioned" org.eventb.core.label="act2"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="evt2" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_BloodPressure_LegalValue">
-<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A2_Alarm_RemoveAlarm"/>
-<org.eventb.core.guard name="-" org.eventb.core.label="grd1" org.eventb.core.predicate="removeAlarm ∈ Alarms" org.eventb.core.theorem="true"/>
-<org.eventb.core.parameter name="," org.eventb.core.identifier="removeAlarm"/>
-<org.eventb.core.action name="." org.eventb.core.assignment="Alarm_C_ActiveAlarms ≔ Alarm_C_ActiveAlarms ∖ {removeAlarm}" org.eventb.core.label="act1"/>
-<org.eventb.core.guard name="/" org.eventb.core.label="grd2" org.eventb.core.predicate="(Alarm_VPExceedsUpperLimit ∈ Alarm_C_ActiveAlarms ⇒ removeAlarm = Alarm_VPExceedsUpperLimit) ∨ (Alarm_VPBelowLowerLimit ∈ Alarm_C_ActiveAlarms ⇒ removeAlarm = Alarm_VPBelowLowerLimit) ∨ removeAlarm = Alarm_DefaultAlarm"/>
-<org.eventb.core.action name="0" org.eventb.core.assignment="BloodPressure_C_TransitionState ≔ Transitioned" org.eventb.core.label="act2"/>
-<org.eventb.core.guard name="1" org.eventb.core.label="grd3" org.eventb.core.predicate="BloodPressure_M_VenousPressure &lt; BloodPressure_C_VPUpperLimit"/>
+<org.eventb.core.event name="evt2" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="A_BloodPressure_LegalValue">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="A3_Alarm_RemoveAlarm"/>
+<org.eventb.core.guard name="/" org.eventb.core.label="grd5" org.eventb.core.predicate="(Alarm_VPExceedsUpperLimit ∈ Alarm_C_ActiveAlarms ⇒ removeAlarm = Alarm_VPExceedsUpperLimit) ∨ (Alarm_VPBelowLowerLimit ∈ Alarm_C_ActiveAlarms ⇒ removeAlarm = Alarm_VPBelowLowerLimit) ∨ removeAlarm = Alarm_DefaultAlarm"/>
+<org.eventb.core.guard name="1" org.eventb.core.label="grd6" org.eventb.core.predicate="BloodPressure_M_VenousPressure &lt; BloodPressure_C_VPUpperLimit"/>
 </org.eventb.core.event>
 <org.eventb.core.seesContext name="inv8" org.eventb.core.target="AlarmTypesCtx02_BloodEntryPressure01"/>
 <org.eventb.core.event name="inv9" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="A_BloodPressure_ChangeVPressure">
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="{Alarm_VPExceedsUpperLimit, Alarm_VPBelowLowerLimit} ⊈ Alarm_C_UncheckedAlarms"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="Alarm_C_UncheckedAlarms ≔ Alarm_C_UncheckedAlarms ∪ {Alarm_VPExceedsUpperLimit, Alarm_VPBelowLowerLimit}" org.eventb.core.label="act1"/>
 <org.eventb.core.parameter name="'" org.eventb.core.identifier="newVP"/>
-<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="newVP ∈ ℕ"/>
-<org.eventb.core.action name=")" org.eventb.core.assignment="BloodPressure_M_VenousPressure ≔ newVP" org.eventb.core.label="act1"/>
-<org.eventb.core.action name="*" org.eventb.core.assignment="BloodPressure_C_TransitionState ≔ Transitioning" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd2" org.eventb.core.predicate="newVP ∈ ℕ"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="BloodPressure_M_VenousPressure ≔ newVP" org.eventb.core.label="act2"/>
+<org.eventb.core.refinesEvent name="+" org.eventb.core.target="A_Alarm_AddUncheckedAlarm"/>
+<org.eventb.core.witness name="," org.eventb.core.label="uncheckedAlarms" org.eventb.core.predicate="uncheckedAlarms = {Alarm_VPExceedsUpperLimit, Alarm_VPBelowLowerLimit}"/>
 </org.eventb.core.event>
-<org.eventb.core.invariant name="inv:" org.eventb.core.label="inv5" org.eventb.core.predicate="BloodPressure_C_TransitionState = Transitioned ∧ BloodPressure_M_VenousPressure &gt; BloodPressure_C_VPUpperLimit ⇒ Alarm_VPExceedsUpperLimit ∈ Alarm_C_ActiveAlarms"/>
+<org.eventb.core.invariant name="inv:" org.eventb.core.label="inv4" org.eventb.core.predicate="Alarm_VPExceedsUpperLimit ∉ Alarm_C_UncheckedAlarms ∧ BloodPressure_M_VenousPressure &gt; BloodPressure_C_VPUpperLimit ⇒ Alarm_VPExceedsUpperLimit ∈ Alarm_C_ActiveAlarms"/>
 </org.eventb.core.machineFile>
